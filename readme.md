@@ -3,6 +3,11 @@
 - *23120215 - Ngô Đa Báu*  
 - *23120219 - Nguyễn Văn Chiến*  
 
+## Coding conventions
+- Class name: CamelCase
+- Prive field: _camelCase
+- Method: cameCase (starts with verb)
+
 ## Project Proposal  
 ### Introduction  
 Search Engine Project is an academic search engine application designed to search relevant academic information and records in universities. With this application, **students** in universities can search academic information based on keywords and titles provided for search.  
