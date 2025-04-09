@@ -10,7 +10,7 @@
                 "-g",
                 "${fileDirname}/*.cpp",
                 "-o",
-                "$../release/program"
+                "${fileDirname}/../release/program"
             ],
             "options": {
                 "cwd": "${fileDirname}"
