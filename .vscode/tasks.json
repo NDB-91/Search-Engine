@@ -9,9 +9,8 @@
                 "-fdiagnostics-color=always",
                 "-g",
                 "${fileDirname}/*.cpp",
-                "../lib/*.cpp",
                 "-o",
-                "${fileDirname}/debug/program"
+                "$../release/program"
             ],
             "options": {
                 "cwd": "${fileDirname}"
