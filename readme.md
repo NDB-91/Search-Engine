@@ -1,12 +1,24 @@
 # Search Engine Project  
 **Member:**  
-- *23120215 - Ngô Đa Báu*  
+- *23120215 - Ngô Đa Báu - Leader*  
 - *23120219 - Nguyễn Văn Chiến*  
 
 ## Coding conventions
 - Class name: CamelCase
 - Prive field: _camelCase
 - Method: cameCase (starts with verb)
+
+## Progress
+### Phase 1 tasks (11/04 - 13/04)
+- Ngô Đa Báu
+    - Learn and implement a basic search engine
+    - Generate or gather academic documents for universities (stored as text files).
+- Nguyễn Văn Chiến
+    - Design a basic document management model for the university
+    - Draw a schema for the above model (using ER model or relational model)
+    - Describe constraints (if any)
+    - Draw a class diagram for the above model.
+
 
 ## Project Proposal  
 ### Introduction  
