@@ -1,6 +1,8 @@
 #include <iostream>
+#include "application.h"
 
 int main(){
-    std::cout << "Hello world\n";
+    Application app;
+    app.run();
     return 0;
 }
