@@ -9,16 +9,25 @@
 - Method: cameCase (starts with verb)
 
 ## Progress
-### Phase 1 tasks (11/04 - 13/04)
+### Phase 1 tasks (11/04 - 13/04) - Done
 - Ngô Đa Báu
     - Learn and implement a basic search engine
     - Generate or gather academic documents for universities (stored as text files).
-- Nguyễn Văn Chiến
+- Nguyễn Văn Chiến (https://drive.google.com/drive/folders/1r5ub6TMLJNeTc8KTuxTEhqJeb2-vHstA)
     - Design a basic document management model for the university
     - Draw a schema for the above model (using ER model or relational model)
     - Describe constraints (if any)
     - Draw a class diagram for the above model.
 
+### Phase 2 tasks (14/04 - 20/04)
+- Ngô Đa Báu
+    - Continue building search engine
+    - Apply SOLID principles, dependency injection principles
+    - Demonstrate compliance with OOP principles and principles, use design patterns
+- Nguyễn Văn Chiến
+    - Implement the designed model - basic document management for university
+    - Apply SOLID principles, dependency injection principles
+    - Demonstrate compliance with OOP principles and principles, use design patterns
 
 ## Project Proposal  
 ### Introduction  

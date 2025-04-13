@@ -5,20 +5,20 @@
 - `git clone <repository-url>` - Clone an existing repository.
 - `git status` - Check the status of your working directory and staging area.
 - `git add <file>` - Stage changes for commit.
-- `git add .` - Stage all changes in the current directory.
-- `git commit -m "message"` - Commit staged changes with a message.
+- **`git add .` - Stage all changes in the current directory.**
+- **`git commit -m "message"` - Commit staged changes with a message.**
 - `git log` - View the commit history.
 
 #### Branching and Merging
-- `git branch` - List all branches in the repository.
-- `git branch <branch-name>` - Create a new branch.
-- `git checkout <branch-name>` - Switch to a specific branch.
+- **`git branch -a` - List all branches in the repository.**
+- **`git branch <branch-name>` - Create a new branch.**
+- **`git checkout <branch-name>` - Switch to a specific branch.**
 - `git checkout -b <branch-name>` - Create and switch to a new branch.
 - `git merge <branch-name>` - Merge a branch into the current branch.
 
 #### Remote Repositories
 - `git remote add origin <repository-url>` - Link a local repository to a remote one.
-- `git push origin <branch-name>` - Push changes to a remote branch.
+- **`git push origin -u <branch-name>` - Push changes to a remote branch.**
 - `git pull origin <branch-name>` - Pull changes from a remote branch.
 - `git fetch` - Fetch changes from the remote repository without merging.
 
