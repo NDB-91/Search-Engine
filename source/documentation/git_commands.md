@@ -18,7 +18,7 @@
 
 #### Remote Repositories
 - `git remote add origin <repository-url>` - Link a local repository to a remote one.
-- **`git push origin -u <branch-name>` - Push changes to a remote branch.**
+- **`git push -u origin <branch-name>` - Push changes to a remote branch.**
 - `git pull origin <branch-name>` - Pull changes from a remote branch.
 - `git fetch` - Fetch changes from the remote repository without merging.
 
