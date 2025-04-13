@@ -16,8 +16,8 @@ public:
     void deleteUser(const std::string& username);
 
 private:
-    std::string currentUsername;
-    bool isLoggedIn;
+    std::string _currentUsername;
+    bool _isLoggedIn;
 
     void validateCredentials(const std::string& username, const std::string& password);
     void storeUserData(const std::string& username, const std::string& password);

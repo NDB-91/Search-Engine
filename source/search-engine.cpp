@@ -1,59 +1,66 @@
 #include "search-engine.h"
 
-SearchEngine::SearchEngine() {
-
+SearchEngine::SearchEngine(const std::string& directoryPath) 
+    : _currentQuery(""), _currentFilename(""), _resultsLoaded(false), _resultsSaved(false) {
+    
+    _directoryPath = directoryPath;
+    buildIndex();
 }
 
 SearchEngine::~SearchEngine() {
 
 }
 
+void SearchEngine::buildIndex() {
+    FileLoader fileLoader(_directoryPath);
+    auto documents = fileLoader.loadDocuments();
+
+    for (const auto& doc : documents) {
+        _index.indexDocument(doc.first, doc.second);
+    }
+}
+
 void SearchEngine::search(const std::string& query) {
-    currentQuery = query;
+    _currentQuery = query;
     processQuery(query);
 }
 
 void SearchEngine::displayResults() {
-    if (results.empty()) {
-        std::cout << "No results found for query: " << currentQuery << "\n";
+    if (_results.empty()) {
+        std::cout << "No results found for query: " << _currentQuery << "\n";
     } else {
-        std::cout << "Search results for query: " << currentQuery << "\n";
-        for (const auto& result : results) {
+        std::cout << "Search results for query: " << _currentQuery << "\n";
+        for (const auto& result : _results) {
             std::cout << result << "\n";
         }
     }
 }
 
 void SearchEngine::saveResults(const std::string& filename) {
-    currentFilename = filename;
+    _currentFilename = filename;
     // Save results to file
-    resultsSaved = true;
+    _resultsSaved = true;
 }
 
 void SearchEngine::loadResults(const std::string& filename) {
-    currentFilename = filename;
+    _currentFilename = filename;
     // Load results from file
-    resultsLoaded = true;
+    _resultsLoaded = true;
 }
 
 void SearchEngine::clearResults() {
-    results.clear();
-    currentQuery.clear();
-    currentFilename.clear();
-    resultsLoaded = false;
-    resultsSaved = false;
+    _results.clear();
+    _currentQuery.clear();
+    _currentFilename.clear();
+    _resultsLoaded = false;
+    _resultsSaved = false;
 }
 
 void SearchEngine::processQuery(const std::string& query) {
-    // Simulate processing the query and generating results
-    results.push_back("Result 1 for " + query);
-    results.push_back("Result 2 for " + query);
-    results.push_back("Result 3 for " + query);
+    _results = _index.search(query);
+    formatResults();
 }
 
 void SearchEngine::formatResults() {
-    // Format results for display
-    for (auto& result : results) {
-        result = "Formatted: " + result;
-    }
+    
 }

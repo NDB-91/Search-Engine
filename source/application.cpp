@@ -1,13 +1,13 @@
 #include "application.h"
 
 Application::Application() {
-    currentUser = new User();
-    searchEngine = new SearchEngine();
+    _currentUser = new User();
+    _searchEngine = new SearchEngine(DIRECTORY_PATH);
 }
 
 Application::~Application() {
-    delete currentUser;
-    delete searchEngine;
+    delete _currentUser;
+    delete _searchEngine;
 }
 
 void Application::run() {
@@ -18,8 +18,8 @@ void Application::run() {
     std::cin >> username;
     std::cout << "Password: ";
     std::cin >> password;
-    currentUser->login(username, password);
-    if (currentUser->IsLoggedIn()) {
+    _currentUser->login(username, password);
+    if (_currentUser->IsLoggedIn()) {
         std::cout << "Login successful!\n";
         std::string query;
         std::cin.ignore();
@@ -29,14 +29,14 @@ void Application::run() {
             if (query == "exit") {
                 break;
             }
-            searchEngine->search(query);
-            searchEngine->displayResults();
-            searchEngine->clearResults();
+            _searchEngine->search(query);
+            _searchEngine->displayResults();
+            _searchEngine->clearResults();
         }
     } else {
         std::cout << "Login failed. Please try again.\n";
     }
-    currentUser->logout();
+    _currentUser->logout();
     std::cout << "Thank you for using the Search Engine Application!\n";
     std::cout << "Goodbye!\n";
     std::cout << "Exiting application...\n";

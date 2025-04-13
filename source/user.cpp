@@ -1,6 +1,6 @@
 #include "user.h"
 
-User::User() : isLoggedIn(false) {
+User::User() : _isLoggedIn(false) {
 
 }
 
@@ -9,7 +9,7 @@ User::~User() {
 }
 
 bool User::IsLoggedIn() const {
-    return isLoggedIn;
+    return _isLoggedIn;
 }
 
 void User::login(const std::string& username, const std::string& password) {
@@ -17,8 +17,8 @@ void User::login(const std::string& username, const std::string& password) {
 }
 
 void User::logout() {
-    isLoggedIn = false;
-    currentUsername.clear();
+    _isLoggedIn = false;
+    _currentUsername.clear();
 }
 
 void User::registerUser(const std::string& username, const std::string& password) {
@@ -32,20 +32,20 @@ void User::deleteUser(const std::string& username) {
 void User::validateCredentials(const std::string& username, const std::string& password) {
     // Validate user credentials
     if (username == "admin" && password == "password") {
-        isLoggedIn = true;
-        currentUsername = username;
+        _isLoggedIn = true;
+        _currentUsername = username;
     } else {
-        isLoggedIn = false;
+        _isLoggedIn = false;
     }
 }
 void User::storeUserData(const std::string& username, const std::string& password) {
     // Store user data
-    currentUsername = username;
+    _currentUsername = username;
 }
 void User::removeUserData(const std::string& username) {
     // Remove user data
-    if (currentUsername == username) {
-        currentUsername.clear();
-        isLoggedIn = false;
+    if (_currentUsername == username) {
+        _currentUsername.clear();
+        _isLoggedIn = false;
     }
 }

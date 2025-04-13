@@ -6,6 +6,8 @@
 #include "user.h"
 #include "search-engine.h"
 
+#define DIRECTORY_PATH "references/"
+
 class Application {
 public:
     Application();
@@ -14,8 +16,8 @@ public:
     void run();
 
 private:
-    User* currentUser;
-    SearchEngine* searchEngine;
+    User* _currentUser;
+    SearchEngine* _searchEngine;
 };
 
 #endif
