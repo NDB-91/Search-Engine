@@ -54,3 +54,47 @@ After this project is finished, the program might operate as follows:
     - View or download one of the results.
     - Continue searching with a new query.
     - Exit the program.
+
+### Software Architecture
+This project is designed using the **SOLID Principles** to ensure maintainability, scalability, and robustness:
+
+- **Single Responsibility Principle (SRP):**  
+    Each class in the project has a single responsibility  
+    `Index`: Build index for references  
+    `LoaderFile`: Handle read file  
+    `Search`: Search document for query  
+    etc...  
+
+- **Open/Closed Principle (OCP):**  
+    The system is designed to allow extension without modifying existing code.  
+    `ISearch`: Interface extension for specific searches like document type, title, author or general document  
+
+- **Liskov's Substitution Principle (LSP):**  
+    Subclasses can replace their parent classes without affecting the functionality.
+
+- **Interface Segregation Principle (ISP):**  
+    Interfaces are designed to be specific to the needs of the clients.
+
+- **Dependency Inversion Principle (DIP):**  
+    High-level modules do not depend on low-level modules; both depend on abstractions. For example: `ISearch`, `IIndex`, `ILoader`, etc...
+
+### Design Pattern
+The following design patterns are used in this project:
+
+- **Factory Pattern:**  
+    Used to create instances of search algorithms (`KeywordSearch`, `SemanticSearch`, etc.) based on user preferences or input.
+
+- **Singleton Pattern:**  
+    Ensures that certain classes, such as `RecordsManager`, have only one instance throughout the application to maintain consistency in managing user search history.
+
+- **Strategy Pattern:**  
+    Allows the `SearchEngine` to switch between different search algorithms (e.g., keyword-based or semantic search) at runtime by encapsulating them as interchangeable strategies.
+
+- **Observer Pattern:**  
+    Used to notify components (e.g., CLI or UI) when the search results are updated or when a new search is performed.
+
+- **Decorator Pattern:**  
+    Used to add additional functionality to search results, such as filtering or sorting, without modifying the core search algorithm.
+
+- **Command Pattern:**  
+    Used to encapsulate user actions (e.g., view, download, or exit) as commands, making it easier to extend or modify the CLI behavior.
