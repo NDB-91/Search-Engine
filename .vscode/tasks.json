@@ -9,6 +9,10 @@
                 "-fdiagnostics-color=always",
                 "-g",
                 "${fileDirname}/*.cpp",
+                "${fileDirname}/indexer/*.cpp",
+                "${fileDirname}/loader/*.cpp",
+                "${fileDirname}/search/*.cpp",
+                "${fileDirname}/text/*.cpp",
                 "-o",
                 "${fileDirname}/../release/program"
             ],
