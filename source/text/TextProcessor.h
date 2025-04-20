@@ -8,6 +8,8 @@
 
 class TextProcessor {
 public:
+    TextProcessor() = delete;
+
     static std::string toLower(const std::string& text);
     static std::vector<std::string> tokenize(const std::string& text);
 };

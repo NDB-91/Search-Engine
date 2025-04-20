@@ -4,9 +4,8 @@
 #include <iostream>
 
 #include "user.h"
-#include "search-engine.h"
+#include "search/SearchEngine.h"
 
-#define DIRECTORY_PATH "references/"
 
 class Application {
 public:

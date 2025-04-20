@@ -2,7 +2,7 @@
 
 Application::Application() {
     _currentUser = new User();
-    _searchEngine = new SearchEngine(DIRECTORY_PATH);
+    _searchEngine = new SearchEngine;
 }
 
 Application::~Application() {

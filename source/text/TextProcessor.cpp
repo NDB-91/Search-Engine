@@ -1,4 +1,4 @@
-#include "text-processor.h"
+#include "TextProcessor.h"
 
 std::string TextProcessor::toLower(const std::string& text) {
     std::string lowerText = text;
