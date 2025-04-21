@@ -3,7 +3,7 @@
 
 #include <string>
 
-#include "../university/Univeristy.h"
+#include "../university/University.h"
 #include "../department/Department.h"
 
 class Lecturer {

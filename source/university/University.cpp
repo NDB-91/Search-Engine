@@ -1,4 +1,4 @@
-#include "Univeristy.h"
+#include "University.h"
 
 University::University(const Name& name)
     : _name(name) {}

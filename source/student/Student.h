@@ -3,7 +3,7 @@
 
 #include <string>
 
-#include "../university/Univeristy.h"
+#include "../university/University.h"
 
 class Student {
 public:

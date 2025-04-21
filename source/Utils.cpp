@@ -3,7 +3,19 @@
 std::string toString(const University::Name& university) {
     switch (university) {
         case University::Name::HCMUS:
-        
+            return "HCMUS";
+        case University::Name::USSH:
+            return "USSH";
+        case University::Name::UIT:
+            return "UIT";
+        case University::Name::HCMUT:
+            return "HCMUT";
+        case University::Name::HCMUTE:
+            return "HCMUTE";
+        case University::Name::NEU:
+            return "NEU";
+        case University::Name::FTU:
+            return "FTU";
         default:
             return "Unknown University";
     }

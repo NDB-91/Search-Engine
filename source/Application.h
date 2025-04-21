@@ -3,7 +3,7 @@
 
 #include <iostream>
 
-#include "user.h"
+#include "User.h"
 #include "search/SearchEngine.h"
 
 
