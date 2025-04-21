@@ -8,6 +8,7 @@
                 "-std=c++2b",
                 "-fdiagnostics-color=always",
                 "-g",
+                "${workspaceFolder}/source/*.cpp",
                 "${workspaceFolder}/source/**/*.cpp",
                 "-o",
                 "${workspaceFolder}/release/program"
