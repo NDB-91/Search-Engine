@@ -5,6 +5,7 @@
 
 #include "user.h"
 #include "search/SearchEngine.h"
+#include "document.h"
 
 
 class Application {
