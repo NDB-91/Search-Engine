@@ -3,20 +3,16 @@
 
 #include <vector>
 
-#include "IDocument.h"
-#include "../indexer/IndexManager.h"
-#include "../loader/ILoader.h"
+#include "DocumentBase.h"
 
 class DocumentManager {
 public:
     DocumentManager();
     ~DocumentManager();
 
-    void addDocument(const std::string& id, DocumentType type, const std::string& title, const std::string& author);
+    void addDocument(const std::string& id, const Department& department, const std::string& title, const std::string& author);
 private:
-    std::vector<IDocument*> _documents;
-    IndexManager* _indexManager;
-    ILoader* _loader;
+    std::vector<DocumentBase*> _documents;
 };
 
 #endif

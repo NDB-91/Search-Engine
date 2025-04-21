@@ -3,7 +3,7 @@
 
 #include <vector>
 
-#include "ISearch.h"
+#include "SearchBase.h"
 
 class SearchEngine {
 public:
@@ -14,7 +14,7 @@ public:
     void displayResults();
     void clearResults();
 private:
-    ISearch* _search;
+    SearchBase* _search;
     std::string _currentQuery;
     std::vector<std::string> _results;
 };

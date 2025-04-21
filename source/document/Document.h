@@ -1,21 +1,11 @@
 #ifndef _DOCUMENT_H_
 #define _DOCUMENT_H_
 
-#include "IDocument.h"
+#include "DocumentBase.h"
 
-class Document : public IDocument {
+class Document : public DocumentBase {
 public:
-    Document(const std::string& id, DocumentType type, const std::string& title, const std::string& author);
-    
-    std::string id() const override;
-    DocumentType type() const override;
-    std::string title() const override;
-    std::string author() const override;
-private:
-    std::string _id;
-    DocumentType _type;
-    std::string _title;
-    std::string _author;
+    Document(const std::string& id, const Department& department, const std::string& title, const std::string& author);
 };
 
 #endif

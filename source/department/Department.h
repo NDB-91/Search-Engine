@@ -1,0 +1,16 @@
+#ifndef _DEPARTMENT_H_
+#define _DEPARTMENT_H_
+
+enum class Department {
+    MATHEMATICS,
+    PHYSICS,
+    CHEMISTRY,
+    BIOLOGY,
+    INFORMATION_TECHNOLOGY,
+    LINGUISTICS,
+    MAKETING,
+    ECONOMICS,
+    PHILOSOPHY,
+};
+
+#endif
