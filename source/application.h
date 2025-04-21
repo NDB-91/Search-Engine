@@ -5,6 +5,7 @@
 
 #include "user.h"
 #include "search-engine.h"
+#include "document.h"
 
 #define DIRECTORY_PATH "references/"
 
