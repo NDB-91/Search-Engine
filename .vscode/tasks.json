@@ -8,16 +8,12 @@
                 "-std=c++2b",
                 "-fdiagnostics-color=always",
                 "-g",
-                "${fileDirname}/*.cpp",
-                "${fileDirname}/indexer/*.cpp",
-                "${fileDirname}/loader/*.cpp",
-                "${fileDirname}/search/*.cpp",
-                "${fileDirname}/text/*.cpp",
+                "${workspaceFolder}/source/**/*.cpp",
                 "-o",
-                "${fileDirname}/../release/program"
+                "${workspaceFolder}/release/program"
             ],
             "options": {
-                "cwd": "${fileDirname}"
+                "cwd": "${workspaceFolder}"
             },
             "problemMatcher": [
                 "$gcc"
