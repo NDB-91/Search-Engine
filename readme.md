@@ -29,6 +29,18 @@
     - Apply SOLID principles, dependency injection principles
     - Demonstrate compliance with OOP principles and principles, use design patterns
 
+### Phase 3 tasks (22/04 - 27/04)
+- Ngô Đa Báu
+    - Add Trie Tree for search engine
+    - Implement TF-IDF ranking
+- Nguyễn Văn Chiến
+    - Continue building the document managemen system for the university
+    - Apply SOLID principles and dependency injection principles
+    - Demonstrate compliance with OOP principles and use design patterns
+    - Implement user roles for signing into the application
+        - Student: Search documents
+        - Lecturer: Search documents and documents
+
 ## Project Proposal  
 ### Introduction  
 Search Engine Project is an academic search engine application designed to search relevant academic information and records in universities. With this application, **students** in universities can search academic information based on keywords and titles provided for search.  
