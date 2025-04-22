@@ -55,19 +55,35 @@ After this project is finished, the program might operate as follows:
     - Continue searching with a new query.
     - Exit the program.
 
-### Software Architecture
-This project is designed using the **SOLID Principles** to ensure maintainability, scalability, and robustness:
+## Software Architecture
+This project is designed using the **Layered Architecture** approach, combined with the **SOLID Principles**, to ensure maintainability, scalability, and robustness.
 
+### Layered Architecture
+The system is divided into the following layers:
+
+1. **Presentation Layer (CLI or UI):**  
+    This layer is responsible for interacting with the user. It displays search results, accepts user input, and communicates with the application layer.
+
+2. **Application Layer:**  
+    This layer contains the core logic of the application, such as managing user queries, coordinating search operations, and handling user actions like viewing or downloading results.
+
+3. **Domain Layer:**  
+    This layer encapsulates the business logic of the system. It includes components like `SearchEngine`, `SearchAlgorithm`, and `RecordsManager`, which implement the core functionality of the search engine.
+
+4. **Infrastructure Layer:**  
+    This layer handles low-level details such as file I/O, database access, and external libraries. It includes components like `LoaderFile` for reading files and `Index` for building and managing search indices.
+
+### SOLID Principles
 - **Single Responsibility Principle (SRP):**  
     Each class in the project has a single responsibility  
     `Index`: Build index for references  
     `LoaderFile`: Handle read file  
     `Search`: Search document for query  
-    etc...  
+    etc...
 
 - **Open/Closed Principle (OCP):**  
     The system is designed to allow extension without modifying existing code.  
-    `ISearch`: Interface extension for specific searches like document type, title, author or general document  
+    `ISearch`: Interface extension for specific searches like document type, title, author or general document
 
 - **Liskov's Substitution Principle (LSP):**  
     Subclasses can replace their parent classes without affecting the functionality.
@@ -76,7 +92,9 @@ This project is designed using the **SOLID Principles** to ensure maintainabilit
     Interfaces are designed to be specific to the needs of the clients.
 
 - **Dependency Inversion Principle (DIP):**  
-    High-level modules do not depend on low-level modules; both depend on abstractions. For example: `ISearch`, `IIndex`, `ILoader`, etc...
+    High-level modules do not depend on low-level modules; both depend on abstractions. For example, `ISearch`, `IIndex`, and `ILoader`.
+
+This combination of **Layered Architecture** and **SOLID Principles** ensures that the project is modular, extensible, and easy to maintain.
 
 ### Design Pattern
 The following design patterns are used in this project:
