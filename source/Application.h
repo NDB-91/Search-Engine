@@ -13,6 +13,8 @@ public:
     ~Application();
 
     void run();
+    void handleStudent();
+    void handleLecturer();
 
 private:
     User* _currentUser;
