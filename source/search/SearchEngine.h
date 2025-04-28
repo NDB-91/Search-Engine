@@ -1,6 +1,7 @@
 #ifndef _SEARCH_ENGINE_H_
 #define _SEARCH_ENGINE_H_
 
+#include <memory>
 #include <vector>
 
 #include "SearchBase.h"
@@ -8,13 +9,13 @@
 class SearchEngine {
 public:
     SearchEngine();
-    ~SearchEngine();
+    ~SearchEngine() = default;
 
     void search(const std::string& query);
     void displayResults();
     void clearResults();
 private:
-    SearchBase* _search;
+    std::shared_ptr<SearchBase> _search;
     std::string _currentQuery;
     std::vector<std::string> _results;
 };

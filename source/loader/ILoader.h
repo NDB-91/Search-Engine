@@ -5,7 +5,6 @@
 
 class ILoader {
 public:
-    ILoader() = default;
     virtual ~ILoader() = default;
 
     virtual std::string loadDocument(const std::string& documentId) = 0;

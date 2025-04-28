@@ -1,18 +1,21 @@
 #ifndef _DOCUMENT_MANAGER_H_
 #define _DOCUMENT_MANAGER_H_
 
+#include <memory>
 #include <vector>
 
-#include "DocumentBase.h"
+#include "Document.h"
 
 class DocumentManager {
 public:
-    DocumentManager();
-    ~DocumentManager();
+    static DocumentManager& instance();
 
-    void addDocument(const std::string& id, const Department& department, const std::string& title, const std::string& author);
+    void addDocument(const std::string& id, const Department& department, const std::string& title, const Lecturer& author);
+    std::vector<std::shared_ptr<Document>> documents() const;
 private:
-    std::vector<DocumentBase*> _documents;
+    DocumentManager() = default;
+
+    std::vector<std::shared_ptr<Document>> _documents;
 };
 
 #endif

@@ -7,11 +7,11 @@ std::string TextProcessor::toLower(const std::string& text) {
 }
 
 std::vector<std::string> TextProcessor::tokenize(const std::string& text) {
-    std::stringstream ss(text);
+    std::istringstream iss(text);
     std::vector<std::string> tokens;
     std::string token;
 
-    while (ss >> token) {
+    while (iss >> token) {
         tokens.push_back(token);
     }
 

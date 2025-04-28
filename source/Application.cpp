@@ -1,13 +1,8 @@
 #include "Application.h"
 
 Application::Application() {
-    _currentUser = new User();
-    _searchEngine = new SearchEngine;
-}
-
-Application::~Application() {
-    delete _currentUser;
-    delete _searchEngine;
+    _currentUser = std::make_shared<User>();
+    _searchEngine = std::make_shared<SearchEngine>();
 }
 
 void Application::run() {

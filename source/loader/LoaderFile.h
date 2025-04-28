@@ -8,11 +8,14 @@
 
 class LoaderFile : public ILoader {
 public:
-    LoaderFile() = default;
+    static LoaderFile& instance();
+    
     ~LoaderFile() override = default;
 
     std::string loadDocument(const std::string& documentId) override;
 private:
+    LoaderFile() = default;
+
     std::unordered_map<std::string, std::string> _loadedDocuments;
 };
 

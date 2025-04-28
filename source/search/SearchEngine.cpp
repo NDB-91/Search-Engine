@@ -6,11 +6,7 @@
 #include "../text/TextProcessor.h"
 
 SearchEngine::SearchEngine() {
-    _search = new Search();
-}
-
-SearchEngine::~SearchEngine() {
-    delete _search;
+    _search = std::make_shared<Search>();
 }
 
 void SearchEngine::search(const std::string& query) {

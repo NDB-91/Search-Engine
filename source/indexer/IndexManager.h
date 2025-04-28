@@ -1,16 +1,15 @@
 #ifndef _INDEX_MANAGER_H_
 #define _INDEX_MANAGER_H_
 
+#include <memory>
 #include <string>
 #include <unordered_set>
 
 #include "IndexBuilder.h"
-#include "../loader/ILoader.h"
 
 class IndexManager {
 public:
-    IndexManager();
-    ~IndexManager();
+    static IndexManager& instance();
 
     void addDocument(const std::string& documentId);
     void removeDocument(const std::string& documentId);
@@ -18,8 +17,9 @@ public:
 
     std::vector<std::string> search(const std::string& query);
 private:
-    IndexBuilder* _indexBuilder;
-    ILoader* _loader;
+    IndexManager();
+
+    std::shared_ptr<IndexBuilder> _indexBuilder;
     std::string _directoryPath;
     std::unordered_set<std::string> _indexed;
 };

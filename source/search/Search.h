@@ -3,18 +3,14 @@
 
 #include "SearchBase.h"
 
-#include "../indexer/IndexManager.h"
-
-#define DIRECTORY_PATH "references/"
+#define DIRECTORY_PATH "database/reference/"
 
 class Search : public SearchBase {
 public:
-    Search();
-    ~Search() override;
+    Search() = default;
+    ~Search() override = default;
 
     std::vector<std::string> search(const std::string& query) override;
-private:
-    IndexManager* _indexManager;
 };
 
 #endif

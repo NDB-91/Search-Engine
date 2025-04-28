@@ -4,11 +4,7 @@
 #include "Index.h"
 
 IndexBuilder::IndexBuilder() {
-    _index = new Index();
-}
-
-IndexBuilder::~IndexBuilder() {
-    delete _index;
+    _index = std::make_shared<Index>();
 }
 
 void IndexBuilder::buildIndex(const std::string& documentId, const std::string& content) {

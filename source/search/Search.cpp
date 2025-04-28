@@ -1,14 +1,7 @@
 #include "Search.h"
-
-Search::Search() {
-    _indexManager = new IndexManager();
-}
-
-Search::~Search() {
-    delete _indexManager;
-}
+#include "../indexer/IndexManager.h"
 
 std::vector<std::string> Search::search(const std::string& query) {
-    _indexManager->buildIndexDirectory(DIRECTORY_PATH);
-    return _indexManager->search(query);
+    IndexManager::instance().buildIndexDirectory(DIRECTORY_PATH);
+    return IndexManager::instance().search(query);
 }

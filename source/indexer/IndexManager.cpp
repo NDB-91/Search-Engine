@@ -4,18 +4,13 @@
 #include "IndexManager.h"
 #include "../loader/LoaderFile.h"
 
-IndexManager::IndexManager() {
-    _indexBuilder = new IndexBuilder();
-    _loader = new LoaderFile();
-}
-
-IndexManager::~IndexManager() {
-    delete _indexBuilder;
-    delete _loader;
+IndexManager& IndexManager::instance() {
+    static IndexManager _instance;
+    return _instance;
 }
 
 void IndexManager::addDocument(const std::string& documentId) {
-    std::string content = _loader->loadDocument(_directoryPath + documentId);
+    std::string content = LoaderFile::instance().loadDocument(_directoryPath + documentId);
     _indexBuilder->buildIndex(documentId, content);
 }
 
@@ -40,4 +35,8 @@ void IndexManager::buildIndexDirectory(const std::string& directoryPath) {
 
 std::vector<std::string> IndexManager::search(const std::string& query) {
     return _indexBuilder->search(query);
+}
+
+IndexManager::IndexManager() {
+    _indexBuilder = std::make_shared<IndexBuilder>();
 }

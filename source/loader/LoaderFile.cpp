@@ -2,6 +2,11 @@
 
 #include "LoaderFile.h"
 
+LoaderFile& LoaderFile::instance() {
+    static LoaderFile _instance;
+    return _instance;
+}
+
 std::string LoaderFile::loadDocument(const std::string& documentId) {
     if (_loadedDocuments.find(documentId) != _loadedDocuments.end()) {
         return _loadedDocuments[documentId];

@@ -1,6 +1,7 @@
 #ifndef _APPLICATION_H_
 #define _APPLICATION_H_
 
+#include <memory>
 #include <iostream>
 
 #include "User.h"
@@ -10,13 +11,11 @@
 class Application {
 public:
     Application();
-    ~Application();
 
     void run();
-
 private:
-    User* _currentUser;
-    SearchEngine* _searchEngine;
+    std::shared_ptr<User> _currentUser;
+    std::shared_ptr<SearchEngine> _searchEngine;
 };
 
 #endif
