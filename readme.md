@@ -29,7 +29,7 @@
     - Apply SOLID principles, dependency injection principles
     - Demonstrate compliance with OOP principles and principles, use design patterns
 
-### Phase 3 tasks (22/04 - 27/04)
+### Phase 3 tasks (22/04 - 29/04)
 - Ngô Đa Báu
     - Add Trie Tree for search engine
     - Implement TF-IDF ranking
