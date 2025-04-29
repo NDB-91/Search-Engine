@@ -76,7 +76,7 @@ void Application::handleStudent() {
             std::cout << "Enter password: ";
             std::getline(std::cin, password);
 
-            bool success = auth.registerStudent(email, name, fromString(university), password);
+            bool success = auth.registerStudent(email, name, convertUniversityName(university), password);
             if (success) {
                 std::cout << "Sign Up successful! You can now login.\n";
             } else {
@@ -133,7 +133,7 @@ void Application::handleLecturer() {
             std::cout << "Enter password: ";
             std::getline(std::cin, password);
 
-            bool success = auth.registerLecturer(email, name, fromStringtoDepartment(department), fromString(university), password);
+            bool success = auth.registerLecturer(email, name, convertDepartment(department), convertUniversityName(university), password);
             if (success) {
                 std::cout << "Sign Up successful! You can now login.\n";
             } else {

@@ -1,5 +1,15 @@
 #include "Utils.h"
 
+std::vector<std::string> split(const std::string& str, char delimiter) {
+    std::vector<std::string> tokens;
+    std::string token;
+    std::istringstream tokenStream(str);
+    while (std::getline(tokenStream, token, delimiter)) {
+        tokens.push_back(token);
+    }
+    return tokens;
+}
+
 std::string toString(const University::Name& university) {
     switch (university) {
         case University::Name::HCMUS:
@@ -46,42 +56,42 @@ std::string toString(const Department& department) {
     }
 }
 
-University::Name fromString(const std::string& str) {
-    if (str == "HCMUS")
+University::Name convertUniversityName(const std::string& name) {
+    if (name == "HCMUS")
         return University::Name::HCMUS;
-    if (str == "USSH")
+    if (name == "USSH")
         return University::Name::USSH;
-    if (str == "UIT")
+    if (name == "UIT")
         return University::Name::UIT;
-    if (str == "HCMUT")
+    if (name == "HCMUT")
         return University::Name::HCMUT;
-    if (str == "HCMUTE") 
+    if (name == "HCMUTE") 
         return University::Name::HCMUTE;
-    if (str == "NEU")
+    if (name == "NEU")
         return University::Name::NEU;
-    if (str == "FTU") 
+    if (name == "FTU") 
         return University::Name::FTU;
     return University::Name::Unknown;
 }
 
-Department fromStringtoDepartment(const std::string& str) {
-    if (str == "Mathematics") 
+Department convertDepartment(const std::string& department) {
+    if (department == "Mathematics") 
         return Department::MATHEMATICS;
-    if (str == "Physics") 
+    if (department == "Physics") 
         return Department::PHYSICS;
-    if (str == "Chemistry") 
+    if (department == "Chemistry") 
         return Department::CHEMISTRY;
-    if (str == "Biology") 
+    if (department == "Biology") 
         return Department::BIOLOGY;
-    if (str == "Information Technology") 
+    if (department == "Information Technology") 
         return Department::INFORMATION_TECHNOLOGY;
-    if (str == "Linguistics") 
+    if (department == "Linguistics") 
         return Department::LINGUISTICS;
-    if (str == "Marketing") 
+    if (department == "Marketing") 
         return Department::MARKETING;
-    if (str == "Economics") 
+    if (department == "Economics") 
         return Department::ECONOMICS;
-    if (str == "Philosophy") 
+    if (department == "Philosophy") 
         return Department::PHILOSOPHY;
     return Department::Unknown;
 }

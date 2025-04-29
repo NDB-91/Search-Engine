@@ -1,7 +1,7 @@
-#include "Index.h"
+#include "InvertedIndex.h"
 #include "../text/TextProcessor.h"
 
-void Index::indexDocument(const std::string& documentId, const std::string& content) {
+void InvertedIndex::indexDocument(const std::string& documentId, const std::string& content) {
     std::stringstream ss(content);
     std::string token;
     while (ss >> token) {
@@ -10,13 +10,13 @@ void Index::indexDocument(const std::string& documentId, const std::string& cont
     }
 }
 
-void Index::removeIndex(const std::string& documentId) {
+void InvertedIndex::removeIndex(const std::string& documentId) {
     for (auto& pair : _indexs) {
         pair.second.erase(documentId);
     }
 }
 
-std::vector<std::string> Index::search(const std::string& query) {
+std::vector<std::string> InvertedIndex::search(const std::string& query) {
     std::vector<std::string> results;
     std::stringstream ss(query);
     std::string token;

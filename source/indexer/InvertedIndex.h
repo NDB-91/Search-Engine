@@ -1,5 +1,5 @@
-#ifndef _INDEX_H_
-#define _INDEX_H_
+#ifndef _INVERTED_INDEX_H_
+#define _INVERTED_INDEX_H_
 
 #include <unordered_map>
 #include <unordered_set>
@@ -7,10 +7,10 @@
 
 #include "IIndex.h"
 
-class Index : public IIndex {
+class InvertedIndex : public IIndex {
 public:
-    Index() = default;
-    ~Index() override = default;
+    InvertedIndex() = default;
+    ~InvertedIndex() override = default;
 
     void indexDocument(const std::string& documentId, const std::string& content) override;
     void removeIndex(const std::string& documentId) override;

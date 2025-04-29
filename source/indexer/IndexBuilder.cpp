@@ -1,10 +1,10 @@
 #include <unordered_set>
 
 #include "IndexBuilder.h"
-#include "Index.h"
+#include "InvertedIndex.h"
 
 IndexBuilder::IndexBuilder() {
-    _index = std::make_shared<Index>();
+    _index = std::make_shared<InvertedIndex>();
 }
 
 void IndexBuilder::buildIndex(const std::string& documentId, const std::string& content) {

@@ -8,20 +8,20 @@
 
 class Document {
 public:
-    Document(const std::string& id, const Department& department, const std::string& title, const Lecturer& author);
+    Document(const std::string& id, const Department& department, const std::string& title, const std::string& _idAuthor);
     virtual ~Document() = default;
 
     std::string id() const;
     Department department() const;
     std::string title() const;
-    Lecturer author() const;
+    std::string author() const;
 
     std::string content() const;
 protected:
     std::string _id;
     Department _department;
     std::string _title;
-    Lecturer _author;
+    std::string _idAuthor;
 };
 
 #endif

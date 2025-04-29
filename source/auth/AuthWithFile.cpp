@@ -79,11 +79,11 @@ bool AuthWithFile::validateLogin(const std::string& email, const std::string& pa
 
             if (isLecturer) {
                 iss >> storedEmail >> name >> departmentStr >> universityStr >> storedPassword;
-                department = fromStringtoDepartment(departmentStr);
-                university = fromString(universityStr);
+                department = convertDepartment(departmentStr);
+                university = convertUniversityName(universityStr);
             } else {
                 iss >> storedEmail >> name >> universityStr >> storedPassword;
-                university = fromString(universityStr);
+                university = convertUniversityName(universityStr);
             }
 
             if (storedEmail == email && storedPassword == password) {

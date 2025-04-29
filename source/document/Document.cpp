@@ -1,8 +1,9 @@
 #include "Document.h"
 #include "../loader/LoaderFile.h"
+#include "../lecturer/LecturerManager.h"
 
-Document::Document(const std::string& id, const Department& department, const std::string& title, const Lecturer& author)
-    : _id(id), _department(department), _title(title), _author(author) {}
+Document::Document(const std::string& id, const Department& department, const std::string& title, const std::string& idAuthor)
+    : _id(id), _department(department), _title(title), _idAuthor(idAuthor) {}
 
 std::string Document::id() const {
     return _id;
@@ -16,8 +17,8 @@ std::string Document::title() const {
     return _title;
 }
 
-Lecturer Document::author() const {
-    return _author;
+std::string Document::author() const {
+    return LecturerManager::instance().getLecturerName(_idAuthor);
 }
 
 std::string Document::content() const {
