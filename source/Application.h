@@ -13,6 +13,9 @@ public:
     Application();
 
     void run();
+    void handleStudent();
+    void handleLecturer();
+    void search();
 private:
     std::shared_ptr<User> _currentUser;
     std::shared_ptr<SearchEngine> _searchEngine;

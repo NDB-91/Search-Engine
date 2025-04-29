@@ -62,6 +62,8 @@
         "typeinfo": "cpp",
         "variant": "cpp",
         "unordered_set": "cpp",
-        "cstring": "cpp"
+        "cstring": "cpp",
+        "*.tcc": "cpp",
+        "authwithfile": "cpp"
     }
 }

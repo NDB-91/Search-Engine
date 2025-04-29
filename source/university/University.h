@@ -13,12 +13,15 @@ public:
         HCMUTE,
         NEU,
         FTU,
+        Unknown,
     };
 public:
     University(const Name& name);
     ~University();
 
     Name name() const;
+
+
 private:
     Name _name;
 };

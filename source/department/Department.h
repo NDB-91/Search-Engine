@@ -1,6 +1,8 @@
 #ifndef _DEPARTMENT_H_
 #define _DEPARTMENT_H_
 
+#include <string>
+
 enum class Department {
     MATHEMATICS,
     PHYSICS,
@@ -8,9 +10,9 @@ enum class Department {
     BIOLOGY,
     INFORMATION_TECHNOLOGY,
     LINGUISTICS,
-    MAKETING,
+    MARKETING,
     ECONOMICS,
     PHILOSOPHY,
+    Unknown,
 };
-
 #endif
