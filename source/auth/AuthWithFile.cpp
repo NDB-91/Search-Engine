@@ -2,8 +2,7 @@
 #include <iostream>
 
 #include "AuthWithFile.h"
-#include "../department/Department.h"
-#include "../university/University.h"
+#include "../Utils.h"
 
 AuthWithFile::AuthWithFile(const std::string& studentFile, const std::string& lecturerFile) : _studentFile(studentFile), _lecturerFile(lecturerFile) {}
 
@@ -18,9 +17,9 @@ bool AuthWithFile::registerAccount(
     const std::string& department
 ) {
     if (role == "student") {
-        return registerStudent(email, name, University::fromString(university), password);
+        return registerStudent(email, name, fromString(university), password);
     } else if (role == "lecturer") {
-        return registerLecturer(email, name, fromString(department),  University::fromString(university), password);
+        return registerLecturer(email, name, fromStringtoDepartment(department), fromString(university), password);
     }
     return false;
 }
@@ -51,7 +50,7 @@ bool AuthWithFile::registerStudent(const std::string& email, const std::string& 
 
     std::ofstream outFile(_studentFile, std::ios::app);
     if (outFile.is_open()) {
-        outFile << email << " " << name << " " << University::toString(university) << " " << password << std::endl;
+        outFile << email << " " << name << " " << toString(university) << " " << password << std::endl;
         return true;
     }
 
@@ -74,7 +73,7 @@ bool AuthWithFile::registerLecturer(const std::string& email, const std::string&
 
     std::ofstream outFile(_lecturerFile, std::ios::app);
     if (outFile.is_open()) {
-        outFile << email << " " << name << " " << toString(department) << " " << University::toString(university) << password << std::endl;
+        outFile << email << " " << name << " " << toString(department) << " " << toString(university) << password << std::endl;
         return true;
     }
     return false;
@@ -106,11 +105,11 @@ bool AuthWithFile::validateLogin(const std::string& email, const std::string& pa
 
             if (isLecturer) {
                 iss >> storedEmail >> name >> departmentStr >> universityStr >> storedPassword;
-                department = fromString(departmentStr);
-                university = University::fromString(universityStr);
+                department = fromStringtoDepartment(departmentStr);
+                university = fromString(universityStr);
             } else {
                 iss >> storedEmail >> name >> universityStr >> storedPassword;
-                university = University::fromString(universityStr);
+                university = fromString(universityStr);
             }
 
             if (storedEmail == email && storedPassword == password) {

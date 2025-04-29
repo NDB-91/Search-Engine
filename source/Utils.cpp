@@ -35,7 +35,7 @@ std::string toString(const Department& department) {
             return "Information Technology";
         case Department::LINGUISTICS:
             return "Linguistics";
-        case Department::MAKETING:
+        case Department::MARKETING:
             return "Marketing";
         case Department::ECONOMICS:
             return "Economics";
@@ -44,4 +44,44 @@ std::string toString(const Department& department) {
         default:
             return "Unknown Department";
     }
+}
+
+University::Name fromString(const std::string& str) {
+    if (str == "HCMUS")
+        return University::Name::HCMUS;
+    if (str == "USSH")
+        return University::Name::USSH;
+    if (str == "UIT")
+        return University::Name::UIT;
+    if (str == "HCMUT")
+        return University::Name::HCMUT;
+    if (str == "HCMUTE") 
+        return University::Name::HCMUTE;
+    if (str == "NEU")
+        return University::Name::NEU;
+    if (str == "FTU") 
+        return University::Name::FTU;
+    return University::Name::Unknown;
+}
+
+Department fromStringtoDepartment(const std::string& str) {
+    if (str == "Mathematics") 
+        return Department::MATHEMATICS;
+    if (str == "Physics") 
+        return Department::PHYSICS;
+    if (str == "Chemistry") 
+        return Department::CHEMISTRY;
+    if (str == "Biology") 
+        return Department::BIOLOGY;
+    if (str == "Information_Technology") 
+        return Department::INFORMATION_TECHNOLOGY;
+    if (str == "Linguistics") 
+        return Department::LINGUISTICS;
+    if (str == "Marketing") 
+        return Department::MARKETING;
+    if (str == "Economics") 
+        return Department::ECONOMICS;
+    if (str == "Philosophy") 
+        return Department::PHILOSOPHY;
+    return Department::Unknown;
 }
