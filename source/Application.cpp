@@ -1,5 +1,6 @@
 #include "Application.h"
-#include "../auth/AuthWithFile.h"
+#include "auth/AuthWithFile.h"
+#include "Utils.h"
 
 Application::Application() {
     _currentUser = new User();
@@ -40,10 +41,12 @@ void Application::run() {
 }
 
 void Application::handleStudent() {
-    AuthWithFile auth("../account/student.txt", "../account/lecturer.txt");
     int choice;
 
     do {
+        AuthWithFile auth("account/student.txt", "account/lecturer.txt");
+        std::cout << auth.getFile();
+
         std::cout << "\nStudent - Please choose an action:\n";
         std::cout << "1. Login\n";
         std::cout << "2. Sign Up\n";
@@ -77,7 +80,7 @@ void Application::handleStudent() {
             std::cout << "Enter password: ";
             std::getline(std::cin, password);
 
-            bool success = auth.registerStudent(email, name, University::fromString(university), password);
+            bool success = auth.registerStudent(email, name, fromString(university), password);
             if (success) {
                 std::cout << "Sign Up successful! You can now login.\n";
             } else {
@@ -94,9 +97,9 @@ void Application::handleStudent() {
 }
 
 void Application::handleLecturer() {
-    AuthWithFile auth("../account/student.txt", "../account/lecturer.txt"); // Path đúng
+    AuthWithFile auth("account/student.txt", "account/lecturer.txt");
+    std::cout << auth.getFile();
     int choice;
-
     do {
         std::cout << "\nLecturer - Please choose an action:\n";
         std::cout << "1. Login\n";
@@ -133,7 +136,7 @@ void Application::handleLecturer() {
             std::cout << "Enter password: ";
             std::getline(std::cin, password);
 
-            bool success = auth.registerLecturer(email, name, fromString(department), University::fromString(university), password);
+            bool success = auth.registerLecturer(email, name, fromStringtoDepartment(department), fromString(university), password);
             if (success) {
                 std::cout << "Sign Up successful! You can now login.\n";
             } else {

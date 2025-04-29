@@ -17,7 +17,7 @@ std::string toString(const University::Name& university) {
         case University::Name::FTU:
             return "FTU";
         default:
-            return "Unknown University";
+            return "Unknown_University";
     }
 }
 
@@ -42,7 +42,7 @@ std::string toString(const Department& department) {
         case Department::PHILOSOPHY:
             return "Philosophy";
         default:
-            return "Unknown Department";
+            return "Unknown_Department";
     }
 }
 
@@ -73,7 +73,7 @@ Department fromStringtoDepartment(const std::string& str) {
         return Department::CHEMISTRY;
     if (str == "Biology") 
         return Department::BIOLOGY;
-    if (str == "Information_Technology") 
+    if (str == "Information Technology") 
         return Department::INFORMATION_TECHNOLOGY;
     if (str == "Linguistics") 
         return Department::LINGUISTICS;

@@ -8,32 +8,6 @@ AuthWithFile::AuthWithFile(const std::string& studentFile, const std::string& le
 
 AuthWithFile::~AuthWithFile() {}
 
-bool AuthWithFile::registerAccount(
-    const std::string& role,
-    const std::string& email,
-    const std::string& name,
-    const std::string& password,
-    const std::string& university,
-    const std::string& department
-) {
-    if (role == "student") {
-        return registerStudent(email, name, fromString(university), password);
-    } else if (role == "lecturer") {
-        return registerLecturer(email, name, fromStringtoDepartment(department), fromString(university), password);
-    }
-    return false;
-}
-
-
-bool AuthWithFile::loginAccount(const std::string& role, const std::string& email, const std::string& password) {
-    if (role == "student") {
-        return loginStudent(email, password);
-    } else if (role == "lecturer") {
-        return loginLecturer(email, password);
-    }
-    return false;
-}
-
 bool AuthWithFile::registerStudent(const std::string& email, const std::string& name, const University::Name university, const std::string& password) {
     std::ifstream file(_studentFile);
     std::string line;
@@ -73,7 +47,7 @@ bool AuthWithFile::registerLecturer(const std::string& email, const std::string&
 
     std::ofstream outFile(_lecturerFile, std::ios::app);
     if (outFile.is_open()) {
-        outFile << email << " " << name << " " << toString(department) << " " << toString(university) << password << std::endl;
+        outFile << email << " " << name << " " << toString(department) << " " << toString(university) << " " << password << std::endl;
         return true;
     }
     return false;
