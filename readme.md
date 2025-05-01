@@ -41,6 +41,9 @@
         - Student: Search documents
         - Lecturer: Search documents and documents
 
+### Phase 4 tasks (1/5 - 5/5)
+- Prepare project requirements for progress reporting
+
 ## Project Proposal  
 ### Introduction  
 Search Engine Project is an academic search engine application designed to search relevant academic information and records in universities. With this application, **students** in universities can search academic information based on keywords and titles provided for search.  
