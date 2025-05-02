@@ -1,5 +1,8 @@
 #include "Lecturer.h"
 
+Lecturer::Lecturer()
+    : _email(""), _name(""), _department(Department::Unknown), _university(University::Name::Unknown) {}
+
 Lecturer::Lecturer(const std::string& email, const std::string& name, const Department& department, const University::Name& university)
     : _email(email), _name(name), _department(department), _university(university) {}
 

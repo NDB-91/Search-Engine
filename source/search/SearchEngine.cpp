@@ -2,11 +2,11 @@
 #include <format>
 
 #include "SearchEngine.h"
-#include "Search.h"
+#include "SearchKeyword.h"
 #include "../text/TextProcessor.h"
 
 SearchEngine::SearchEngine() {
-    _search = std::make_shared<Search>();
+    _search = std::make_shared<SearchKeyword>();
 }
 
 void SearchEngine::search(const std::string& query) {

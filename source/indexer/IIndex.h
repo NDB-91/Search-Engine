@@ -4,14 +4,14 @@
 #include <vector>
 #include <string>
 
+#include "../document/Document.h"
+
 class IIndex {
 public:
-    IIndex() = default;
     virtual ~IIndex() = default;
-
-    virtual void indexDocument(const std::string& documentId, const std::string& content) = 0;
-    virtual void removeIndex(const std::string& documentId) = 0;
-    virtual std::vector<std::string> search(const std::string& query) = 0;
+    virtual void indexDocument(const Document& document) = 0;
+    virtual void removeIndex(const Document& document) = 0;
+    virtual std::vector<std::string> index(const std::string& query) = 0;
 };
 
 #endif

@@ -50,3 +50,7 @@ void DocumentManager::saveDocument(const std::string& id, const Department& depa
     docsFile << id << "|" << toString(department) << "|" << title << "|" << author << "\n";
     docsFile.close();
 }
+
+DocumentManager::DocumentManager() {
+    loadDocuments();
+}

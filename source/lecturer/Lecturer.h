@@ -8,6 +8,7 @@
 
 class Lecturer {
 public:
+    Lecturer();
     Lecturer(const std::string& email, const std::string& name, const Department& department, const University::Name& university);
     ~Lecturer();
 

@@ -7,7 +7,7 @@
 
 #include "Document.h"
 
-#define DOCUMENTS "documents.txt"
+#define DOCUMENTS "document/documents.txt"
 
 class DocumentManager {
 public:
@@ -19,7 +19,7 @@ public:
     DocumentManager(const DocumentManager&) = delete;
     DocumentManager& operator=(const DocumentManager&) = delete;
 private:
-    DocumentManager() = default;
+    DocumentManager();
     void loadDocuments();
     void saveDocument(const std::string& id, const Department& department, const std::string& title, const std::string& idAuthor);
 
