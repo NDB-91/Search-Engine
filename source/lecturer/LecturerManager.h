@@ -9,21 +9,22 @@
 #include "../department/Department.h"
 #include "../university/University.h"
 
-#define LECTURERS "lecturers.txt"
+#define LECTURERS "database/entity/lecturers.txt"
 
 class LecturerManager {
 public:
     static LecturerManager& instance();
 
-    void addLecturer(const std::string& email, const std::string& name, const Department& department, const University::Name& university);
+    void addLecturer(const Lecturer& lecturer);
     std::string getLecturerName(const std::string& email) const;
+    Lecturer& getLecturer(const std::string& email);
 
     LecturerManager(const LecturerManager&) = delete;
     LecturerManager& operator=(const LecturerManager&) = delete;
 private:
-    LecturerManager() = default;
+    LecturerManager();
     void loadLecturers();
-    void saveLecturer(const std::string& email, const std::string& name, const Department& department, const University::Name& university);
+    void saveLecturer(const Lecturer& lecturer);
 
     std::unordered_map<std::string, Lecturer> _lecturers;
 };

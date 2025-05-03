@@ -1,152 +1,26 @@
 #include "Application.h"
-#include "auth/AuthWithFile.h"
+#include "account/FileAccountRepository.h"
 #include "Utils.h"
 
 Application::Application() {
-    _currentUser = std::make_shared<User>();
+    _repo = std::make_shared<FileAccountRepository>(REPOSITORY);
+    _accountService = std::make_shared<AccountService>(_repo);
     _searchEngine = std::make_shared<SearchEngine>();
 }
 
 void Application::run() {
-    int roleChoice;
-    do {
-        std::cout << "Welcome to the Application!\n";
-        std::cout << "Please choose your role:\n";
-        std::cout << "1. Student\n";
-        std::cout << "2. Lecturer\n";
-        std::cout << "3. Exit\n";
-        std::cout << "Please select your role (1-3): ";
-        std::cin >> roleChoice;
-
-        switch (roleChoice) {
-            case 1:
-                handleStudent();
-                break;
-            case 2:
-                handleLecturer();
-                break;
-            case 3:
-                std::cout << "Exiting the application...\n";
-                break;
-            default:
-                std::cout << "Invalid choice. Please try again.\n";
-                break;
-        }
-    } while (roleChoice != 3);
-}
-
-void Application::handleStudent() {
-    int choice;
-
-    do {
-        AuthWithFile auth("account/student.txt", "account/lecturer.txt");
-        std::cout << auth.getFile();
-
-        std::cout << "\nStudent - Please choose an action:\n";
-        std::cout << "1. Login\n";
-        std::cout << "2. Sign Up\n";
-        std::cout << "3. Back\n";
-        std::cout << "Please select an option (1-3): ";
-        std::cin >> choice;
-        std::cin.ignore();
-
-        if (choice == 1) { 
-            std::string email, password;
-            std::cout << "Enter email: ";
-            std::getline(std::cin, email);
-            std::cout << "Enter password: ";
-            std::getline(std::cin, password);
-
-            if (auth.loginStudent(email, password)) {
-                std::cout << "Login successful!\n";
-                search();
-                break;
-            } else {
-                std::cout << "Login failed. Please try again.\n";
-            }
-        }
-        else if (choice == 2) { // Sign Up
-            std::string email, name, university, password;
-            std::cout << "Enter email: ";
-            std::getline(std::cin, email);
-            std::cout << "Enter name: ";
-            std::getline(std::cin, name);
-            std::cout << "Enter university name: ";
-            std::getline(std::cin, university);
-            std::cout << "Enter password: ";
-            std::getline(std::cin, password);
-
-            bool success = auth.registerStudent(email, name, convertUniversityName(university), password);
-            if (success) {
-                std::cout << "Sign Up successful! You can now login.\n";
-            } else {
-                std::cout << "Sign Up failed! Please try again.\n";
-            }
-        }
-        else if (choice == 3) {
-            break;
-        }
-        else {
-            std::cout << "Invalid choice. Please enter 1-3.\n";
-        }
-    } while (true);
-}
-
-void Application::handleLecturer() {
-    AuthWithFile auth("account/student.txt", "account/lecturer.txt");
-    std::cout << auth.getFile();
+    std::cout << "Welcome to the Search Engine Application!\n";
     int choice;
     do {
-        std::cout << "\nLecturer - Please choose an action:\n";
-        std::cout << "1. Login\n";
-        std::cout << "2. Sign Up\n";
-        std::cout << "3. Back\n";
-        std::cout << "Please select an option (1-3): ";
-        std::cin >> choice;
-        std::cin.ignore();
-
-        if (choice == 1) {
-            std::string email, password;
-            std::cout << "Enter email: ";
-            std::getline(std::cin, email);
-            std::cout << "Enter password: ";
-            std::getline(std::cin, password);
-
-            if (auth.loginLecturer(email, password)) {
-                std::cout << "Login successful!\n";
-                search();
-                break;
-            } else {
-                std::cout << "Login failed. Please try again.\n";
-            }
-        }
-        else if (choice == 2) { // Sign Up
-            std::string email, name, department, university, password;
-            std::cout << "Enter email: ";
-            std::getline(std::cin, email);
-            std::cout << "Enter name: ";
-            std::getline(std::cin, name);
-            std::cout << "Enter department: ";
-            std::getline(std::cin, department);
-            std::cout << "Enter university name: ";
-            std::getline(std::cin, university);
-            std::cout << "Enter password: ";
-            std::getline(std::cin, password);
-
-            bool success = auth.registerLecturer(email, name, convertDepartment(department), convertUniversityName(university), password);
-            if (success) {
-                std::cout << "Sign Up successful! You can now login.\n";
-            } else {
-                std::cout << "Sign Up failed! Please try again.\n";
-            }
-        }
-        else if (choice == 3) {
-            break;
-        }
-        else {
-            std::cout << "Invalid choice. Please enter 1-3.\n";
-        }
-    } while (true);
+        displayChoice();
+        std::cout << "Enter your choice: ";
+        choice = getChoice();
+        handleChoice(choice);
+    } while (choice != 4);
+    std::cout << "Thank you for using the Search Engine Application!\n";
+    std::cout << "Goodbye!\n";
+    std::cout << "Exiting application...\n";
+    std::cout << "Application exited successfully.\n";
 }
 
 void Application::search() {
@@ -161,9 +35,84 @@ void Application::search() {
         _searchEngine->displayResults();
         _searchEngine->clearResults();
     }
-    _currentUser->logout();
-    std::cout << "Thank you for using the Search Engine Application!\n";
-    std::cout << "Goodbye!\n";
-    std::cout << "Exiting application...\n";
-    std::cout << "Application exited successfully.\n";
+}
+
+void Application::displayChoice() const {
+    std::cout << "1. Login\n";
+    std::cout << "2. Register Student\n";
+    std::cout << "3. Register Lecturer\n";
+    std::cout << "4. Exit\n";
+}
+
+int Application::getChoice() const {
+    int c;
+    std::cin >> c;
+    std::cin.ignore();
+    return c;
+}
+
+void Application::handleChoice(int choice) {
+    switch(choice) {
+    case 1:
+        if(login()){
+            search();
+        }
+        break;
+    case 2:
+        registerStudent();
+        break;
+    case 3:
+        registerLecturer();
+        break;
+    case 4:
+        std::cout << "Goodbye!\n";
+        break;
+    default:
+        std::cout << "Invalid choice\n";
+    }
+}
+
+bool Application::login() {
+    std::string email, password;
+    std::cout << "Email: "; std::cin >> email;
+    std::cin.ignore();
+    std::cout << "Password: "; std::cin >> password;
+    std::cin.ignore();
+    bool success = _accountService->login(email, password);
+    if (success){
+        std::cout << "Login successfully!\n";
+    }
+    else{
+        std::cout << "Login failed.\n";
+    }
+    return success;
+}
+
+void Application::registerStudent() {
+    std::string email, name, university;
+    std::string password;
+    std::cout << "Email: "; std::cin >> email;
+    std::cin.ignore();
+    std::cout << "Name: "; std::getline(std::cin, name);
+    std::cout << "University: "; std::getline(std::cin, university);
+    std::cout << "Password: "; std::cin >> password;
+    std::cin.ignore();
+    Student student(email, name, convertUniversityName(university));
+    _accountService->registerStudent(student, password);
+    std::cout << "Student registered!\n";
+}
+
+void Application::registerLecturer() {
+    std::string email, name, department, university;
+    std::string password;
+    std::cout << "Email: "; std::cin >> email;
+    std::cin.ignore();
+    std::cout << "Name: "; std::getline(std::cin, name);
+    std::cout << "Department: "; std::getline(std::cin, department);
+    std::cout << "University: "; std::getline(std::cin, university);
+    std::cout << "Password: "; std::cin >> password;
+    std::cin.ignore();
+    Lecturer lecturer(email, name, convertDepartment(department), convertUniversityName(university));
+    _accountService->registerLecturer(lecturer, password);
+    std::cout << "Lecturer registered!\n";
 }

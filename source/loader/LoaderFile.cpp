@@ -13,7 +13,6 @@ std::string LoaderFile::loadDocument(const std::string& documentId) {
         return _loadedDocuments[documentId];
     }
     std::string fullPath = DOCS_PATH + documentId;
-    std::cout << "Attempting to open file: " << fullPath << std::endl;
     std::fstream file(fullPath);
     if (!file.is_open()) {
         throw std::runtime_error("Could not open file: " + documentId);

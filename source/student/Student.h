@@ -7,6 +7,7 @@
 
 class Student {
 public:
+    Student();
     Student(const std::string& email, const std::string& name, const University::Name& university);
     ~Student();
 
