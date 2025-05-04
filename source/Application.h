@@ -4,21 +4,28 @@
 #include <memory>
 #include <iostream>
 
-#include "User.h"
+#include "service/AccountService.h"
 #include "search/SearchEngine.h"
 
+#define REPOSITORY "database/account/accounts.txt"
 
 class Application {
 public:
     Application();
 
     void run();
-    void handleStudent();
-    void handleLecturer();
     void search();
 private:
-    std::shared_ptr<User> _currentUser;
+    std::shared_ptr<IAccountRepository> _repo;
+    std::shared_ptr<AccountService> _accountService;
     std::shared_ptr<SearchEngine> _searchEngine;
+
+    void displayChoice() const;
+    int getChoice() const;
+    void handleChoice(int choice);
+    bool login();
+    void registerStudent();
+    void registerLecturer();
 };
 
 #endif

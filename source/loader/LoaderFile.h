@@ -6,7 +6,7 @@
 
 #include "ILoader.h"
 
-#define DOCS_PATH "../database/reference/"
+#define DOCS_PATH "database/reference/"
 
 class LoaderFile : public ILoader {
 public:

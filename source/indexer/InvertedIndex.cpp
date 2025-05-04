@@ -1,22 +1,24 @@
 #include "InvertedIndex.h"
 #include "../text/TextProcessor.h"
+#include "../loader/LoaderFile.h"
 
-void InvertedIndex::indexDocument(const std::string& documentId, const std::string& content) {
+void InvertedIndex::indexDocument(const Document& document) {
+    std::string content = document.content();
+    content = TextProcessor::toLower(content);
     std::stringstream ss(content);
     std::string token;
     while (ss >> token) {
-        token = TextProcessor::toLower(token);
-        _indexs[token].insert(documentId);
+        _indexs[token].insert(document.id());
     }
 }
 
-void InvertedIndex::removeIndex(const std::string& documentId) {
+void InvertedIndex::removeIndex(const Document& document) {
     for (auto& pair : _indexs) {
-        pair.second.erase(documentId);
+        pair.second.erase(document.id());
     }
 }
 
-std::vector<std::string> InvertedIndex::search(const std::string& query) {
+std::vector<std::string> InvertedIndex::index(const std::string& query) {
     std::vector<std::string> results;
     std::stringstream ss(query);
     std::string token;

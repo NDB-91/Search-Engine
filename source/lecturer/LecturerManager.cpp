@@ -1,15 +1,15 @@
 #include "LecturerManager.h"
 #include "../Utils.h"
 
+#include <iostream>
+
 LecturerManager& LecturerManager::instance() {
     static LecturerManager _instance;
     return _instance;
 }
 
-void LecturerManager::addLecturer(const std::string& email, const std::string& name, const Department& department, const University::Name& university) {
-    Lecturer lecturer(email, name, department, university);
-    _lecturers[email] = lecturer;
-    saveLecturer(email, name, department, university);
+void LecturerManager::addLecturer(const Lecturer& lecturer) {
+    saveLecturer(lecturer);
 }
 
 std::string LecturerManager::getLecturerName(const std::string& email) const {
@@ -20,6 +20,14 @@ std::string LecturerManager::getLecturerName(const std::string& email) const {
     else {
         return "Lecturer not found";
     }
+}
+
+Lecturer& LecturerManager::getLecturer(const std::string& email) {
+    return _lecturers[email];
+}
+
+LecturerManager::LecturerManager() {
+    loadLecturers();
 }
 
 void LecturerManager::loadLecturers() {
@@ -42,20 +50,25 @@ void LecturerManager::loadLecturers() {
 
         Department dept = convertDepartment(department);
         University::Name uni = convertUniversityName(university);
-        addLecturer(email, name, dept, uni);
+        Lecturer lecturer(email, name, dept, uni);
+        _lecturers[email] = lecturer;
     }
     lecturersFile.close();
 }
 
-void LecturerManager::saveLecturer(const std::string& email, const std::string& name, const Department& department, const University::Name& university) {
-    if(_lecturers.find(email) != _lecturers.end()) {
+void LecturerManager::saveLecturer(const Lecturer& lecturer) {
+    if(_lecturers.find(lecturer.email()) != _lecturers.end()) {
         return;
     }
+    _lecturers[lecturer.email()] = lecturer;
     std::ofstream lecturersFile(LECTURERS, std::ios::app);
     if(!lecturersFile.is_open()) {
         throw std::runtime_error("Could not open lecturers file for writing");
         return;
     }
-    lecturersFile << email << "|" << name << "|" << toString(department) << "|" << toString(university) << "\n";
+    lecturersFile << lecturer.email() << "|"
+                    << lecturer.name() << "|"
+                    << toString(lecturer.department()) << "|"
+                    << toString(lecturer.university()) << "\n";
     lecturersFile.close();
 }

@@ -1,14 +1,14 @@
-#ifndef _SEARCH_H_
-#define _SEARCH_H_
+#ifndef _SEARCH_KEYWORD_H_
+#define _SEARCH_KEYWORD_H_
 
 #include "SearchBase.h"
 
 #define DIRECTORY_PATH "database/reference/"
 
-class Search : public SearchBase {
+class SearchKeyword : public SearchBase {
 public:
-    Search() = default;
-    ~Search() override = default;
+    SearchKeyword();
+    ~SearchKeyword() override = default;
 
     std::vector<std::string> search(const std::string& query) override;
 };

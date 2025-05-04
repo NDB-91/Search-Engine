@@ -1,4 +1,5 @@
 #include <sstream>
+#include <iostream>
 
 #include "LoaderFile.h"
 
@@ -11,7 +12,8 @@ std::string LoaderFile::loadDocument(const std::string& documentId) {
     if (_loadedDocuments.find(documentId) != _loadedDocuments.end()) {
         return _loadedDocuments[documentId];
     }
-    std::fstream file(DOCS_PATH + documentId);
+    std::string fullPath = DOCS_PATH + documentId;
+    std::fstream file(fullPath);
     if (!file.is_open()) {
         throw std::runtime_error("Could not open file: " + documentId);
     }

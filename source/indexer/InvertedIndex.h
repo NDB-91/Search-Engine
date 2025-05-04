@@ -12,9 +12,9 @@ public:
     InvertedIndex() = default;
     ~InvertedIndex() override = default;
 
-    void indexDocument(const std::string& documentId, const std::string& content) override;
-    void removeIndex(const std::string& documentId) override;
-    std::vector<std::string> search(const std::string& query) override;
+    void indexDocument(const Document& document) override;
+    void removeIndex(const Document& document) override;
+    std::vector<std::string> index(const std::string& query) override;
 private:
     std::unordered_map<std::string, std::unordered_set<std::string>> _indexs;
 };

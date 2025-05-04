@@ -8,13 +8,13 @@
                 "-std=c++2b",
                 "-fdiagnostics-color=always",
                 "-g",
-                "${workspaceFolder}/source/*.cpp",
-                "${workspaceFolder}/source/**/*.cpp",
+                "${fileDirname}/*.cpp",
+                "${fileDirname}/**/*.cpp",
                 "-o",
-                "${workspaceFolder}/release/program"
+                "${fileDirname}/../release/program"
             ],
             "options": {
-                "cwd": "${workspaceFolder}"
+                "cwd": "${fileDirname}"
             },
             "problemMatcher": [
                 "$gcc"

@@ -1,5 +1,8 @@
 #include "Student.h"
 
+Student::Student()
+    : _email(""), _name(""), _university(University::Name::Unknown) {}
+
 Student::Student(const std::string& email, const std::string& name, const University::Name& university)
     : _email(email), _name(name), _university(university) {}
 
