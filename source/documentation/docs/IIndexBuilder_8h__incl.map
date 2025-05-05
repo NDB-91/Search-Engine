@@ -1,0 +1,11 @@
+<map id="/workspaces/codespaces&#45;blank/source/indexer/IIndexBuilder.h" name="/workspaces/codespaces&#45;blank/source/indexer/IIndexBuilder.h">
+<area shape="rect" id="node1" title="Defines the IIndexBuilder interface for building and managing document indices." alt="" coords="89,5,271,61"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,109,83,136"/>
+<area shape="rect" id="node3" title=" " alt="" coords="261,408,320,435"/>
+<area shape="rect" id="node4" href="$IIndex_8h.html" title="Defines the IIndex interface for indexing and querying documents." alt="" coords="180,109,255,136"/>
+<area shape="rect" id="node6" href="$Document_8h.html" title="Defines the Document class for managing documents in the system." alt="" coords="295,184,478,211"/>
+<area shape="rect" id="node5" title=" " alt="" coords="209,184,271,211"/>
+<area shape="rect" id="node7" href="$Department_8h.html" title="Defines the Department enumeration for categorizing academic or organizational departments." alt="" coords="259,333,463,360"/>
+<area shape="rect" id="node8" href="$Lecturer_8h.html" title="Defines the Lecturer class for representing lecturer information." alt="" coords="419,259,571,285"/>
+<area shape="rect" id="node9" href="$University_8h.html" title="Defines the University class for representing university information." alt="" coords="539,333,719,360"/>
+</map>

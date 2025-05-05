@@ -1,0 +1,4 @@
+<map id="FileAccountRepository" name="FileAccountRepository">
+<area shape="rect" id="node1" title="Implements the IAccountRepository interface to manage accounts stored in a file." alt="" coords="5,80,172,107"/>
+<area shape="rect" id="node2" href="$classIAccountRepository.html" title="Interface for managing account storage and retrieval." alt="" coords="15,5,163,32"/>
+</map>

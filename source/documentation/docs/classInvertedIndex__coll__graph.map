@@ -1,0 +1,4 @@
+<map id="InvertedIndex" name="InvertedIndex">
+<area shape="rect" id="node1" title="Implements the IIndex interface using an inverted index structure." alt="" coords="5,80,117,107"/>
+<area shape="rect" id="node2" href="$classIIndex.html" title="Interface for indexing and querying documents." alt="" coords="30,5,93,32"/>
+</map>

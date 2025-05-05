@@ -1,0 +1,4 @@
+<map id="SearchBase" name="SearchBase">
+<area shape="rect" id="node1" title="Abstract base class for performing search queries." alt="" coords="17,5,116,32"/>
+<area shape="rect" id="node2" href="$classSearchKeyword.html" title="Implements keyword&#45;based search functionality." alt="" coords="5,80,128,107"/>
+</map>

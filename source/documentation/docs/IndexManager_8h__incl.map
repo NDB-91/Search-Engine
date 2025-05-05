@@ -1,0 +1,13 @@
+<map id="/workspaces/codespaces&#45;blank/source/indexer/IndexManager.h" name="/workspaces/codespaces&#45;blank/source/indexer/IndexManager.h">
+<area shape="rect" id="node1" title="Defines the IndexManager class for managing the indexing process." alt="" coords="30,5,213,61"/>
+<area shape="rect" id="node2" title=" " alt="" coords="249,483,308,509"/>
+<area shape="rect" id="node3" title=" " alt="" coords="43,259,106,285"/>
+<area shape="rect" id="node4" title=" " alt="" coords="112,109,227,136"/>
+<area shape="rect" id="node5" href="$IIndexBuilder_8h.html" title="Defines the IIndexBuilder interface for building and managing document indices." alt="" coords="331,109,450,136"/>
+<area shape="rect" id="node6" title=" " alt="" coords="723,184,800,211"/>
+<area shape="rect" id="node7" href="$IIndex_8h.html" title="Defines the IIndex interface for indexing and querying documents." alt="" coords="191,184,265,211"/>
+<area shape="rect" id="node8" href="$Document_8h.html" title="Defines the Document class for managing documents in the system." alt="" coords="299,259,482,285"/>
+<area shape="rect" id="node9" href="$Department_8h.html" title="Defines the Department enumeration for categorizing academic or organizational departments." alt="" coords="393,408,597,435"/>
+<area shape="rect" id="node10" href="$Lecturer_8h.html" title="Defines the Lecturer class for representing lecturer information." alt="" coords="236,333,388,360"/>
+<area shape="rect" id="node11" href="$University_8h.html" title="Defines the University class for representing university information." alt="" coords="189,408,369,435"/>
+</map>

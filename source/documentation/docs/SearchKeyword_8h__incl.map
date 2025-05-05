@@ -1,0 +1,14 @@
+<map id="/workspaces/codespaces&#45;blank/source/search/SearchKeyword.h" name="/workspaces/codespaces&#45;blank/source/search/SearchKeyword.h">
+<area shape="rect" id="node1" title="Defines the SearchKeyword class for performing keyword&#45;based search queries." alt="" coords="226,5,499,47"/>
+<area shape="rect" id="node2" href="$SearchBase_8h.html" title="Defines the SearchBase abstract class for performing search queries." alt="" coords="307,95,418,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="67,319,144,345"/>
+<area shape="rect" id="node4" title=" " alt="" coords="591,393,654,420"/>
+<area shape="rect" id="node5" title=" " alt="" coords="447,617,505,644"/>
+<area shape="rect" id="node6" href="$IIndexBuilder_8h.html" title="Defines the IIndexBuilder interface for building and managing document indices." alt="" coords="271,244,454,271"/>
+<area shape="rect" id="node12" href="$IndexSearcher_8h.html" title="Defines the IndexSearcher class for performing search queries on an index." alt="" coords="414,169,541,196"/>
+<area shape="rect" id="node7" href="$IIndex_8h.html" title="Defines the IIndex interface for indexing and querying documents." alt="" coords="455,319,529,345"/>
+<area shape="rect" id="node8" href="$Document_8h.html" title="Defines the Document class for managing documents in the system." alt="" coords="321,393,503,420"/>
+<area shape="rect" id="node9" href="$Department_8h.html" title="Defines the Department enumeration for categorizing academic or organizational departments." alt="" coords="94,543,298,569"/>
+<area shape="rect" id="node10" href="$Lecturer_8h.html" title="Defines the Lecturer class for representing lecturer information." alt="" coords="336,468,488,495"/>
+<area shape="rect" id="node11" href="$University_8h.html" title="Defines the University class for representing university information." alt="" coords="322,543,502,569"/>
+</map>

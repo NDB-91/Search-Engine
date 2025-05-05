@@ -1,0 +1,5 @@
+<map id="LecturerAccount" name="LecturerAccount">
+<area shape="rect" id="node1" title="Represents an account for a lecturer." alt="" coords="5,155,132,181"/>
+<area shape="rect" id="node2" href="$classIAccount.html" title="Interface for managing user accounts." alt="" coords="29,80,108,107"/>
+<area shape="rect" id="node3" href="$classIUser.html" title="Interface for a user in the system." alt="" coords="41,5,97,32"/>
+</map>

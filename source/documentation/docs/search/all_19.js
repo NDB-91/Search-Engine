@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['_7edocument_684',['~Document',['../classDocument.html#a019961bde3286135b55bd74c77d082c1',1,'Document']]],
+  ['_7eiaccount_685',['~IAccount',['../classIAccount.html#aa9a245da1463d6bbc93549a41524e1fa',1,'IAccount']]],
+  ['_7eiaccountrepository_686',['~IAccountRepository',['../classIAccountRepository.html#acd8192731c8dac1df29245a5b6e0286d',1,'IAccountRepository']]],
+  ['_7eiindex_687',['~IIndex',['../classIIndex.html#a4124bf6a244bc4ca1f0332c82dcd141f',1,'IIndex']]],
+  ['_7eiindexbuilder_688',['~IIndexBuilder',['../classIIndexBuilder.html#a18e9b2393b19f835724fc018c1ab44b2',1,'IIndexBuilder']]],
+  ['_7eiinversedocumentfrequency_689',['~IInverseDocumentFrequency',['../classIInverseDocumentFrequency.html#abbdea65556458307a33339433df1f938',1,'IInverseDocumentFrequency']]],
+  ['_7eiloader_690',['~ILoader',['../classILoader.html#aaa9f69dc4cc786787c9dcbbf140be364',1,'ILoader']]],
+  ['_7eilogger_691',['~ILogger',['../classILogger.html#ad5d37badb7f177d73bb0344109ff847d',1,'ILogger']]],
+  ['_7einvertedindex_692',['~InvertedIndex',['../classInvertedIndex.html#a984465c0733e7183c0864a6f62271203',1,'InvertedIndex']]],
+  ['_7einvertedindexbuilder_693',['~InvertedIndexBuilder',['../classInvertedIndexBuilder.html#a01cd4f546f6b9fd51a2fe2a2d9f7e9c9',1,'InvertedIndexBuilder']]],
+  ['_7eisuggester_694',['~ISuggester',['../classISuggester.html#ae16f238e1219f0d0c257173b66d254ab',1,'ISuggester']]],
+  ['_7eitermfrequency_695',['~ITermFrequency',['../classITermFrequency.html#a2657f0e05f0c2a3cf5706a20b4f5a7a2',1,'ITermFrequency']]],
+  ['_7eiuser_696',['~IUser',['../classIUser.html#af8f7553c64d8551e390fc28f1f214191',1,'IUser']]],
+  ['_7electurer_697',['~Lecturer',['../classLecturer.html#a6083c05eb808cbd8ca067d54caf44ee3',1,'Lecturer']]],
+  ['_7eloaderfile_698',['~LoaderFile',['../classLoaderFile.html#a57ad34609a6097f96c8a38452946fa10',1,'LoaderFile']]],
+  ['_7esearchbase_699',['~SearchBase',['../classSearchBase.html#ad8ef4d3c52792b056e3f0bce803f69f6',1,'SearchBase']]],
+  ['_7esearchengine_700',['~SearchEngine',['../classSearchEngine.html#a71bceddd2d9448e4032d4740bde7f8ad',1,'SearchEngine']]],
+  ['_7esearchkeyword_701',['~SearchKeyword',['../classSearchKeyword.html#a00b8f991358c466eb1a066a1dddd98e8',1,'SearchKeyword']]],
+  ['_7esearchlogger_702',['~SearchLogger',['../classSearchLogger.html#a61dfa88618b999c45b635a311d8c792d',1,'SearchLogger']]],
+  ['_7esearchsuggester_703',['~SearchSuggester',['../classSearchSuggester.html#a1da214e62fa2765321b9d6a132c1c77b',1,'SearchSuggester']]],
+  ['_7estudent_704',['~Student',['../classStudent.html#a54a8ea060d6cd04222c3a2f89829f105',1,'Student']]],
+  ['_7etfidf_705',['~TFIDF',['../classTFIDF.html#a0cd24764f57d4bd7050b9a4b67c8a189',1,'TFIDF']]],
+  ['_7etrie_706',['~Trie',['../classTrie.html#abf9d6f48d556e09d1b292412df153a4b',1,'Trie']]],
+  ['_7euniversity_707',['~University',['../classUniversity.html#ae0b134358eb35873de4c7efab063e86f',1,'University']]]
+];

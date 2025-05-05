@@ -1,0 +1,5 @@
+<map id="TFIDF" name="TFIDF">
+<area shape="rect" id="node1" title="Implements the ITermFrequency and IInverseDocumentFrequency interfaces to calculate TF&#45;IDF values." alt="" coords="133,80,193,107"/>
+<area shape="rect" id="node2" href="$classITermFrequency.html" title="Interface for calculating the term frequency (TF) of terms in a document." alt="" coords="5,5,131,32"/>
+<area shape="rect" id="node3" href="$classIInverseDocumentFrequency.html" title="Interface for calculating the inverse document frequency (IDF) of terms." alt="" coords="155,5,363,32"/>
+</map>

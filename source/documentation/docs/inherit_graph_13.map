@@ -1,0 +1,4 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classISuggester.html" title="Interface for providing suggestions." alt="" coords="5,5,96,32"/>
+<area shape="rect" id="node2" href="$classSearchSuggester.html" title="Implements the ISuggester interface to provide search suggestions." alt="" coords="144,5,275,32"/>
+</map>

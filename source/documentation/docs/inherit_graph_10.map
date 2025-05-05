@@ -1,0 +1,4 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classILogger.html" title="Interface for logging messages." alt="" coords="5,5,76,32"/>
+<area shape="rect" id="node2" href="$classSearchLogger.html" title="Implements the ILogger interface to log search queries." alt="" coords="124,5,235,32"/>
+</map>

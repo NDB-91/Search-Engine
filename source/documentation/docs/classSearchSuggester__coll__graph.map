@@ -1,0 +1,4 @@
+<map id="SearchSuggester" name="SearchSuggester">
+<area shape="rect" id="node1" title="Implements the ISuggester interface to provide search suggestions." alt="" coords="5,80,136,107"/>
+<area shape="rect" id="node2" href="$classISuggester.html" title="Interface for providing suggestions." alt="" coords="25,5,116,32"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="/workspaces/codespaces&#45;blank/source/indexer/InvertedIndex.h" name="/workspaces/codespaces&#45;blank/source/indexer/InvertedIndex.h">
+<area shape="rect" id="node1" title="Defines the InvertedIndex class for managing an inverted index of documents." alt="" coords="179,5,361,61"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,109,129,136"/>
+<area shape="rect" id="node3" title=" " alt="" coords="154,109,269,136"/>
+<area shape="rect" id="node4" title=" " alt="" coords="293,109,367,136"/>
+<area shape="rect" id="node5" href="$IIndex_8h.html" title="Defines the IIndex interface for indexing and querying documents." alt="" coords="391,109,466,136"/>
+<area shape="rect" id="node6" title=" " alt="" coords="328,184,391,211"/>
+<area shape="rect" id="node7" title=" " alt="" coords="590,408,649,435"/>
+<area shape="rect" id="node8" href="$Document_8h.html" title="Defines the Document class for managing documents in the system." alt="" coords="488,184,671,211"/>
+<area shape="rect" id="node9" href="$Department_8h.html" title="Defines the Department enumeration for categorizing academic or organizational departments." alt="" coords="517,333,721,360"/>
+<area shape="rect" id="node10" href="$Lecturer_8h.html" title="Defines the Lecturer class for representing lecturer information." alt="" coords="671,259,823,285"/>
+<area shape="rect" id="node11" href="$University_8h.html" title="Defines the University class for representing university information." alt="" coords="797,333,977,360"/>
+</map>

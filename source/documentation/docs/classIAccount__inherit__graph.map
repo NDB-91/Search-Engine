@@ -1,0 +1,6 @@
+<map id="IAccount" name="IAccount">
+<area shape="rect" id="node1" title="Interface for managing user accounts." alt="" coords="104,80,183,107"/>
+<area shape="rect" id="node3" href="$classLecturerAccount.html" title="Represents an account for a lecturer." alt="" coords="5,155,132,181"/>
+<area shape="rect" id="node4" href="$classStudentAccount.html" title="Represents an account for a student." alt="" coords="156,155,280,181"/>
+<area shape="rect" id="node2" href="$classIUser.html" title="Interface for a user in the system." alt="" coords="115,5,171,32"/>
+</map>

@@ -1,5 +1,24 @@
 var searchData=
 [
-  ['utils_2ecpp_3',['utils.cpp',['../utils_8cpp.html',1,'']]],
-  ['utils_2eh_4',['utils.h',['../utils_8h.html',1,'']]]
+  ['bargain_57',['bargain',['../lenin-philosophy_8txt.html#af7b360ee3a7da443c4c1282e271bed11',1,'lenin-philosophy.txt']]],
+  ['basically_58',['basically',['../lenin-philosophy_8txt.html#ac6fe4f2bc57cce9dcbdaeef912c5f876',1,'basically():&#160;lenin-philosophy.txt'],['../lenin-philosophy_8txt.html#a25041546421b316bdc56fe0404188cc3',1,'Basically():&#160;lenin-philosophy.txt']]],
+  ['bazarov_59',['Bazarov',['../lenin-philosophy_8txt.html#a46371022ed095de9b325e0f6f05a7ddc',1,'lenin-philosophy.txt']]],
+  ['be_60',['be',['../lenin-philosophy_8txt.html#af2d46f2ea8bcef108417f21b08af6bb2',1,'lenin-philosophy.txt']]],
+  ['bear_61',['bear',['../lenin-philosophy_8txt.html#ad14b7a1d8bbd0d1adfdfd9f7c7182c8a',1,'lenin-philosophy.txt']]],
+  ['began_62',['began',['../lenin-philosophy_8txt.html#aadb36b293825362882782e014bed2deb',1,'lenin-philosophy.txt']]],
+  ['behavior_63',['behavior',['../philosophy_8txt.html#a502aa8ed9097493934fad0e4b5aae911',1,'philosophy.txt']]],
+  ['behind_64',['behind',['../lenin-philosophy_8txt.html#a2f4d62053faf1dd7a96f95401e247b06',1,'lenin-philosophy.txt']]],
+  ['belief_65',['belief',['../philosophy_8txt.html#ac3321fe8e300e1715ff65d876135d303',1,'philosophy.txt']]],
+  ['besides_66',['besides',['../lenin-philosophy_8txt.html#a9e0d7e59f8af9fd3c181238e548f0333',1,'lenin-philosophy.txt']]],
+  ['biologists_67',['biologists',['../lenin-philosophy_8txt.html#aefe5fe0660692482b048f2dc2194d065',1,'lenin-philosophy.txt']]],
+  ['biology_68',['BIOLOGY',['../Department_8h.html#a938069f766288326dabb8a8f0cd83bcea038052552f7b04e4b2523203d3c25489',1,'Department.h']]],
+  ['bogdanov_69',['Bogdanov',['../lenin-philosophy_8txt.html#a73b1d38b4f9a2dfafbf69581b3a058d1',1,'lenin-philosophy.txt']]],
+  ['bolshevik_70',['Bolshevik',['../lenin-philosophy_8txt.html#a4c4b12058b593322049db22e7571fc61',1,'lenin-philosophy.txt']]],
+  ['born_71',['born',['../lenin-philosophy_8txt.html#ac832b685805e99dd8eac8bfd0bb769d3',1,'lenin-philosophy.txt']]],
+  ['bottom_72',['bottom',['../lenin-philosophy_8txt.html#a800afabd05ada8915ea33695f96520ed',1,'lenin-philosophy.txt']]],
+  ['boutroux_73',['Boutroux',['../lenin-philosophy_8txt.html#a2ad80cb6bc1d720b7d172cc85db7baa9',1,'lenin-philosophy.txt']]],
+  ['break_74',['break',['../lenin-philosophy_8txt.html#adddeab49bc8076188430a7db1d1e2879',1,'lenin-philosophy.txt']]],
+  ['breaks_75',['breaks',['../lenin-philosophy_8txt.html#a3c95a873719bd4513344201e5566008a',1,'lenin-philosophy.txt']]],
+  ['brunschvicg_76',['Brunschvicg',['../lenin-philosophy_8txt.html#acb55ca811bfedcbf248ace39d990f54d',1,'lenin-philosophy.txt']]],
+  ['buildindex_77',['buildIndex',['../classIIndexBuilder.html#a590aaed17cd5b1c913b13883dcf1098f',1,'IIndexBuilder::buildIndex()'],['../classIndexManager.html#ac74e152e55d3a2c4b826772ddfd3b0a3',1,'IndexManager::buildIndex()'],['../classInvertedIndexBuilder.html#ae2be3e1940a59e0d2423815f57785320',1,'InvertedIndexBuilder::buildIndex()']]]
 ];

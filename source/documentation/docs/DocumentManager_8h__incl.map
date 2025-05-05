@@ -1,0 +1,11 @@
+<map id="/workspaces/codespaces&#45;blank/source/document/DocumentManager.h" name="/workspaces/codespaces&#45;blank/source/document/DocumentManager.h">
+<area shape="rect" id="node1" title="Defines the DocumentManager class for managing a collection of documents." alt="" coords="97,5,280,61"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,109,79,136"/>
+<area shape="rect" id="node3" title=" " alt="" coords="103,109,181,136"/>
+<area shape="rect" id="node4" title=" " alt="" coords="205,109,268,136"/>
+<area shape="rect" id="node5" href="$Document_8h.html" title="Defines the Document class for managing documents in the system." alt="" coords="293,109,394,136"/>
+<area shape="rect" id="node6" title=" " alt="" coords="383,333,442,360"/>
+<area shape="rect" id="node7" href="$Department_8h.html" title="Defines the Department enumeration for categorizing academic or organizational departments." alt="" coords="241,259,445,285"/>
+<area shape="rect" id="node8" href="$Lecturer_8h.html" title="Defines the Lecturer class for representing lecturer information." alt="" coords="394,184,546,211"/>
+<area shape="rect" id="node9" href="$University_8h.html" title="Defines the University class for representing university information." alt="" coords="521,259,701,285"/>
+</map>

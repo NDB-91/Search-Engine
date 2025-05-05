@@ -1,0 +1,11 @@
+<map id="/workspaces/codespaces&#45;blank/source/account/FileAccountRepository.h" name="/workspaces/codespaces&#45;blank/source/account/FileAccountRepository.h">
+<area shape="rect" id="node1" title="Defines the FileAccountRepository class for managing accounts stored in a file." alt="" coords="201,5,384,61"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,109,79,136"/>
+<area shape="rect" id="node3" title=" " alt="" coords="46,184,121,211"/>
+<area shape="rect" id="node4" title=" " alt="" coords="311,184,373,211"/>
+<area shape="rect" id="node5" title=" " alt="" coords="293,259,370,285"/>
+<area shape="rect" id="node6" title=" " alt="" coords="199,333,258,360"/>
+<area shape="rect" id="node7" href="$IAccountRepository_8h.html" title="Defines the IAccountRepository interface for managing account storage and retrieval." alt="" coords="155,109,313,136"/>
+<area shape="rect" id="node8" href="$IAccount_8h.html" title="Defines the IAccount interface for managing user accounts." alt="" coords="145,184,235,211"/>
+<area shape="rect" id="node9" href="$IUser_8h.html" title="Defines the IUser interface and the Role enumeration for user management." alt="" coords="189,259,268,285"/>
+</map>

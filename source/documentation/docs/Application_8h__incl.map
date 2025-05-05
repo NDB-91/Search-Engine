@@ -1,0 +1,24 @@
+<map id="/workspaces/codespaces&#45;blank/source/Application.h" name="/workspaces/codespaces&#45;blank/source/Application.h">
+<area shape="rect" id="node1" title=" " alt="" coords="599,5,797,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="710,393,787,420"/>
+<area shape="rect" id="node3" title=" " alt="" coords="606,319,686,345"/>
+<area shape="rect" id="node4" href="$AccountService_8h.html" title="Defines the AccountService class for managing account&#45;related operations." alt="" coords="349,169,535,196"/>
+<area shape="rect" id="node17" href="$SearchEngine_8h.html" title="Defines the SearchEngine class for managing search operations." alt="" coords="776,95,945,121"/>
+<area shape="rect" id="node5" href="$IAccountRepository_8h.html" title="Defines the IAccountRepository interface for managing account storage and retrieval." alt="" coords="228,244,453,271"/>
+<area shape="rect" id="node11" href="$AccountFactory_8h.html" title="Defines the AccountFactory class for creating account objects." alt="" coords="5,244,204,271"/>
+<area shape="rect" id="node16" href="$NotificationService_8h.html" title="Defines the NotificationService class for sending notifications." alt="" coords="478,244,635,271"/>
+<area shape="rect" id="node6" title=" " alt="" coords="820,468,883,495"/>
+<area shape="rect" id="node7" title=" " alt="" coords="355,319,430,345"/>
+<area shape="rect" id="node8" href="$IAccount_8h.html" title="Defines the IAccount interface for managing user accounts." alt="" coords="190,319,281,345"/>
+<area shape="rect" id="node9" title=" " alt="" coords="602,692,661,719"/>
+<area shape="rect" id="node10" href="$IUser_8h.html" title="Defines the IUser interface and the Role enumeration for user management." alt="" coords="140,468,219,495"/>
+<area shape="rect" id="node12" href="$Student_8h.html" title="Defines the Student class for representing student information." alt="" coords="87,543,237,569"/>
+<area shape="rect" id="node14" href="$Lecturer_8h.html" title="Defines the Lecturer class for representing lecturer information." alt="" coords="555,543,707,569"/>
+<area shape="rect" id="node13" href="$University_8h.html" title="Defines the University class for representing university information." alt="" coords="363,617,543,644"/>
+<area shape="rect" id="node15" href="$Department_8h.html" title="Defines the Department enumeration for categorizing academic or organizational departments." alt="" coords="669,617,873,644"/>
+<area shape="rect" id="node18" href="$SearchBase_8h.html" title="Defines the SearchBase abstract class for performing search queries." alt="" coords="972,169,1083,196"/>
+<area shape="rect" id="node19" href="$IIndexBuilder_8h.html" title="Defines the IIndexBuilder interface for building and managing document indices." alt="" coords="1116,319,1299,345"/>
+<area shape="rect" id="node22" href="$IndexSearcher_8h.html" title="Defines the IndexSearcher class for performing search queries on an index." alt="" coords="1015,244,1141,271"/>
+<area shape="rect" id="node20" href="$IIndex_8h.html" title="Defines the IIndex interface for indexing and querying documents." alt="" coords="1065,393,1139,420"/>
+<area shape="rect" id="node21" href="$Document_8h.html" title="Defines the Document class for managing documents in the system." alt="" coords="907,468,1089,495"/>
+</map>

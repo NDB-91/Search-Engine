@@ -1,0 +1,11 @@
+<map id="/workspaces/codespaces&#45;blank/source/account/AccountFactory.h" name="/workspaces/codespaces&#45;blank/source/account/AccountFactory.h">
+<area shape="rect" id="node1" title="Defines the AccountFactory class for creating account objects." alt="" coords="203,5,386,61"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,184,83,211"/>
+<area shape="rect" id="node3" title=" " alt="" coords="373,259,432,285"/>
+<area shape="rect" id="node4" href="$IAccount_8h.html" title="Defines the IAccount interface for managing user accounts." alt="" coords="104,109,195,136"/>
+<area shape="rect" id="node6" href="$Student_8h.html" title="Defines the Student class for representing student information." alt="" coords="220,109,369,136"/>
+<area shape="rect" id="node8" href="$Lecturer_8h.html" title="Defines the Lecturer class for representing lecturer information." alt="" coords="415,109,567,136"/>
+<area shape="rect" id="node5" href="$IUser_8h.html" title="Defines the IUser interface and the Role enumeration for user management." alt="" coords="158,184,237,211"/>
+<area shape="rect" id="node7" href="$University_8h.html" title="Defines the University class for representing university information." alt="" coords="313,184,493,211"/>
+<area shape="rect" id="node9" href="$Department_8h.html" title="Defines the Department enumeration for categorizing academic or organizational departments." alt="" coords="569,184,773,211"/>
+</map>

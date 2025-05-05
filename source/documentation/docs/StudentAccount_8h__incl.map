@@ -1,0 +1,9 @@
+<map id="/workspaces/codespaces&#45;blank/source/account/StudentAccount.h" name="/workspaces/codespaces&#45;blank/source/account/StudentAccount.h">
+<area shape="rect" id="node1" title="Defines the StudentAccount class for managing student accounts." alt="" coords="106,5,289,61"/>
+<area shape="rect" id="node2" href="$IAccount_8h.html" title="Defines the IAccount interface for managing user accounts." alt="" coords="80,109,171,136"/>
+<area shape="rect" id="node6" href="$Student_8h.html" title="Defines the Student class for representing student information." alt="" coords="200,109,349,136"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,184,83,211"/>
+<area shape="rect" id="node4" title=" " alt="" coords="207,259,265,285"/>
+<area shape="rect" id="node5" href="$IUser_8h.html" title="Defines the IUser interface and the Role enumeration for user management." alt="" coords="158,184,237,211"/>
+<area shape="rect" id="node7" href="$University_8h.html" title="Defines the University class for representing university information." alt="" coords="313,184,493,211"/>
+</map>

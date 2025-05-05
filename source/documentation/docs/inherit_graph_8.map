@@ -1,0 +1,4 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classIIndexBuilder.html" title="Interface for building and managing document indices." alt="" coords="5,5,113,32"/>
+<area shape="rect" id="node2" href="$classInvertedIndexBuilder.html" title="Implements the IIndexBuilder interface to build and manage inverted indices." alt="" coords="161,5,320,32"/>
+</map>
