@@ -3,46 +3,22 @@
 - *23120215 - Ngô Đa Báu - Leader*  
 - *23120219 - Nguyễn Văn Chiến*  
 
-## Coding conventions
+## Conventions
+### Naming
 - Class name: CamelCase
 - Prive field: _camelCase
 - Method: cameCase (starts with verb)
+- File name: CamelCase.* (h/cpp) (main file and test file not included)
+- Folder name: kabal-case
+- Test file name: test_name.cpp (main_test.cpp not included)
 
-## Progress
-### Phase 1 tasks (11/04 - 13/04) - Done
-- Ngô Đa Báu
-    - Learn and implement a basic search engine
-    - Generate or gather academic documents for universities (stored as text files).
-- Nguyễn Văn Chiến (https://drive.google.com/drive/folders/1r5ub6TMLJNeTc8KTuxTEhqJeb2-vHstA)
-    - Design a basic document management model for the university
-    - Draw a schema for the above model (using ER model or relational model)
-    - Describe constraints (if any)
-    - Draw a class diagram for the above model.
-
-### Phase 2 tasks (14/04 - 20/04)
-- Ngô Đa Báu
-    - Continue building search engine
-    - Apply SOLID principles, dependency injection principles
-    - Demonstrate compliance with OOP principles and principles, use design patterns
-- Nguyễn Văn Chiến
-    - Implement the designed model - basic document management for university
-    - Apply SOLID principles, dependency injection principles
-    - Demonstrate compliance with OOP principles and principles, use design patterns
-
-### Phase 3 tasks (22/04 - 29/04)
-- Ngô Đa Báu
-    - Add Trie Tree for search engine
-    - Implement TF-IDF ranking
-- Nguyễn Văn Chiến
-    - Continue building the document managemen system for the university
-    - Apply SOLID principles and dependency injection principles
-    - Demonstrate compliance with OOP principles and use design patterns
-    - Implement user roles for signing into the application
-        - Student: Search documents
-        - Lecturer: Search documents and documents
-
-### Phase 4 tasks (1/5 - 5/5)
-- Prepare project requirements for progress reporting
+### Coding
+- Separate declaration and implementation
+- System libraries above, defined libraries below
+- private under public (protected middle if any)
+- Use smart pointer for pointer
+- Do not use friend class
+- Do not use string literals for open files (use #define instead)
 
 ## Project Proposal  
 ### Introduction  
@@ -69,6 +45,7 @@ After this project is finished, the program might operate as follows:
     - View or download one of the results.
     - Continue searching with a new query.
     - Exit the program.
+
 
 ## Software Architecture
 This project is designed using the **Layered Architecture** approach, combined with the **SOLID Principles**, to ensure maintainability, scalability, and robustness.
@@ -111,7 +88,7 @@ The system is divided into the following layers:
 
 This combination of **Layered Architecture** and **SOLID Principles** ensures that the project is modular, extensible, and easy to maintain.
 
-### Design Pattern
+## Design Pattern
 The following design patterns are used in this project:
 
 - **Factory Pattern:**  
@@ -131,3 +108,40 @@ The following design patterns are used in this project:
 
 - **Command Pattern:**  
     Used to encapsulate user actions (e.g., view, download, or exit) as commands, making it easier to extend or modify the CLI behavior.
+
+
+## Progress
+### Phase 1 tasks (11/04 - 13/04)
+- Ngô Đa Báu
+    - Learn and implement a basic search engine
+    - Generate or gather academic documents for universities (stored as text files).
+- Nguyễn Văn Chiến (https://drive.google.com/drive/folders/1r5ub6TMLJNeTc8KTuxTEhqJeb2-vHstA)
+    - Design a basic document management model for the university
+    - Draw a schema for the above model (using ER model or relational model)
+    - Describe constraints (if any)
+    - Draw a class diagram for the above model.
+
+### Phase 2 tasks (14/04 - 20/04)
+- Ngô Đa Báu
+    - Continue building search engine
+    - Apply SOLID principles, dependency injection principles
+    - Demonstrate compliance with OOP principles and principles, use design patterns
+- Nguyễn Văn Chiến
+    - Implement the designed model - basic document management for university
+    - Apply SOLID principles, dependency injection principles
+    - Demonstrate compliance with OOP principles and principles, use design patterns
+
+### Phase 3 tasks (22/04 - 29/04)
+- Ngô Đa Báu
+    - Add Trie Tree for search engine
+    - Implement TF-IDF ranking
+- Nguyễn Văn Chiến
+    - Continue building the document managemen system for the university
+    - Apply SOLID principles and dependency injection principles
+    - Demonstrate compliance with OOP principles and use design patterns
+    - Implement user roles for signing into the application
+        - Student: Search documents
+        - Lecturer: Search documents and documents
+
+### Phase 4 tasks (1/5 - 5/5)
+- Prepare project requirements for progress reporting  
