@@ -13,10 +13,6 @@ void SearchEngine::search(const std::string& query) {
     _results = _search->search(TextProcessor::toLower(query));
 }
 
-std::vector<std::string> SearchEngine::results() {
-    return _results;
-}
-
 void SearchEngine::displayResults() {
     std::cout << "The results for the query " << _currentQuery << " are:\n";
     for(const auto& result : _results) {

@@ -65,5 +65,6 @@
         "cstring": "cpp",
         "*.tcc": "cpp",
         "authwithfile": "cpp"
-    }
+    },
+    "liveServer.settings.port": 5501
 }
