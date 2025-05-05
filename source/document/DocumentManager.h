@@ -7,7 +7,7 @@
 
 #include "Document.h"
 
-#define DOCUMENTS "document/documents.txt"
+#define DOCUMENTS "database/document/documents.txt"
 
 class DocumentManager {
 public:

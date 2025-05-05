@@ -1,5 +1,4 @@
 #include <iostream>
-#include <format>
 
 #include "SearchEngine.h"
 #include "SearchKeyword.h"
@@ -14,11 +13,12 @@ void SearchEngine::search(const std::string& query) {
     _results = _search->search(TextProcessor::toLower(query));
 }
 
+std::vector<std::string> SearchEngine::results() {
+    return _results;
+}
+
 void SearchEngine::displayResults() {
-    std::cout << std::format(
-        "The results for the query \"{}\" are:\n",
-        _currentQuery
-    );
+    std::cout << "The results for the query " << _currentQuery << " are:\n";
     for(const auto& result : _results) {
         std::cout << result << "\n";
     }

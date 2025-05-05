@@ -1,6 +1,0 @@
-dsa-tutorial.txt|Information Technology|DSA Tutorial - Learn Data Structures and Algorithms|vcnam@lecturer
-lenin-philosophy.txt|Philosophy|Lenin and Philosophy|mtktrinh@lecturer
-linux-unix-tutorial.txt|Information Technology|Linux/Unix Tutorial|lbtorvalds@lecturer
-oop-tutorial.txt|Information Technology|Object Oriented Programming Tutorial|tdquang@lecturer
-oop.txt|Information Technology|Introduction of Object Oriented Programming|tdquang@lecturer
-philosophy.txt|Philosophy|What is Philosophy – Definition, Methods, Types|mtktrinh@lecturer

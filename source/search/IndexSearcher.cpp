@@ -11,5 +11,5 @@ IndexSearcher::IndexSearcher(const std::shared_ptr<IIndexBuilder>& indexBuilder)
 }
 
 std::vector<std::string> IndexSearcher::search(const std::string& query) const {
-    return _index->index(query);
+    return _index->search(query);
 }

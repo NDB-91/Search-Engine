@@ -18,7 +18,7 @@ void InvertedIndex::removeIndex(const Document& document) {
     }
 }
 
-std::vector<std::string> InvertedIndex::index(const std::string& query) {
+std::vector<std::string> InvertedIndex::search(const std::string& query) {
     std::vector<std::string> results;
     std::stringstream ss(query);
     std::string token;

@@ -12,6 +12,7 @@ public:
     ~SearchEngine() = default;
 
     void search(const std::string& query);
+    std::vector<std::string> results();
     void displayResults();
     void clearResults();
 private:

@@ -14,7 +14,7 @@ public:
 
     void indexDocument(const Document& document) override;
     void removeIndex(const Document& document) override;
-    std::vector<std::string> index(const std::string& query) override;
+    std::vector<std::string> search(const std::string& query) override;
 private:
     std::unordered_map<std::string, std::unordered_set<std::string>> _indexs;
 };

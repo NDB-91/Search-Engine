@@ -3,7 +3,7 @@
 #include "Utils.h"
 
 Application::Application() {
-    _repo = std::make_shared<FileAccountRepository>(REPOSITORY);
+    _repo = std::make_shared<FileAccountRepository>(ACCOUNTS);
     _accountService = std::make_shared<AccountService>(_repo);
     _searchEngine = std::make_shared<SearchEngine>();
 }

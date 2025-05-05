@@ -16,7 +16,7 @@ public:
     std::string title() const;
     std::string author() const;
 
-    std::string content() const;
+    virtual std::string content() const;
 protected:
     std::string _id;
     Department _department;
