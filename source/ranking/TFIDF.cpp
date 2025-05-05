@@ -19,11 +19,11 @@ float TFIDF::calculateTF(const Document& document, const std::string& term) cons
 }
 
 float TFIDF::calculateIDF(const std::string& term) const {
-    std::vector<std::shared_ptr<Document>> documents = DocumentManager::instance().documents();
+    std::vector<Document> documents = DocumentManager::instance().documents();
     int totalDocuments = documents.size();
     int termDocumentCount = 0;
     for(const auto& doc : documents) {
-        std::string content = doc->content();
+        std::string content = doc.content();
         content = TextProcessor::toLower(content);
         std::vector<std::string> words = TextProcessor::tokenize(content);
         if (std::find(words.begin(), words.end(), term) != words.end()) {

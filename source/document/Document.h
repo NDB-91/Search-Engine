@@ -20,6 +20,11 @@
 class Document {
 public:
     /**
+     * @brief Default constructor for the Document class.
+     */
+    Document();
+
+    /**
      * @brief Constructs a Document object.
      * 
      * @param id The unique identifier of the document.

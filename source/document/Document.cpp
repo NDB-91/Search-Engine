@@ -2,6 +2,9 @@
 #include "../loader/LoaderFile.h"
 #include "../lecturer/LecturerManager.h"
 
+Document::Document()
+    : _id(""), _department(Department::Unknown), _title(""), _idAuthor("") {}
+
 Document::Document(const std::string& id, const Department& department, const std::string& title, const std::string& idAuthor)
     : _id(id), _department(department), _title(title), _idAuthor(idAuthor) {}
 

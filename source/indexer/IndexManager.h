@@ -31,11 +31,11 @@ public:
     /**
      * @brief Builds an index for a collection of documents.
      * 
-     * @param documents A vector of shared pointers to Document objects to be indexed.
+     * @param documents A vector of  Document objects to be indexed.
      * @param indexBuilder A shared pointer to the IIndexBuilder used to build the index.
      * @return A shared pointer to the built IIndex object.
      */
-    std::shared_ptr<IIndex> buildIndex(const std::vector<std::shared_ptr<Document>>& documents, std::shared_ptr<IIndexBuilder> indexBuilder);
+    std::shared_ptr<IIndex> buildIndex(const std::vector<Document>& documents, std::shared_ptr<IIndexBuilder> indexBuilder);
 
     /**
      * @brief Deleted copy constructor to enforce the singleton pattern.

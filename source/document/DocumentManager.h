@@ -2,8 +2,8 @@
 #define _DOCUMENT_MANAGER_H_
 
 #include <fstream>
-#include <memory>
 #include <vector>
+#include <unordered_map>
 
 #include "Document.h"
 
@@ -37,13 +37,21 @@ public:
      * @param title The title of the document.
      * @param idAuthor The unique identifier of the author.
      */
-    void addDocument(const std::string& id, const Department& department, const std::string& title, const std::string& idAuthor);
+    void addDocument(const Document& document);
+
+    /**
+     * @brief Retrieves a Document object by their id.
+     * 
+     * @param id The id of the Document.
+     * @return A Document object.
+     */
+    Document getDocument(const std::string& id);
 
     /**
      * @brief Retrieves all documents in the collection.
      * @return A vector of shared pointers to Document objects.
      */
-    std::vector<std::shared_ptr<Document>> documents() const;
+    std::vector<Document> documents() const;
 
     /**
      * @brief Deleted copy constructor to enforce singleton pattern.
@@ -76,9 +84,9 @@ private:
      * @param title The title of the document.
      * @param idAuthor The unique identifier of the author.
      */
-    void saveDocument(const std::string& id, const Department& department, const std::string& title, const std::string& idAuthor);
+    void saveDocument(const Document& document);
 
-    std::vector<std::shared_ptr<Document>> _documents; /**< Collection of documents managed by the DocumentManager. */
+    std::unordered_map<std::string, Document> _documents; /**< Collection of documents managed by the DocumentManager. */
 };
 
 #endif

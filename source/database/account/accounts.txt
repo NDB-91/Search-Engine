@@ -1,6 +1,6 @@
-1|vcnam@lecturer|password
-1|mtktrinh@lecturer|password
+1|vcnam@lecturer|pwd
+1|mtktrinh@lecturer|pass
 1|lbtorvalds@lecturer|password
 1|tdquang@lecturer|password
-0|ndbau@student|password
-1|dbtien@lecturer|password
+0|ndbau@student|pwd
+0|nvchien@student|password

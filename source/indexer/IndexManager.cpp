@@ -9,9 +9,9 @@ IndexManager& IndexManager::instance() {
     return _instance;
 }
 
-std::shared_ptr<IIndex> IndexManager::buildIndex(const std::vector<std::shared_ptr<Document>>& documents, std::shared_ptr<IIndexBuilder> indexBuilder) {
+std::shared_ptr<IIndex> IndexManager::buildIndex(const std::vector<Document>& documents, std::shared_ptr<IIndexBuilder> indexBuilder) {
     for(auto& document : documents) {
-       indexBuilder->buildIndex(*document);
+       indexBuilder->buildIndex(document);
     }
     return indexBuilder->index();
 }

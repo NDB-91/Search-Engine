@@ -8,13 +8,20 @@ DocumentManager& DocumentManager::instance() {
     return _instance;
 }
 
-void DocumentManager::addDocument(const std::string& id, const Department& department, const std::string& title, const std::string& author) {
-    std::shared_ptr<Document> doc(new Document(id, department, title, author));
-    _documents.emplace_back(doc);
+void DocumentManager::addDocument(const Document& document) {
+    saveDocument(document);
 }
 
-std::vector<std::shared_ptr<Document>> DocumentManager::documents() const {
-    return _documents;
+Document DocumentManager::getDocument(const std::string& id) {
+    return _documents[id];
+}
+
+std::vector<Document> DocumentManager::documents() const {
+    std::vector<Document> documents;
+    for(const auto& pair : _documents) {
+        documents.emplace_back(pair.second);
+    }
+    return documents;
 }
 
 void DocumentManager::loadDocuments() {
@@ -36,18 +43,26 @@ void DocumentManager::loadDocuments() {
         author = tokens[3];
 
         Department dept = convertDepartment(department);
-        addDocument(id, dept, title, author);
+        Document document(id, dept, title, author);
+        _documents[id] = document;
     }
     docsFile.close();
 }
 
-void DocumentManager::saveDocument(const std::string& id, const Department& department, const std::string& title, const std::string& author) {
+void DocumentManager::saveDocument(const Document& document) {
+    if(_documents.find(document.id()) != _documents.end()){
+        return;
+    }
+    _documents[document.id()] = document;
     std::ofstream docsFile(DOCUMENTS, std::ios::app);
     if(!docsFile.is_open()) {
         throw std::runtime_error("Could not open documents file for writing");
         return;
     }
-    docsFile << id << "|" << toString(department) << "|" << title << "|" << author << "\n";
+    docsFile << document.id() << "|"
+                << toString(document.department()) << "|"
+                << document.title() << "|"
+                << document.author() << "\n";
     docsFile.close();
 }
 

@@ -2,4 +2,3 @@ vcnam@lecturer|Van Chi Nam|Information Technology|HCMUS
 mtktrinh@lecturer|Mac Thi Khanh Trinh|Philosophy|USSH
 lbtorvalds@lecturer|Linus Benedict Torvalds|Information Technology|HCMUS
 tdquang@lecturer|Tran Duy Quang|Information Technology|HCMUS
-dbtien@lecturer|Dinh Ba Tien|Information Technology|Unknown_University
