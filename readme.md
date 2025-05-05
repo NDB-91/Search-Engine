@@ -20,8 +20,6 @@
 
 **Member score ratio:** divide equally
 
-
-
 ## Conventions
 ### Naming
 - Class name: CamelCase
@@ -38,6 +36,15 @@
 - Use smart pointer for pointer
 - Do not use friend class
 - Do not use string literals for open files (use #define instead)
+
+## Compile and run the program
+1. Run and Debug button of VSCode with configured .vscode filed  
+2. Bash  
+```Bash
+$ cd source
+$ g++ -std=c++2b *.cpp **/*.cpp -o ../release/program
+$ ../release/program
+```
 
 ## Project Proposal  
 ### Introduction  
@@ -134,8 +141,11 @@ The following design patterns are used in this project:
 - **Adapter Pattern:**  
     `InderSearcher`: A bridge between IIndex and BaseBase  
 
-### Source code reference
+### Reference
 https://github.com/alexandria-org/alexandria
+
+### Video demo
+https://youtu.be/XDi8AcXPEuU
 
 ## Progress
 ### Phase 1 tasks (11/04 - 13/04)

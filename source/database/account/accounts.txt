@@ -4,3 +4,5 @@
 1|tdquang@lecturer|password
 0|ndbau@student|pwd
 0|nvchien@student|password
+0|nva@student|pwd
+1|dbtien@lecturer|password
