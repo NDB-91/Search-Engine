@@ -189,3 +189,12 @@ Prepare project requirements for progress reporting
     - Create unit test (test plan, test cases and test report)  
 - Nguyễn Văn Chiến  
     - Generate documentation to describe the architecture (using Doxygen)  
+
+### Phase 5 tasks (10/5 - 12/5)
+- Ngô Đa Báu
+    - Implement universal visitor design pattern
+    - Implement ranking for search documents (using Visitor)
+    - Implement a simple logging for accounts
+- Nguyễn Văn Chiến
+    - Handle input exception (including email, department, university, password, choice)
+    - Notify those exceptions in the CLI
