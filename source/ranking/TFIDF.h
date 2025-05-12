@@ -23,6 +23,12 @@
 class TFIDF : public ITermFrequency, public IInverseDocumentFrequency {
 public:
     /**
+     * @brief Gets the singleton instance of the TFIDF.
+     * @return A reference to the TFIDF instance.
+     */
+    static TFIDF& instance();
+
+    /**
      * @brief Destroys the TFIDF object.
      */
     ~TFIDF() override = default;

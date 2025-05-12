@@ -2,6 +2,11 @@
 #include "../document/DocumentManager.h"
 #include "../text/TextProcessor.h"
 
+TFIDF& TFIDF::instance() {
+    static TFIDF _instance;
+    return _instance;
+}
+
 float TFIDF::calculateTF(const Document& document, const std::string& term) const {
     std::string content = document.content();
     content = TextProcessor::toLower(content);

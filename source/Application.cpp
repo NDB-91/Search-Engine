@@ -1,11 +1,13 @@
 #include "Application.h"
 #include "account/FileAccountRepository.h"
 #include "Utils.h"
+#include "visitor/TFIDFRanking.h"
 
 Application::Application() {
     _repo = std::make_shared<FileAccountRepository>(ACCOUNTS);
     _accountService = std::make_shared<AccountService>(_repo);
     _searchEngine = std::make_shared<SearchEngine>();
+    _rankingVisitor = std::make_shared<TFIDFRanking>();
 }
 
 void Application::run() {
@@ -29,8 +31,7 @@ void Application::search() {
             break;
         }
         _searchEngine->search(query);
-        _searchEngine->displayResults();
-        _searchEngine->clearResults();
+        _searchEngine->displayResults(_rankingVisitor);
     }
 }
 

@@ -5,6 +5,8 @@
 #include <vector>
 
 #include "SearchBase.h"
+#include "../visitor/IVisitable.h"
+#include "../visitor/IRankingVisitor.h"
 
 /**
  * @file SearchEngine.h
@@ -19,7 +21,7 @@
  * and clear previous search results. It uses a SearchBase-derived object to perform
  * the actual search operations.
  */
-class SearchEngine {
+class SearchEngine : public std::enable_shared_from_this<SearchEngine>, public IVisitable {
 public:
     /**
      * @brief Constructs a SearchEngine object.
@@ -39,19 +41,42 @@ public:
     void search(const std::string& query);
 
     /**
-     * @brief Displays the search results.
+     * @brief Retrieves the result of the current search query.
+     * 
+     * @return The list of Document of current search query string.
      */
-    void displayResults();
+    std::vector<Document>& results();
+
+    /**
+     * @brief Retrieves the current search query string.
+     * 
+     * @return The current search query string.
+     */
+    std::string currentQuery() const;
+
+    /**
+     * @brief Displays the search results.
+     * 
+     * @param visitor The visitor object to use for displaying results.
+     */
+    void displayResults(std::shared_ptr<IRankingVisitor> visitor);
 
     /**
      * @brief Clears the current search results.
      */
     void clearResults();
 
+    /**
+     * @brief Accepts a visitor for processing.
+     * 
+     * @param visitor The visitor object to accept.
+     */
+    void accept(std::shared_ptr<IVisitor> visitor) override;
+
 private:
     std::shared_ptr<SearchBase> _search; /**< The search object used to perform queries. */
     std::string _currentQuery;           /**< The current search query string. */
-    std::vector<std::string> _results;   /**< The results of the current search query. */
+    std::vector<Document> _results;   /**< The results of the current search query. */
 };
 
 #endif

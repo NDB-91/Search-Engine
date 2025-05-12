@@ -6,6 +6,7 @@
 
 #include "service/AccountService.h"
 #include "search/SearchEngine.h"
+#include "visitor/IRankingVisitor.h"
 
 #define ACCOUNTS "database/account/accounts.txt"
 
@@ -34,6 +35,7 @@ private:
     std::shared_ptr<IAccountRepository> _repo; ///< Repository for account data.
     std::shared_ptr<AccountService> _accountService; ///< Service for managing accounts.
     std::shared_ptr<SearchEngine> _searchEngine; ///< Search engine for handling search queries.
+    std::shared_ptr<IRankingVisitor> _rankingVisitor; ///< Visitor for ranking search results.
 
     /**
      * @brief Displays the menu choices to the user.
