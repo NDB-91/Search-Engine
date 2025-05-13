@@ -3,7 +3,7 @@
 
 #include "ILogger.h"
 
-#define LOG_SEARCH_PATH "../database/log/log.txt"
+#define LOG_SEARCH_PATH "database/log/log.txt"
 
 /**
  * @file SearchLogger.h
@@ -19,6 +19,12 @@
 class SearchLogger : public ILogger {
 public:
     /**
+     * @brief Gets the singleton instance of the SearchLogger.
+     * @return A reference to the SearchLogger instance.
+     */
+    static SearchLogger& intance();
+
+    /**
      * @brief Destroys the SearchLogger object.
      */
     ~SearchLogger() override = default;
@@ -28,7 +34,7 @@ public:
      * 
      * @param query The search query to be logged.
      */
-    void log(const std::string& query) override;
+    void log(const std::string& query);
 };
 
 #endif

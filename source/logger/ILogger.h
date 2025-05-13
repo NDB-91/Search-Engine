@@ -6,15 +6,15 @@
 
 /**
  * @file ILogger.h
- * @brief Defines the ILogger interface for logging messages.
+ * @brief Defines the ILogger interface for logging informations.
  */
 
 /**
  * @class ILogger
- * @brief Interface for logging messages.
+ * @brief Interface for logging informations.
  * 
- * The ILogger interface provides a method to log messages. Implementations
- * of this interface can define how and where the messages are logged.
+ * The ILogger interface provides a method to log informations. Implementations
+ * of this interface can define how and where the informations are logged.
  */
 class ILogger {
 public:
@@ -22,13 +22,6 @@ public:
      * @brief Virtual destructor for the ILogger interface.
      */
     virtual ~ILogger() = default;
-
-    /**
-     * @brief Logs a message.
-     * 
-     * @param str The message to be logged.
-     */
-    virtual void log(const std::string& str) = 0;
 };
 
 #endif

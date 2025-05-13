@@ -7,6 +7,7 @@
 #include "service/AccountService.h"
 #include "search/SearchEngine.h"
 #include "visitor/IRankingVisitor.h"
+#include "logger/SearchLogger.h"
 
 #define ACCOUNTS "database/account/accounts.txt"
 

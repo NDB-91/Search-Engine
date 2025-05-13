@@ -31,6 +31,7 @@ void Application::search() {
             break;
         }
         _searchEngine->search(query);
+        SearchLogger::intance().log(query);
         _searchEngine->displayResults(_rankingVisitor);
     }
 }
