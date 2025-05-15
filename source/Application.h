@@ -7,7 +7,7 @@
 #include "service/AccountService.h"
 #include "search/SearchEngine.h"
 
-#define REPOSITORY "database/account/accounts.txt"
+#define ACCOUNTS "database/account/accounts.txt"
 
 /**
  * @class Application

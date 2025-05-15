@@ -3,24 +3,20 @@
 #include "Utils.h"
 
 Application::Application() {
-    _repo = std::make_shared<FileAccountRepository>(REPOSITORY);
+    _repo = std::make_shared<FileAccountRepository>(ACCOUNTS);
     _accountService = std::make_shared<AccountService>(_repo);
     _searchEngine = std::make_shared<SearchEngine>();
 }
 
 void Application::run() {
-    std::cout << "Welcome to the Search Engine Application!\n";
+    std::cout << "<===== Welcome to the Search Engine Application for finding documents! =====>\n";
     int choice;
     do {
         displayChoice();
-        std::cout << "Enter your choice: ";
         choice = getChoice();
         handleChoice(choice);
     } while (choice != 4);
-    std::cout << "Thank you for using the Search Engine Application!\n";
-    std::cout << "Goodbye!\n";
-    std::cout << "Exiting application...\n";
-    std::cout << "Application exited successfully.\n";
+    std::cout << "\n<===== Thank you for using the Search Engine Application! =====>\n";
 }
 
 void Application::search() {
@@ -38,23 +34,43 @@ void Application::search() {
 }
 
 void Application::displayChoice() const {
-    std::cout << "1. Login\n";
-    std::cout << "2. Register Student\n";
-    std::cout << "3. Register Lecturer\n";
-    std::cout << "4. Exit\n";
+    std::cout << "The list of options available to you.\n";
+    std::cout << "\t1. Login\n";
+    std::cout << "\t2. Register Student\n";
+    std::cout << "\t3. Register Lecturer\n";
+    std::cout << "\t4. Exit\n";
 }
 
 int Application::getChoice() const {
-    int c;
-    std::cin >> c;
-    std::cin.ignore();
-    return c;
+    int choice;
+    while (true) {
+        std::cout << "Please enter your choice (1-4): ";
+        std::string input;
+        std::getline(std::cin, input);
+        if (input.empty() || input.find_first_not_of("0123456789") != std::string::npos) {
+            std::cout << "Invalid input. Please enter a number between 1 and 4.\n";
+            continue;
+        }
+        try {
+            choice = std::stoi(input);
+
+            if (choice < 1 || choice > 4) {
+                throw std::invalid_argument("Choice must be between 1 and 4.");
+            }
+            break;
+        } catch (const std::invalid_argument& e) {
+            std::cout << "Invalid input: " << e.what() << "\n";
+        }
+    }
+    return choice;
 }
+
 
 void Application::handleChoice(int choice) {
     switch(choice) {
     case 1:
         if(login()){
+            std::cout << "\n<--- Let's search a document! --->\n";
             search();
         }
         break;
@@ -74,10 +90,10 @@ void Application::handleChoice(int choice) {
 
 bool Application::login() {
     std::string email, password;
-    std::cout << "Email: "; std::cin >> email;
-    std::cin.ignore();
-    std::cout << "Password: "; std::cin >> password;
-    std::cin.ignore();
+    std::cout << "Email     : "; 
+    std::getline(std::cin, email);
+    std::cout << "Password  : ";
+    std::getline(std::cin, password);
     bool success = _accountService->login(email, password);
     if (success){
         std::cout << "Login successfully!\n";
@@ -91,12 +107,41 @@ bool Application::login() {
 void Application::registerStudent() {
     std::string email, name, university;
     std::string password;
-    std::cout << "Email: "; std::cin >> email;
-    std::cin.ignore();
-    std::cout << "Name: "; std::getline(std::cin, name);
-    std::cout << "University: "; std::getline(std::cin, university);
-    std::cout << "Password: "; std::cin >> password;
-    std::cin.ignore();
+    while (true) {
+        try {
+            std::cout << "Email     : "; 
+            std::getline(std::cin, email);
+            validateEmail(email, "student");
+            break;
+        } catch (const std::invalid_argument& e) {
+            std::cout << e.what() << "\nPlease try again.\n";
+        }
+    }
+
+    std::cout << "Name      : "; 
+    std::getline(std::cin, name);
+
+    while (true) {
+        try {
+            std::cout << "University: "; 
+            std::getline(std::cin, university);
+            validateUniversity(university);
+            break;
+        } catch (const std::invalid_argument& e) {
+            std::cout << e.what() << "\nPlease try again.\n";
+        }
+    }
+
+    while (true) {
+        std::cout << "Password  : ";
+        std::getline(std::cin, password);
+        try {
+            validatePassword(password);
+            break;
+        } catch (const std::invalid_argument& e) {
+            std::cout << e.what() << "\nPlease try again.\n";
+        }
+    }
     Student student(email, name, convertUniversityName(university));
     _accountService->registerStudent(student, password);
     std::cout << "Student registered!\n";
@@ -105,13 +150,54 @@ void Application::registerStudent() {
 void Application::registerLecturer() {
     std::string email, name, department, university;
     std::string password;
-    std::cout << "Email: "; std::cin >> email;
-    std::cin.ignore();
-    std::cout << "Name: "; std::getline(std::cin, name);
-    std::cout << "Department: "; std::getline(std::cin, department);
-    std::cout << "University: "; std::getline(std::cin, university);
-    std::cout << "Password: "; std::cin >> password;
-    std::cin.ignore();
+
+    while (true) {
+        try {
+            std::cout << "Email     : ";
+            std::getline(std::cin, email);
+            validateEmail(email, "lecturer");
+            break;
+        } catch (const std::invalid_argument& e) {
+            std::cout << e.what() << "\nPlease try again.\n";
+        }
+    }
+
+    std::cout << "Name      : ";
+    std::getline(std::cin, name);
+
+    while (true) {
+        try {
+            std::cout << "Department: ";
+            std::getline(std::cin, department);
+            validateDepartment(department);
+            break;
+        } catch (const std::invalid_argument& e) {
+            std::cout << e.what() << "\nPlease try again.\n";
+        }
+    }
+
+    while (true) {
+        try {
+            std::cout << "University: ";
+            std::getline(std::cin, university);
+            validateUniversity(university);
+            break;
+        } catch (const std::invalid_argument& e) {
+            std::cout << e.what() << "\nPlease try again.\n";
+        }
+    }
+
+    while (true) {
+        std::cout << "Password  : ";
+        std::getline(std::cin, password);
+        try {
+            validatePassword(password);
+            break;
+        } catch (const std::invalid_argument& e) {
+            std::cout << e.what() << "\nPlease try again.\n";
+        }
+    }
+
     Lecturer lecturer(email, name, convertDepartment(department), convertUniversityName(university));
     _accountService->registerLecturer(lecturer, password);
     std::cout << "Lecturer registered!\n";
