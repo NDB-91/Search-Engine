@@ -64,7 +64,11 @@
         "unordered_set": "cpp",
         "cstring": "cpp",
         "*.tcc": "cpp",
-        "authwithfile": "cpp"
-    },
-    "liveServer.settings.port": 5501
+        "authwithfile": "cpp",
+        "bitset": "cpp",
+        "condition_variable": "cpp",
+        "regex": "cpp",
+        "shared_mutex": "cpp",
+        "expected": "cpp"
+    }
 }
