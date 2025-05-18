@@ -4,6 +4,8 @@
 #include <string>
 #include <sstream>
 #include <vector>
+#include <regex>
+#include <stdexcept> 
 
 #include "university/University.h"
 #include "department/Department.h"
@@ -44,4 +46,41 @@ University::Name convertUniversityName(const std::string& name);
  */
 Department convertDepartment(const std::string& department);
 
-#endif
+/**
+ * @brief Validates email format for student or lecturer roles.
+ * @param email The email to validate.
+ * @param role The role ("student" or "lecturer").
+ * @return True if the email is valid, else throws an exception.
+ */
+bool validateEmail(const std::string& email, const std::string& role);
+
+/**
+ * @brief Validates password length (between 6 and 20 characters).
+ * @param password The password to validate.
+ * @return True if the password is valid, else throws an exception.
+ */
+bool validatePassword(const std::string& password);
+
+/**
+ * @brief Validates if the department exists in the list.
+ * @param department The department name to validate.
+ * @return True if the department exists, else throws an exception.
+ */
+bool validateDepartment(const std::string& department);
+
+/**
+ * @brief Validates if the university exists in the list.
+ * @param university The university name to validate.
+ * @return True if the university exists, else throws an exception.
+ */
+bool validateUniversity(const std::string& university);
+
+/**
+ * @brief Validates user choice input (must be a number between 1 and 4).
+ * @return The valid choice number.
+ * @throws std::invalid_argument If the choice is invalid.
+ */
+int getValidatedChoice();
+
+
+#endif // _UTILS_H_

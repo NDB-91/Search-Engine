@@ -6,3 +6,4 @@
 0|nvchien@student|password
 0|nva@student|pwd
 1|dbtien@lecturer|password
+0|chien@student|12345678
