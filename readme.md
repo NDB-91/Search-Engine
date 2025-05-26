@@ -190,7 +190,7 @@ Prepare project requirements for progress reporting
 - Nguyễn Văn Chiến  
     - Generate documentation to describe the architecture (using Doxygen)  
 
-### Phase 5 tasks (10/5 - 12/5)
+### Phase 5 tasks (10/5 - 16/5)
 - Ngô Đa Báu
     - Implement universal visitor design pattern
     - Implement ranking for search documents (using Visitor)
@@ -198,3 +198,7 @@ Prepare project requirements for progress reporting
 - Nguyễn Văn Chiến
     - Handle input exception (including email, department, university, password, choice)
     - Notify those exceptions in the CLI
+
+### Phase 6 tasks (26/5 - 31/5)
+- Implement suggestion
+- Dedeploy dependency
