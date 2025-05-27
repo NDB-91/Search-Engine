@@ -4,6 +4,8 @@
 #include <fstream>
 #include <string>
 
+#include "../Object.h"
+
 /**
  * @file ILogger.h
  * @brief Defines the ILogger interface for logging informations.
@@ -16,7 +18,7 @@
  * The ILogger interface provides a method to log informations. Implementations
  * of this interface can define how and where the informations are logged.
  */
-class ILogger {
+class ILogger : public Object {
 public:
     /**
      * @brief Virtual destructor for the ILogger interface.

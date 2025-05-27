@@ -3,6 +3,8 @@
 
 #include <string>
 
+#include "../Object.h"
+
 /**
  * @file Trie.h
  * @brief Defines the Trie and TrieNode classes for managing a prefix tree (trie) data structure.
@@ -18,6 +20,7 @@
 struct TrieNode {
     TrieNode* childrens[26]; /**< Array of pointers to child nodes, one for each letter of the alphabet. */
     bool endOfWord;          /**< Flag indicating whether this node marks the end of a word. */
+    int frequency;           /**< Number of times this word has been inserted. */
 
     /**
      * @brief Constructs a TrieNode object.
@@ -32,7 +35,7 @@ struct TrieNode {
  * The Trie class provides methods to insert words, search for words, remove words,
  * and check for prefixes in the trie.
  */
-class Trie {
+class Trie : public Object {
 public:
     /**
      * @brief Constructs a Trie object.
@@ -43,6 +46,13 @@ public:
      * @brief Destroys the Trie object and deallocates its nodes.
      */
     ~Trie();
+
+    /**
+     * @brief Gets the root node of the trie.
+     * 
+     * @return A pointer to the root TrieNode.
+     */
+    TrieNode* getRoot() const;
 
     /**
      * @brief Inserts a word into the trie.
@@ -74,8 +84,15 @@ public:
      */
     bool startsWith(const std::string& prefix);
 
+    /**
+     * @brief Returns the frequency of a word in the trie.
+     * 
+     * @param word The word to check.
+     * @return The number of times the word has been inserted.
+     */
+    int getFrequency(const std::string& word);
 private:
-    TrieNode* root; /**< Pointer to the root node of the trie. */
+    TrieNode* _root; /**< Pointer to the root node of the trie. */
 };
 
 #endif

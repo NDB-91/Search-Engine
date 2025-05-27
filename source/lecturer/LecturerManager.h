@@ -5,6 +5,7 @@
 #include <string>
 #include <unordered_map>
 
+#include "../Object.h"
 #include "Lecturer.h"
 #include "../department/Department.h"
 #include "../university/University.h"
@@ -23,7 +24,7 @@
  * The LecturerManager class provides methods to add, retrieve, and manage lecturer information.
  * It ensures that lecturer data is loaded from and saved to persistent storage.
  */
-class LecturerManager {
+class LecturerManager : public Object {
 public:
     /**
      * @brief Gets the singleton instance of the LecturerManager.

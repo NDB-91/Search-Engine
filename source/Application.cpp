@@ -2,12 +2,16 @@
 #include "account/FileAccountRepository.h"
 #include "Utils.h"
 #include "visitor/TFIDFRanking.h"
+#include "suggester/SearchSuggester.h"
+#include "terminal/PosixTerminal.h"
+
 
 Application::Application() {
     _repo = std::make_shared<FileAccountRepository>(ACCOUNTS);
     _accountService = std::make_shared<AccountService>(_repo);
     _searchEngine = std::make_shared<SearchEngine>();
     _rankingVisitor = std::make_shared<TFIDFRanking>();
+    _suggester = std::make_shared<SearchSuggester>();
 }
 
 void Application::run() {
@@ -22,17 +26,77 @@ void Application::run() {
 }
 
 void Application::search() {
-    std::string query;
+    _terminal = std::make_shared<PosixTerminal>();
+    _terminal->write("> Enter search query (or 'exit' to quit): ");
+    std::string buffer;
     while (true) {
-        std::cout << "Enter search query (or 'exit' to quit): ";
-        std::getline(std::cin, query);
-        if (query == "exit") {
-            break;
+        char c = _terminal->readChar();
+        if(c == '\n') {
+            _terminal->write("\n");
+            if(buffer == "exit") {
+                break;
+            }
+            _searchEngine->search(buffer);
+            SearchLogger::instance().log(TextProcessor::toLower(buffer));
+            _searchEngine->displayResults(_rankingVisitor);
+            buffer.clear();
+            _terminal->write("> Enter search query (or 'exit' to quit): ");
+            continue;
         }
-        _searchEngine->search(query);
-        SearchLogger::intance().log(query);
-        _searchEngine->displayResults(_rankingVisitor);
+        if (c == 127 || c == '\b') {
+            if (!buffer.empty()) {
+                buffer.pop_back();
+                _terminal->write("\b \b");
+                _terminal->write("\033[K");
+
+                auto sug = _suggester->suggest(buffer);
+                if (!sug.empty()) {
+                    const auto &full = sug[0];
+                    if (full.size() > buffer.size()) {
+                        auto hint = full.substr(buffer.size());
+                        _terminal->write("\033[K");
+                        _terminal->write("\033[90m" + hint + "\033[0m");
+                        _terminal->write("\033[" + std::to_string(hint.size()) + "D");
+                    } else {
+                        _terminal->write("\033[K");
+                    }
+                }
+            }
+            continue;
+        }
+        if (c == '\t') {
+            auto sug = _suggester->suggest(buffer);
+            if (!sug.empty()) {
+                const auto &full = sug[0];
+                if (full.size() > buffer.size()) {
+                    auto completion = full.substr(buffer.size());
+                    // Print in gray, then reset color
+                    _terminal->write("\033[90m" + completion + "\033[0m");
+                    // Move cursor to end of completion
+                    buffer += completion;
+                }
+            }
+            continue;
+        }
+
+        buffer.push_back(c);
+        _terminal->write(std::string(1, c));
+        _terminal->write("\033[K");
+
+        auto sug = _suggester->suggest(buffer);
+        if (!sug.empty()) {
+            const auto &full = sug[0];
+            if (full.size() > buffer.size()) {
+                auto hint = full.substr(buffer.size());
+                _terminal->write("\033[K");
+                _terminal->write("\033[90m" + hint + "\033[0m");
+                _terminal->write("\033[" + std::to_string(hint.size()) + "D");
+            } else {
+                _terminal->write("\033[K");
+            }
+        }
     }
+    _terminal.reset();
 }
 
 void Application::displayChoice() const {

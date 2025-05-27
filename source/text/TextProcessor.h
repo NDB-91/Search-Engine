@@ -6,6 +6,8 @@
 #include <sstream>
 #include <algorithm>
 
+#include "../Object.h"
+
 /**
  * @file TextProcessor.h
  * @brief Defines the TextProcessor class for text processing operations.
@@ -18,7 +20,7 @@
  * The TextProcessor class includes utility methods for converting text to lowercase
  * and tokenizing text into individual words.
  */
-class TextProcessor {
+class TextProcessor : public Object {
 public:
     /**
      * @brief Deleted default constructor to prevent instantiation.

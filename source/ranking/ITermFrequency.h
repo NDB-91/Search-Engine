@@ -4,6 +4,7 @@
 #include <string>
 #include <unordered_map>
 
+#include "../Object.h"
 #include "../document/Document.h"
 
 /**

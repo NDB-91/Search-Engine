@@ -4,6 +4,7 @@
 #include <memory>
 #include <string>
 
+#include "../Object.h"
 #include "IAccount.h"
 #include "../student/Student.h"
 #include "../lecturer/Lecturer.h"
@@ -20,7 +21,7 @@
  * The AccountFactory class provides static methods to create account objects
  * for students and lecturers with the specified details.
  */
-class AccountFactory {
+class AccountFactory : public Object {
 public:
     /**
      * @brief Creates an account for a student.

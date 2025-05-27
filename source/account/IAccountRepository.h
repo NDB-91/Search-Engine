@@ -5,6 +5,7 @@
 #include <vector>
 #include <optional>
 
+#include "../Object.h"
 #include "IAccount.h"
 
 /**
@@ -19,7 +20,7 @@
  * The IAccountRepository interface provides methods to add accounts, find accounts by email,
  * and retrieve all accounts. Implementations of this interface can define specific storage mechanisms.
  */
-class IAccountRepository {
+class IAccountRepository : public Object {
 public:
     /**
      * @brief Virtual destructor for the IAccountRepository interface.

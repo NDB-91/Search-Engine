@@ -5,6 +5,7 @@
 #include <vector>
 #include <unordered_map>
 
+#include "../Object.h"
 #include "Document.h"
 
 #define DOCUMENTS "database/document/documents.txt"
@@ -21,7 +22,7 @@
  * The DocumentManager class provides methods to add, retrieve, and manage documents.
  * It ensures that documents are loaded from and saved to a persistent storage.
  */
-class DocumentManager {
+class DocumentManager : public Object {
 public:
     /**
      * @brief Gets the singleton instance of the DocumentManager.

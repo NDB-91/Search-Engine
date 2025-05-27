@@ -4,10 +4,13 @@
 #include <memory>
 #include <iostream>
 
+#include "text/TextProcessor.h"
 #include "service/AccountService.h"
 #include "search/SearchEngine.h"
 #include "visitor/IRankingVisitor.h"
 #include "logger/SearchLogger.h"
+#include "suggester/ISuggester.h"
+#include "terminal/ITerminal.h"
 
 #define ACCOUNTS "database/account/accounts.txt"
 
@@ -31,12 +34,13 @@ public:
      * @brief Handles the search functionality of the application.
      */
     void search();
-
 private:
     std::shared_ptr<IAccountRepository> _repo; ///< Repository for account data.
     std::shared_ptr<AccountService> _accountService; ///< Service for managing accounts.
     std::shared_ptr<SearchEngine> _searchEngine; ///< Search engine for handling search queries.
     std::shared_ptr<IRankingVisitor> _rankingVisitor; ///< Visitor for ranking search results.
+    std::shared_ptr<ISuggester> _suggester; ///< Suggester for providing search suggestions.
+    std::shared_ptr<ITerminal> _terminal; ///< Terminal interface for user input/output.
 
     /**
      * @brief Displays the menu choices to the user.

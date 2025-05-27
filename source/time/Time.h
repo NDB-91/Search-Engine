@@ -6,6 +6,8 @@
 #include <chrono>
 #include <iomanip>
 
+#include "../Object.h"
+
 /**
  * @file Time.h
  * @brief Defines the Time class for retrieving the current time.
@@ -18,7 +20,7 @@
  * The Time class includes a utility method to get the current system time
  * formatted as a string.
  */
-class Time {
+class Time : public Object {
 public:
     /**
      * @brief Retrieves the current system time.

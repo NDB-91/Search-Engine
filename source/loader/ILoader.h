@@ -3,6 +3,8 @@
 
 #include <string>
 
+#include "../Object.h"
+
 /**
  * @file ILoader.h
  * @brief Defines the ILoader interface for loading document content.
@@ -15,7 +17,7 @@
  * The ILoader interface provides a method to load the content of a document
  * based on its unique identifier.
  */
-class ILoader {
+class ILoader : public Object {
 public:
     /**
      * @brief Virtual destructor for the ILoader interface.

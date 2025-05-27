@@ -5,6 +5,7 @@
 #include <vector>
 #include <unordered_map>
 
+#include "../Object.h"
 #include "Student.h"
 #include "../university/University.h"
 
@@ -22,7 +23,7 @@
  * The StudentManager class provides methods to add, retrieve, and manage student information.
  * It ensures that student data is loaded from and saved to persistent storage.
  */
-class StudentManager {
+class StudentManager : public Object {
 public:
     /**
      * @brief Gets the singleton instance of the StudentManager.

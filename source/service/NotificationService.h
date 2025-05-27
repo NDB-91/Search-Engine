@@ -4,6 +4,8 @@
 #include <iostream>
 #include <string>
 
+#include "../Object.h"
+
 /**
  * @file NotificationService.h
  * @brief Defines the NotificationService class for sending notifications.
@@ -16,7 +18,7 @@
  * The NotificationService class contains a static method to send notifications
  * by displaying a message to the user.
  */
-class NotificationService {
+class NotificationService : public Object {
 public:
     /**
      * @brief Sends a notification with the given message.

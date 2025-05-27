@@ -4,6 +4,7 @@
 #include <vector>
 #include <string>
 
+#include "../Object.h"
 #include "../document/Document.h"
 
 /**
@@ -18,7 +19,7 @@
  * The IIndex interface provides methods for indexing documents, removing document indices, 
  * and querying the index for relevant documents based on a search query.
  */
-class IIndex {
+class IIndex : public Object {
 public:
     /**
      * @brief Virtual destructor for the IIndex interface.

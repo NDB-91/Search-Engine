@@ -3,6 +3,8 @@
 
 #include <string>
 
+#include "../Object.h"
+
 /**
  * @file University.h
  * @brief Defines the University class for representing university information.
@@ -14,7 +16,7 @@
  * 
  * The University class provides methods to access university details, such as its name.
  */
-class University {
+class University : public Object {
 public:
     /**
      * @enum Name

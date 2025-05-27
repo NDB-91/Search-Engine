@@ -3,6 +3,8 @@
 
 #include <string>
 
+#include "Object.h"
+
 /**
  * @file IUser.h
  * @brief Defines the IUser interface and the Role enumeration for user management.
@@ -25,7 +27,7 @@ enum class Role {
  * The IUser interface provides methods to retrieve user details such as email and role.
  * Implementations of this interface can define specific user types.
  */
-class IUser {
+class IUser : public Object {
 public:
     /**
      * @brief Virtual destructor for the IUser interface.

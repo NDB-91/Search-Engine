@@ -5,6 +5,7 @@
 #include <vector>
 #include <unordered_set>
 
+#include "../Object.h"
 #include "IIndexBuilder.h"
 
 /**
@@ -20,7 +21,7 @@
  * using a specified index builder. It enforces the singleton pattern to ensure a single
  * instance of the manager.
  */
-class IndexManager {
+class IndexManager : public Object {
 public:
     /**
      * @brief Gets the singleton instance of the IndexManager.

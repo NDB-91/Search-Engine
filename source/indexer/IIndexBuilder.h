@@ -4,6 +4,7 @@
 #include <memory>
 #include <string>
 
+#include "../Object.h"
 #include "IIndex.h"
 #include "../document/Document.h"
 
@@ -19,7 +20,7 @@
  * The IIndexBuilder interface provides methods for constructing indices for documents,
  * removing document indices, and retrieving the built index.
  */
-class IIndexBuilder {
+class IIndexBuilder : public Object {
 public:
     /**
      * @brief Virtual destructor for the IIndexBuilder interface.

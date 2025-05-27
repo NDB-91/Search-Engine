@@ -4,6 +4,8 @@
 #include <string>
 #include <vector>
 
+#include "../Object.h"
+
 /**
  * @file IInverseDocumentFrequency.h
  * @brief Defines the IInverseDocumentFrequency interface for calculating the inverse document frequency (IDF) of terms.

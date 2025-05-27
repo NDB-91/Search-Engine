@@ -4,6 +4,7 @@
 #include <memory>
 #include <vector>
 
+#include "../Object.h"
 #include "SearchBase.h"
 #include "../visitor/IVisitable.h"
 #include "../visitor/IRankingVisitor.h"
@@ -21,7 +22,7 @@
  * and clear previous search results. It uses a SearchBase-derived object to perform
  * the actual search operations.
  */
-class SearchEngine : public std::enable_shared_from_this<SearchEngine>, public IVisitable {
+class SearchEngine : public Object, public std::enable_shared_from_this<SearchEngine>, public IVisitable {
 public:
     /**
      * @brief Constructs a SearchEngine object.

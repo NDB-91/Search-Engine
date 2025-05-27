@@ -1,7 +1,7 @@
 #include "SearchLogger.h"
 #include "../time/Time.h"
 
-SearchLogger& SearchLogger::intance() {
+SearchLogger& SearchLogger::instance() {
     static SearchLogger _instance;
     return _instance;
 }

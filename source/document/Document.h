@@ -3,6 +3,7 @@
 
 #include <string>
 
+#include "../Object.h"
 #include "../department/Department.h"
 #include "../lecturer/Lecturer.h"
 
@@ -17,7 +18,7 @@
  * 
  * The Document class provides methods to access document metadata such as ID, department, title, author, and content.
  */
-class Document {
+class Document : public Object {
 public:
     /**
      * @brief Default constructor for the Document class.

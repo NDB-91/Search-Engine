@@ -22,7 +22,7 @@ public:
      * @brief Gets the singleton instance of the SearchLogger.
      * @return A reference to the SearchLogger instance.
      */
-    static SearchLogger& intance();
+    static SearchLogger& instance();
 
     /**
      * @brief Destroys the SearchLogger object.

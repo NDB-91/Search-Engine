@@ -4,6 +4,8 @@
 #include <memory>
 #include <string>
 #include <vector>
+
+#include "../Object.h"
 #include "../indexer/IIndex.h"
 #include "../indexer/IIndexBuilder.h"
 
@@ -20,7 +22,7 @@
  * built using an IIndexBuilder. It retrieves document identifiers that match
  * the given search query.
  */
-class IndexSearcher {
+class IndexSearcher : public Object {
 public:
     /**
      * @brief Constructs an IndexSearcher object with no index.

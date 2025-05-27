@@ -1,6 +1,7 @@
 #ifndef _ACCOUNT_SERVICE_H_
 #define _ACCOUNT_SERVICE_H_
 
+#include "../Object.h"
 #include "../account/IAccountRepository.h"
 #include "../account/AccountFactory.h"
 #include "NotificationService.h"
@@ -17,7 +18,7 @@
  * The AccountService class allows for registering students and lecturers, as well as
  * handling login operations. It interacts with an account repository to manage account data.
  */
-class AccountService {
+class AccountService : public Object {
 public:
     /**
      * @brief Constructs an AccountService object.

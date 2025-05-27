@@ -5,6 +5,7 @@
 #include <vector>
 #include <string>
 
+#include "../Object.h"
 #include "../indexer/IIndexBuilder.h"
 #include "IndexSearcher.h"
 
@@ -20,7 +21,7 @@
  * The SearchBase class provides a common interface for search functionality.
  * Derived classes must implement the `search` method to perform specific search operations.
  */
-class SearchBase {
+class SearchBase : public Object {
 public:
     /**
      * @brief Virtual destructor for the SearchBase class.
