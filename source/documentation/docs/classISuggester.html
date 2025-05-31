@@ -65,7 +65,7 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classISuggester-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">ISuggester Class Reference</div>  </div>
+<div class="title">ISuggester Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -78,8 +78,18 @@ Inheritance diagram for ISuggester:</div>
 <div class="dyncontent">
 <div class="center"><img src="classISuggester__inherit__graph.png" border="0" usemap="#ISuggester_inherit__map" alt="Inheritance graph"/></div>
 <map name="ISuggester_inherit__map" id="ISuggester_inherit__map">
-<area shape="rect" title="Interface for providing suggestions." alt="" coords="25,5,116,32"/>
-<area shape="rect" href="classSearchSuggester.html" title="Implements the ISuggester interface to provide search suggestions." alt="" coords="5,80,136,107"/>
+<area shape="rect" title="Interface for providing suggestions." alt="" coords="25,80,116,107"/>
+<area shape="rect" href="classSearchSuggester.html" title="Implements the ISuggester interface to provide search suggestions." alt="" coords="5,155,136,181"/>
+<area shape="rect" href="classObject.html" title=" " alt="" coords="39,5,103,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for ISuggester:</div>
+<div class="dyncontent">
+<div class="center"><img src="classISuggester__coll__graph.png" border="0" usemap="#ISuggester_coll__map" alt="Collaboration graph"/></div>
+<map name="ISuggester_coll__map" id="ISuggester_coll__map">
+<area shape="rect" title="Interface for providing suggestions." alt="" coords="5,80,96,107"/>
+<area shape="rect" href="classObject.html" title=" " alt="" coords="19,5,83,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -88,6 +98,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae16f238e1219f0d0c257173b66d254ab"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classISuggester.html#ae16f238e1219f0d0c257173b66d254ab">~ISuggester</a> ()=default</td></tr>
 <tr class="memdesc:ae16f238e1219f0d0c257173b66d254ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor for the <a class="el" href="classISuggester.html" title="Interface for providing suggestions.">ISuggester</a> interface.  <a href="classISuggester.html#ae16f238e1219f0d0c257173b66d254ab">More...</a><br /></td></tr>
 <tr class="separator:ae16f238e1219f0d0c257173b66d254ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80f6a611663ac2082ac590446df68b4e"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classISuggester.html#a80f6a611663ac2082ac590446df68b4e">suggest</a> (const std::string &amp;prefix)=0</td></tr>
+<tr class="separator:a80f6a611663ac2082ac590446df68b4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classObject"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classObject')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classObject.html">Object</a></td></tr>
+<tr class="memitem:a226f2ae2af766b77d83c09a4d766b725 inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObject.html#a226f2ae2af766b77d83c09a4d766b725">~Object</a> ()=default</td></tr>
+<tr class="separator:a226f2ae2af766b77d83c09a4d766b725 inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Interface for providing suggestions. </p>
@@ -117,6 +132,35 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Virtual destructor for the <a class="el" href="classISuggester.html" title="Interface for providing suggestions.">ISuggester</a> interface. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a80f6a611663ac2082ac590446df68b4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80f6a611663ac2082ac590446df68b4e">&#9670;&nbsp;</a></span>suggest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::vector&lt;std::string&gt; ISuggester::suggest </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>prefix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classSearchSuggester.html#ac61bd5c82387bec16850378e4937733d">SearchSuggester</a>.</p>
 
 </div>
 </div>

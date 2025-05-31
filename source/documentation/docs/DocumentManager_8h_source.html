@@ -73,44 +73,49 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _DOCUMENT_MANAGER_H_</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Document_8h.html">Document.h</a>&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="DocumentManager_8h.html#af9c9ae857f0322e330656c09da96ea5c">   10</a></span>&#160;<span class="preprocessor">#define DOCUMENTS &quot;database/document/documents.txt&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classDocumentManager.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="classDocumentManager.html">DocumentManager</a> {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">static</span> <a class="code" href="classDocumentManager.html">DocumentManager</a>&amp; <a class="code" href="classDocumentManager.html#a06a2168d185189673e7be82ae91d182f">instance</a>();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classDocumentManager.html#a41f9426e9c31d2f0d30d782b5884e73e">addDocument</a>(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>, <span class="keyword">const</span> <a class="code" href="Department_8h.html#a938069f766288326dabb8a8f0cd83bce">Department</a>&amp; department, <span class="keyword">const</span> std::string&amp; title, <span class="keyword">const</span> std::string&amp; idAuthor);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    std::vector&lt;std::shared_ptr&lt;Document&gt;&gt; <a class="code" href="classDocumentManager.html#ac08fa5f02603d8c005cbe4840422c935">documents</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="classDocumentManager.html">DocumentManager</a>(<span class="keyword">const</span> <a class="code" href="classDocumentManager.html">DocumentManager</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="classDocumentManager.html">DocumentManager</a>&amp; <a class="code" href="classDocumentManager.html#ac26fb2ae6498745d35e392948adc1593">operator=</a>(<span class="keyword">const</span> <a class="code" href="classDocumentManager.html">DocumentManager</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="classDocumentManager.html">DocumentManager</a>();</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> loadDocuments();</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">void</span> saveDocument(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>, <span class="keyword">const</span> <a class="code" href="Department_8h.html#a938069f766288326dabb8a8f0cd83bce">Department</a>&amp; department, <span class="keyword">const</span> std::string&amp; title, <span class="keyword">const</span> std::string&amp; idAuthor);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    std::vector&lt;std::shared_ptr&lt;Document&gt;&gt; _documents; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;};</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../Object.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Document_8h.html">Document.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="DocumentManager_8h.html#af9c9ae857f0322e330656c09da96ea5c">   11</a></span>&#160;<span class="preprocessor">#define DOCUMENTS &quot;database/document/documents.txt&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classDocumentManager.html">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="classDocumentManager.html">DocumentManager</a> : <span class="keyword">public</span> <a class="code" href="classObject.html">Object</a> {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">static</span> <a class="code" href="classDocumentManager.html">DocumentManager</a>&amp; <a class="code" href="classDocumentManager.html#a06a2168d185189673e7be82ae91d182f">instance</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classDocumentManager.html#a8cb6421fc691680b5223b42986826318">addDocument</a>(<span class="keyword">const</span> <a class="code" href="classDocument.html">Document</a>&amp; document);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="classDocument.html">Document</a> <a class="code" href="classDocumentManager.html#abe16d6eb7c566b3392dc399e3d76d1fb">getDocument</a>(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    std::vector&lt;Document&gt; <a class="code" href="classDocumentManager.html#a7b26f4c4970c0dc1a511d2e4c565e560">documents</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="classDocumentManager.html">DocumentManager</a>(<span class="keyword">const</span> <a class="code" href="classDocumentManager.html">DocumentManager</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="classDocumentManager.html">DocumentManager</a>&amp; <a class="code" href="classDocumentManager.html#ac26fb2ae6498745d35e392948adc1593">operator=</a>(<span class="keyword">const</span> <a class="code" href="classDocumentManager.html">DocumentManager</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="classDocumentManager.html">DocumentManager</a>();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">void</span> loadDocuments();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">void</span> saveDocument(<span class="keyword">const</span> <a class="code" href="classDocument.html">Document</a>&amp; document);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    std::unordered_map&lt;std::string, Document&gt; _documents; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;};</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassDocument_html"><div class="ttname"><a href="classDocument.html">Document</a></div><div class="ttdoc">Represents a document associated with a specific department and author.</div><div class="ttdef"><b>Definition:</b> Document.h:21</div></div>
 <div class="ttc" id="aDocument_8h_html"><div class="ttname"><a href="Document_8h.html">Document.h</a></div><div class="ttdoc">Defines the Document class for managing documents in the system.</div></div>
-<div class="ttc" id="aDepartment_8h_html_a938069f766288326dabb8a8f0cd83bce"><div class="ttname"><a href="Department_8h.html#a938069f766288326dabb8a8f0cd83bce">Department</a></div><div class="ttdeci">Department</div><div class="ttdoc">Represents various departments in an organization or institution.</div><div class="ttdef"><b>Definition:</b> Department.h:17</div></div>
+<div class="ttc" id="aclassObject_html"><div class="ttname"><a href="classObject.html">Object</a></div><div class="ttdef"><b>Definition:</b> Object.h:4</div></div>
+<div class="ttc" id="aclassDocumentManager_html_abe16d6eb7c566b3392dc399e3d76d1fb"><div class="ttname"><a href="classDocumentManager.html#abe16d6eb7c566b3392dc399e3d76d1fb">DocumentManager::getDocument</a></div><div class="ttdeci">Document getDocument(const std::string &amp;id)</div><div class="ttdoc">Retrieves a Document object by their id.</div><div class="ttdef"><b>Definition:</b> DocumentManager.cpp:15</div></div>
 <div class="ttc" id="aclassDocumentManager_html_a06a2168d185189673e7be82ae91d182f"><div class="ttname"><a href="classDocumentManager.html#a06a2168d185189673e7be82ae91d182f">DocumentManager::instance</a></div><div class="ttdeci">static DocumentManager &amp; instance()</div><div class="ttdoc">Gets the singleton instance of the DocumentManager.</div><div class="ttdef"><b>Definition:</b> DocumentManager.cpp:6</div></div>
 <div class="ttc" id="aclassDocumentManager_html_ac26fb2ae6498745d35e392948adc1593"><div class="ttname"><a href="classDocumentManager.html#ac26fb2ae6498745d35e392948adc1593">DocumentManager::operator=</a></div><div class="ttdeci">DocumentManager &amp; operator=(const DocumentManager &amp;)=delete</div><div class="ttdoc">Deleted copy assignment operator to enforce singleton pattern.</div></div>
-<div class="ttc" id="aclassDocumentManager_html_ac08fa5f02603d8c005cbe4840422c935"><div class="ttname"><a href="classDocumentManager.html#ac08fa5f02603d8c005cbe4840422c935">DocumentManager::documents</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; Document &gt; &gt; documents() const</div><div class="ttdoc">Retrieves all documents in the collection.</div><div class="ttdef"><b>Definition:</b> DocumentManager.cpp:16</div></div>
-<div class="ttc" id="aclassDocumentManager_html"><div class="ttname"><a href="classDocumentManager.html">DocumentManager</a></div><div class="ttdoc">Singleton class for managing documents in the system.</div><div class="ttdef"><b>Definition:</b> DocumentManager.h:24</div></div>
-<div class="ttc" id="aclassDocumentManager_html_a41f9426e9c31d2f0d30d782b5884e73e"><div class="ttname"><a href="classDocumentManager.html#a41f9426e9c31d2f0d30d782b5884e73e">DocumentManager::addDocument</a></div><div class="ttdeci">void addDocument(const std::string &amp;id, const Department &amp;department, const std::string &amp;title, const std::string &amp;idAuthor)</div><div class="ttdoc">Adds a new document to the collection.</div><div class="ttdef"><b>Definition:</b> DocumentManager.cpp:11</div></div>
+<div class="ttc" id="aclassDocumentManager_html_a8cb6421fc691680b5223b42986826318"><div class="ttname"><a href="classDocumentManager.html#a8cb6421fc691680b5223b42986826318">DocumentManager::addDocument</a></div><div class="ttdeci">void addDocument(const Document &amp;document)</div><div class="ttdoc">Adds a new document to the collection.</div><div class="ttdef"><b>Definition:</b> DocumentManager.cpp:11</div></div>
+<div class="ttc" id="aclassDocumentManager_html"><div class="ttname"><a href="classDocumentManager.html">DocumentManager</a></div><div class="ttdoc">Singleton class for managing documents in the system.</div><div class="ttdef"><b>Definition:</b> DocumentManager.h:25</div></div>
+<div class="ttc" id="aclassDocumentManager_html_a7b26f4c4970c0dc1a511d2e4c565e560"><div class="ttname"><a href="classDocumentManager.html#a7b26f4c4970c0dc1a511d2e4c565e560">DocumentManager::documents</a></div><div class="ttdeci">std::vector&lt; Document &gt; documents() const</div><div class="ttdoc">Retrieves all documents in the collection.</div><div class="ttdef"><b>Definition:</b> DocumentManager.cpp:19</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

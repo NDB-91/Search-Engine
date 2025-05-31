@@ -1,12 +1,15 @@
 <map id="/workspaces/codespaces&#45;blank/source/search/IndexSearcher.h" name="/workspaces/codespaces&#45;blank/source/search/IndexSearcher.h">
-<area shape="rect" id="node1" title="Defines the IndexSearcher class for performing search queries on an index." alt="" coords="511,5,776,47"/>
-<area shape="rect" id="node2" href="$SearchBase_8h.html" title="Defines the SearchBase abstract class for performing search queries." alt="" coords="375,95,624,136"/>
-<area shape="rect" id="node10" href="$IndexSearcher_8cpp.html" title=" " alt="" coords="649,95,929,136"/>
-<area shape="rect" id="node3" href="$SearchEngine_8h.html" title="Defines the SearchEngine class for managing search operations." alt="" coords="223,184,485,225"/>
-<area shape="rect" id="node8" href="$SearchKeyword_8h.html" title="Defines the SearchKeyword class for performing keyword&#45;based search queries." alt="" coords="508,184,781,225"/>
-<area shape="rect" id="node4" href="$Application_8h.html" title=" " alt="" coords="124,273,323,315"/>
-<area shape="rect" id="node7" href="$SearchEngine_8cpp.html" title=" " alt="" coords="347,273,623,315"/>
-<area shape="rect" id="node5" href="$Application_8cpp.html" title=" " alt="" coords="5,363,220,404"/>
-<area shape="rect" id="node6" href="$main_8cpp.html" title=" " alt="" coords="244,363,427,404"/>
-<area shape="rect" id="node9" href="$SearchKeyword_8cpp.html" title=" " alt="" coords="647,273,935,315"/>
+<area shape="rect" id="node1" title="Defines the IndexSearcher class for performing search queries on an index." alt="" coords="601,5,867,47"/>
+<area shape="rect" id="node2" href="$SearchBase_8h.html" title="Defines the SearchBase abstract class for performing search queries." alt="" coords="465,95,715,136"/>
+<area shape="rect" id="node13" href="$IndexSearcher_8cpp.html" title=" " alt="" coords="739,95,1019,136"/>
+<area shape="rect" id="node3" href="$SearchEngine_8h.html" title="Defines the SearchEngine class for managing search operations." alt="" coords="314,184,575,225"/>
+<area shape="rect" id="node11" href="$SearchKeyword_8h.html" title="Defines the SearchKeyword class for performing keyword&#45;based search queries." alt="" coords="599,184,872,225"/>
+<area shape="rect" id="node4" href="$Application_8h.html" title=" " alt="" coords="112,385,311,426"/>
+<area shape="rect" id="node7" href="$IRankingVisitor_8h.html" title=" " alt="" coords="353,273,536,329"/>
+<area shape="rect" id="node8" href="$TFIDFRanking_8h.html" title=" " alt="" coords="335,377,517,433"/>
+<area shape="rect" id="node10" href="$SearchEngine_8cpp.html" title=" " alt="" coords="541,385,817,426"/>
+<area shape="rect" id="node5" href="$Application_8cpp.html" title=" " alt="" coords="212,489,427,530"/>
+<area shape="rect" id="node6" href="$main_8cpp.html" title=" " alt="" coords="5,489,188,530"/>
+<area shape="rect" id="node9" href="$TFIDFRanking_8cpp.html" title=" " alt="" coords="451,481,633,537"/>
+<area shape="rect" id="node12" href="$SearchKeyword_8cpp.html" title=" " alt="" coords="717,281,1005,322"/>
 </map>

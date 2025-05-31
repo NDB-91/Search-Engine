@@ -72,17 +72,41 @@ $(function() {
 <a href="SearchSuggester_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _SEARCHSUGGESTER_H_</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _SEARCHSUGGESTER_H_</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ISuggester_8h.html">ISuggester.h</a>&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classSearchSuggester.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSearchSuggester.html">SearchSuggester</a> : <span class="keyword">public</span> <a class="code" href="classISuggester.html">ISuggester</a> {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classSearchSuggester.html#a1da214e62fa2765321b9d6a132c1c77b">~SearchSuggester</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;};</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ISuggester_8h.html">ISuggester.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../logger/SearchLogger.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;../trie/Trie.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classSearchSuggester.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSearchSuggester.html">SearchSuggester</a> : <span class="keyword">public</span> <a class="code" href="classISuggester.html">ISuggester</a> {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="classSearchSuggester.html#a54d9b8631f0de5d55b9b5e7d20b51d4e">SearchSuggester</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="classSearchSuggester.html#a1da214e62fa2765321b9d6a132c1c77b">~SearchSuggester</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    std::vector&lt;std::string&gt; <a class="code" href="classSearchSuggester.html#ac61bd5c82387bec16850378e4937733d">suggest</a>(<span class="keyword">const</span> std::string&amp; prefix) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="classTrie.html">Trie</a> _trie; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="structTrieNode.html">TrieNode</a>* _trieRoot; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> loadHistory();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="structTrieNode.html">TrieNode</a>* getTrieRoot();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span> collectSuggestions(<a class="code" href="structTrieNode.html">TrieNode</a>* node, std::string <a class="code" href="lenin-philosophy_8txt.html#a595723f0e6484c564440b2a919288894">word</a>, std::vector&lt;std::string&gt;&amp; results);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;};</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassISuggester_html"><div class="ttname"><a href="classISuggester.html">ISuggester</a></div><div class="ttdoc">Interface for providing suggestions.</div><div class="ttdef"><b>Definition:</b> ISuggester.h:16</div></div>
-<div class="ttc" id="aclassSearchSuggester_html"><div class="ttname"><a href="classSearchSuggester.html">SearchSuggester</a></div><div class="ttdoc">Implements the ISuggester interface to provide search suggestions.</div><div class="ttdef"><b>Definition:</b> SearchSuggester.h:18</div></div>
+<div class="ttc" id="aclassISuggester_html"><div class="ttname"><a href="classISuggester.html">ISuggester</a></div><div class="ttdoc">Interface for providing suggestions.</div><div class="ttdef"><b>Definition:</b> ISuggester.h:21</div></div>
+<div class="ttc" id="alenin-philosophy_8txt_html_a595723f0e6484c564440b2a919288894"><div class="ttname"><a href="lenin-philosophy_8txt.html#a595723f0e6484c564440b2a919288894">word</a></div><div class="ttdeci">but he generously concedes that it may have the function of a Platonic ‘myth’ which helps proletarians to be revolutionaries Merleau Ponty dismisses it with a single word</div><div class="ttdef"><b>Definition:</b> lenin-philosophy.txt:43</div></div>
+<div class="ttc" id="aclassTrie_html"><div class="ttname"><a href="classTrie.html">Trie</a></div><div class="ttdoc">Implements a prefix tree (trie) for efficient string storage and retrieval.</div><div class="ttdef"><b>Definition:</b> Trie.h:38</div></div>
+<div class="ttc" id="aclassSearchSuggester_html_ac61bd5c82387bec16850378e4937733d"><div class="ttname"><a href="classSearchSuggester.html#ac61bd5c82387bec16850378e4937733d">SearchSuggester::suggest</a></div><div class="ttdeci">std::vector&lt; std::string &gt; suggest(const std::string &amp;prefix) override</div><div class="ttdoc">Suggests queries that start with the given prefix.</div><div class="ttdef"><b>Definition:</b> SearchSuggester.cpp:7</div></div>
+<div class="ttc" id="aclassSearchSuggester_html_a54d9b8631f0de5d55b9b5e7d20b51d4e"><div class="ttname"><a href="classSearchSuggester.html#a54d9b8631f0de5d55b9b5e7d20b51d4e">SearchSuggester::SearchSuggester</a></div><div class="ttdeci">SearchSuggester()</div><div class="ttdoc">Constructs a SearchSuggester object and loads search history.</div><div class="ttdef"><b>Definition:</b> SearchSuggester.cpp:3</div></div>
+<div class="ttc" id="astructTrieNode_html"><div class="ttname"><a href="structTrieNode.html">TrieNode</a></div><div class="ttdoc">Represents a node in the Trie data structure.</div><div class="ttdef"><b>Definition:</b> Trie.h:20</div></div>
+<div class="ttc" id="aclassSearchSuggester_html"><div class="ttname"><a href="classSearchSuggester.html">SearchSuggester</a></div><div class="ttdoc">Implements the ISuggester interface to provide search suggestions.</div><div class="ttdef"><b>Definition:</b> SearchSuggester.h:23</div></div>
 <div class="ttc" id="aclassSearchSuggester_html_a1da214e62fa2765321b9d6a132c1c77b"><div class="ttname"><a href="classSearchSuggester.html#a1da214e62fa2765321b9d6a132c1c77b">SearchSuggester::~SearchSuggester</a></div><div class="ttdeci">~SearchSuggester() override=default</div><div class="ttdoc">Destroys the SearchSuggester object.</div></div>
 <div class="ttc" id="aISuggester_8h_html"><div class="ttname"><a href="ISuggester_8h.html">ISuggester.h</a></div><div class="ttdoc">Defines the ISuggester interface for providing suggestions.</div></div>
 <!-- start footer part -->

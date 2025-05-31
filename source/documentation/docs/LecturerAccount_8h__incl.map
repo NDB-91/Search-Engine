@@ -1,10 +1,11 @@
 <map id="/workspaces/codespaces&#45;blank/source/account/LecturerAccount.h" name="/workspaces/codespaces&#45;blank/source/account/LecturerAccount.h">
-<area shape="rect" id="node1" title="Defines the LecturerAccount class for managing lecturer accounts." alt="" coords="142,5,325,61"/>
-<area shape="rect" id="node2" href="$IAccount_8h.html" title="Defines the IAccount interface for managing user accounts." alt="" coords="116,109,207,136"/>
-<area shape="rect" id="node6" href="$Lecturer_8h.html" title="Defines the Lecturer class for representing lecturer information." alt="" coords="235,109,387,136"/>
+<area shape="rect" id="node1" title="Defines the LecturerAccount class for managing lecturer accounts." alt="" coords="181,5,363,61"/>
+<area shape="rect" id="node2" href="$IAccount_8h.html" title="Defines the IAccount interface for managing user accounts." alt="" coords="155,109,245,136"/>
+<area shape="rect" id="node7" href="$Lecturer_8h.html" title="Defines the Lecturer class for representing lecturer information." alt="" coords="299,109,451,136"/>
 <area shape="rect" id="node3" title=" " alt="" coords="5,184,83,211"/>
-<area shape="rect" id="node4" title=" " alt="" coords="245,259,304,285"/>
-<area shape="rect" id="node5" href="$IUser_8h.html" title="Defines the IUser interface and the Role enumeration for user management." alt="" coords="158,184,237,211"/>
-<area shape="rect" id="node7" href="$University_8h.html" title="Defines the University class for representing university information." alt="" coords="313,184,493,211"/>
-<area shape="rect" id="node8" href="$Department_8h.html" title="Defines the Department enumeration for categorizing academic or organizational departments." alt="" coords="517,184,721,211"/>
+<area shape="rect" id="node4" title=" " alt="" coords="323,259,381,285"/>
+<area shape="rect" id="node5" href="$IUser_8h.html" title="Defines the IUser interface and the Role enumeration for user management." alt="" coords="107,184,186,211"/>
+<area shape="rect" id="node6" href="$Object_8h.html" title=" " alt="" coords="166,259,242,285"/>
+<area shape="rect" id="node8" href="$University_8h.html" title="Defines the University class for representing university information." alt="" coords="262,184,442,211"/>
+<area shape="rect" id="node9" href="$Department_8h.html" title="Defines the Department enumeration for categorizing academic or organizational departments." alt="" coords="466,184,670,211"/>
 </map>

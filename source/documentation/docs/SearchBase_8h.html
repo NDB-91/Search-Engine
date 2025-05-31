@@ -77,6 +77,7 @@ $(function() {
 <div class="textblock"><code>#include &lt;memory&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
+<code>#include &quot;<a class="el" href="Object_8h_source.html">../Object.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="IIndexBuilder_8h_source.html">../indexer/IIndexBuilder.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="IndexSearcher_8h_source.html">IndexSearcher.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -84,17 +85,18 @@ Include dependency graph for SearchBase.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="SearchBase_8h__incl.png" border="0" usemap="#_2workspaces_2codespaces-blank_2source_2search_2SearchBase_8h" alt=""/></div>
 <map name="_2workspaces_2codespaces-blank_2source_2search_2SearchBase_8h" id="_2workspaces_2codespaces-blank_2source_2search_2SearchBase_8h">
-<area shape="rect" title="Defines the SearchBase abstract class for performing search queries." alt="" coords="238,5,487,47"/>
-<area shape="rect" title=" " alt="" coords="67,244,144,271"/>
-<area shape="rect" title=" " alt="" coords="591,319,654,345"/>
-<area shape="rect" title=" " alt="" coords="447,543,505,569"/>
-<area shape="rect" href="IIndexBuilder_8h.html" title="Defines the IIndexBuilder interface for building and managing document indices." alt="" coords="271,169,454,196"/>
-<area shape="rect" href="IndexSearcher_8h.html" title="Defines the IndexSearcher class for performing search queries on an index." alt="" coords="414,95,541,121"/>
-<area shape="rect" href="IIndex_8h.html" title="Defines the IIndex interface for indexing and querying documents." alt="" coords="455,244,529,271"/>
-<area shape="rect" href="Document_8h.html" title="Defines the Document class for managing documents in the system." alt="" coords="321,319,503,345"/>
-<area shape="rect" href="Department_8h.html" title="Defines the Department enumeration for categorizing academic or organizational departments." alt="" coords="94,468,298,495"/>
-<area shape="rect" href="Lecturer_8h.html" title="Defines the Lecturer class for representing lecturer information." alt="" coords="336,393,488,420"/>
-<area shape="rect" href="University_8h.html" title="Defines the University class for representing university information." alt="" coords="322,468,502,495"/>
+<area shape="rect" title="Defines the SearchBase abstract class for performing search queries." alt="" coords="619,5,869,47"/>
+<area shape="rect" title=" " alt="" coords="525,244,603,271"/>
+<area shape="rect" title=" " alt="" coords="934,319,997,345"/>
+<area shape="rect" title=" " alt="" coords="199,543,257,569"/>
+<area shape="rect" href="Object_8h.html" title=" " alt="" coords="776,543,864,569"/>
+<area shape="rect" href="IIndexBuilder_8h.html" title="Defines the IIndexBuilder interface for building and managing document indices." alt="" coords="602,169,785,196"/>
+<area shape="rect" href="IndexSearcher_8h.html" title="Defines the IndexSearcher class for performing search queries on an index." alt="" coords="731,95,858,121"/>
+<area shape="rect" href="IIndex_8h.html" title="Defines the IIndex interface for indexing and querying documents." alt="" coords="732,244,807,271"/>
+<area shape="rect" href="Document_8h.html" title="Defines the Document class for managing documents in the system." alt="" coords="410,319,593,345"/>
+<area shape="rect" href="Department_8h.html" title="Defines the Department enumeration for categorizing academic or organizational departments." alt="" coords="195,468,399,495"/>
+<area shape="rect" href="Lecturer_8h.html" title="Defines the Lecturer class for representing lecturer information." alt="" coords="393,393,545,420"/>
+<area shape="rect" href="University_8h.html" title="Defines the University class for representing university information." alt="" coords="475,468,655,495"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -102,14 +104,17 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="SearchBase_8h__dep__incl.png" border="0" usemap="#_2workspaces_2codespaces-blank_2source_2search_2SearchBase_8hdep" alt=""/></div>
 <map name="_2workspaces_2codespaces-blank_2source_2search_2SearchBase_8hdep" id="_2workspaces_2codespaces-blank_2source_2search_2SearchBase_8hdep">
-<area shape="rect" title="Defines the SearchBase abstract class for performing search queries." alt="" coords="375,5,624,47"/>
-<area shape="rect" href="SearchEngine_8h.html" title="Defines the SearchEngine class for managing search operations." alt="" coords="223,95,485,136"/>
-<area shape="rect" href="SearchKeyword_8h.html" title="Defines the SearchKeyword class for performing keyword&#45;based search queries." alt="" coords="508,95,781,136"/>
-<area shape="rect" href="Application_8h.html" title=" " alt="" coords="124,184,323,225"/>
-<area shape="rect" href="SearchEngine_8cpp.html" title=" " alt="" coords="347,184,623,225"/>
-<area shape="rect" href="Application_8cpp.html" title=" " alt="" coords="5,273,220,315"/>
-<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="244,273,427,315"/>
-<area shape="rect" href="SearchKeyword_8cpp.html" title=" " alt="" coords="647,184,935,225"/>
+<area shape="rect" title="Defines the SearchBase abstract class for performing search queries." alt="" coords="465,5,715,47"/>
+<area shape="rect" href="SearchEngine_8h.html" title="Defines the SearchEngine class for managing search operations." alt="" coords="314,95,575,136"/>
+<area shape="rect" href="SearchKeyword_8h.html" title="Defines the SearchKeyword class for performing keyword&#45;based search queries." alt="" coords="599,95,872,136"/>
+<area shape="rect" href="Application_8h.html" title=" " alt="" coords="112,295,311,337"/>
+<area shape="rect" href="IRankingVisitor_8h.html" title=" " alt="" coords="353,184,536,240"/>
+<area shape="rect" href="TFIDFRanking_8h.html" title=" " alt="" coords="335,288,517,344"/>
+<area shape="rect" href="SearchEngine_8cpp.html" title=" " alt="" coords="541,295,817,337"/>
+<area shape="rect" href="Application_8cpp.html" title=" " alt="" coords="212,399,427,441"/>
+<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="5,399,188,441"/>
+<area shape="rect" href="TFIDFRanking_8cpp.html" title=" " alt="" coords="451,392,633,448"/>
+<area shape="rect" href="SearchKeyword_8cpp.html" title=" " alt="" coords="717,191,1005,233"/>
 </map>
 </div>
 </div>

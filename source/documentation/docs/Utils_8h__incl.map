@@ -1,8 +1,11 @@
 <map id="/workspaces/codespaces&#45;blank/source/Utils.h" name="/workspaces/codespaces&#45;blank/source/Utils.h">
-<area shape="rect" id="node1" title=" " alt="" coords="65,5,247,47"/>
-<area shape="rect" id="node2" title=" " alt="" coords="267,169,325,196"/>
-<area shape="rect" id="node3" title=" " alt="" coords="25,95,100,121"/>
-<area shape="rect" id="node4" title=" " alt="" coords="125,95,187,121"/>
-<area shape="rect" id="node5" href="$University_8h.html" title="Defines the University class for representing university information." alt="" coords="212,95,380,121"/>
-<area shape="rect" id="node6" href="$Department_8h.html" title="Defines the Department enumeration for categorizing academic or organizational departments." alt="" coords="404,95,596,121"/>
+<area shape="rect" id="node1" title=" " alt="" coords="154,5,337,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="477,169,536,196"/>
+<area shape="rect" id="node3" title=" " alt="" coords="29,95,104,121"/>
+<area shape="rect" id="node4" title=" " alt="" coords="129,95,191,121"/>
+<area shape="rect" id="node5" title=" " alt="" coords="216,95,275,121"/>
+<area shape="rect" id="node6" title=" " alt="" coords="299,95,386,121"/>
+<area shape="rect" id="node7" href="$University_8h.html" title="Defines the University class for representing university information." alt="" coords="627,95,795,121"/>
+<area shape="rect" id="node9" href="$Department_8h.html" title="Defines the Department enumeration for categorizing academic or organizational departments." alt="" coords="411,95,603,121"/>
+<area shape="rect" id="node8" href="$Object_8h.html" title=" " alt="" coords="667,169,755,196"/>
 </map>

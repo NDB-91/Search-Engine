@@ -1,6 +1,7 @@
 <map id="/workspaces/codespaces&#45;blank/source/account/IAccount.h" name="/workspaces/codespaces&#45;blank/source/account/IAccount.h">
 <area shape="rect" id="node1" title="Defines the IAccount interface for managing user accounts." alt="" coords="29,5,211,61"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,109,83,136"/>
-<area shape="rect" id="node3" title=" " alt="" coords="129,184,188,211"/>
+<area shape="rect" id="node3" title=" " alt="" coords="91,184,149,211"/>
 <area shape="rect" id="node4" href="$IUser_8h.html" title="Defines the IUser interface and the Role enumeration for user management." alt="" coords="158,109,237,136"/>
+<area shape="rect" id="node5" href="$Object_8h.html" title=" " alt="" coords="174,184,250,211"/>
 </map>

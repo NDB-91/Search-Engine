@@ -68,18 +68,24 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="Utils_8h_source.html">Utils.h</a>&quot;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;regex&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Utils.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="Utils_8cpp__incl.png" border="0" usemap="#_2workspaces_2codespaces-blank_2source_2Utils_8cpp" alt=""/></div>
 <map name="_2workspaces_2codespaces-blank_2source_2Utils_8cpp" id="_2workspaces_2codespaces-blank_2source_2Utils_8cpp">
-<area shape="rect" title=" " alt="" coords="65,5,247,47"/>
-<area shape="rect" href="Utils_8h.html" title=" " alt="" coords="124,95,188,121"/>
-<area shape="rect" title=" " alt="" coords="267,244,325,271"/>
-<area shape="rect" title=" " alt="" coords="25,169,100,196"/>
-<area shape="rect" title=" " alt="" coords="125,169,187,196"/>
-<area shape="rect" href="University_8h.html" title="Defines the University class for representing university information." alt="" coords="212,169,380,196"/>
-<area shape="rect" href="Department_8h.html" title="Defines the Department enumeration for categorizing academic or organizational departments." alt="" coords="404,169,596,196"/>
+<area shape="rect" title=" " alt="" coords="489,5,672,47"/>
+<area shape="rect" href="Utils_8h.html" title=" " alt="" coords="302,95,366,121"/>
+<area shape="rect" title=" " alt="" coords="728,169,787,196"/>
+<area shape="rect" title=" " alt="" coords="618,95,698,121"/>
+<area shape="rect" title=" " alt="" coords="387,244,446,271"/>
+<area shape="rect" title=" " alt="" coords="23,169,98,196"/>
+<area shape="rect" title=" " alt="" coords="122,169,185,196"/>
+<area shape="rect" title=" " alt="" coords="209,169,296,196"/>
+<area shape="rect" href="University_8h.html" title="Defines the University class for representing university information." alt="" coords="536,169,704,196"/>
+<area shape="rect" href="Department_8h.html" title="Defines the Department enumeration for categorizing academic or organizational departments." alt="" coords="320,169,512,196"/>
+<area shape="rect" href="Object_8h.html" title=" " alt="" coords="576,244,664,271"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -100,6 +106,21 @@ Functions</h2></td></tr>
 <tr class="memitem:ac6d1149001734ad212e0aac3c57cacf6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Department_8h.html#a938069f766288326dabb8a8f0cd83bce">Department</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Utils_8cpp.html#ac6d1149001734ad212e0aac3c57cacf6">convertDepartment</a> (const std::string &amp;department)</td></tr>
 <tr class="memdesc:ac6d1149001734ad212e0aac3c57cacf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a string to a Department object.  <a href="Utils_8cpp.html#ac6d1149001734ad212e0aac3c57cacf6">More...</a><br /></td></tr>
 <tr class="separator:ac6d1149001734ad212e0aac3c57cacf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5fb591983a745ce7313bf73f89d9d1f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Utils_8cpp.html#ae5fb591983a745ce7313bf73f89d9d1f">validateEmail</a> (const std::string &amp;email, const std::string &amp;role)</td></tr>
+<tr class="memdesc:ae5fb591983a745ce7313bf73f89d9d1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates email format for student or lecturer roles.  <a href="Utils_8cpp.html#ae5fb591983a745ce7313bf73f89d9d1f">More...</a><br /></td></tr>
+<tr class="separator:ae5fb591983a745ce7313bf73f89d9d1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9aba6b4b9554ef86b076ec4d8a29cea"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Utils_8cpp.html#ad9aba6b4b9554ef86b076ec4d8a29cea">validatePassword</a> (const std::string &amp;password)</td></tr>
+<tr class="memdesc:ad9aba6b4b9554ef86b076ec4d8a29cea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates password length (between 6 and 20 characters).  <a href="Utils_8cpp.html#ad9aba6b4b9554ef86b076ec4d8a29cea">More...</a><br /></td></tr>
+<tr class="separator:ad9aba6b4b9554ef86b076ec4d8a29cea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82423c5507165ba1bada1d37744e99ce"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Utils_8cpp.html#a82423c5507165ba1bada1d37744e99ce">validateDepartment</a> (const std::string &amp;department)</td></tr>
+<tr class="memdesc:a82423c5507165ba1bada1d37744e99ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates if the department exists in the list.  <a href="Utils_8cpp.html#a82423c5507165ba1bada1d37744e99ce">More...</a><br /></td></tr>
+<tr class="separator:a82423c5507165ba1bada1d37744e99ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d95210919fd00eca05e1d2e8421964b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Utils_8cpp.html#a2d95210919fd00eca05e1d2e8421964b">validateUniversity</a> (const std::string &amp;university)</td></tr>
+<tr class="memdesc:a2d95210919fd00eca05e1d2e8421964b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates if the university exists in the list.  <a href="Utils_8cpp.html#a2d95210919fd00eca05e1d2e8421964b">More...</a><br /></td></tr>
+<tr class="separator:a2d95210919fd00eca05e1d2e8421964b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab616e70f0025a7411e8a0db6308470de"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Utils_8cpp.html#ab616e70f0025a7411e8a0db6308470de">getValidatedChoice</a> ()</td></tr>
+<tr class="memdesc:ab616e70f0025a7411e8a0db6308470de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates user choice input (must be a number between 1 and 4).  <a href="Utils_8cpp.html#ab616e70f0025a7411e8a0db6308470de">More...</a><br /></td></tr>
+<tr class="separator:ab616e70f0025a7411e8a0db6308470de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ac6d1149001734ad212e0aac3c57cacf6"></a>
@@ -153,6 +174,32 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The corresponding <a class="el" href="classUniversity.html#abdc67509a14e4c3b002720a0b58e3771" title="Enumeration of university names.">University::Name</a> enum value. </dd></dl>
+
+</div>
+</div>
+<a id="ab616e70f0025a7411e8a0db6308470de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab616e70f0025a7411e8a0db6308470de">&#9670;&nbsp;</a></span>getValidatedChoice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getValidatedChoice </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Validates user choice input (must be a number between 1 and 4). </p>
+<dl class="section return"><dt>Returns</dt><dd>The valid choice number. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>If the choice is invalid. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -245,6 +292,125 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The string representation of the university name. </dd></dl>
+
+</div>
+</div>
+<a id="a82423c5507165ba1bada1d37744e99ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82423c5507165ba1bada1d37744e99ce">&#9670;&nbsp;</a></span>validateDepartment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool validateDepartment </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>department</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Validates if the department exists in the list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">department</td><td>The department name to validate. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the department exists, else throws an exception. </dd></dl>
+
+</div>
+</div>
+<a id="ae5fb591983a745ce7313bf73f89d9d1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5fb591983a745ce7313bf73f89d9d1f">&#9670;&nbsp;</a></span>validateEmail()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool validateEmail </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>email</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>role</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Validates email format for student or lecturer roles. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">email</td><td>The email to validate. </td></tr>
+    <tr><td class="paramname">role</td><td>The role ("student" or "lecturer"). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the email is valid, else throws an exception. </dd></dl>
+
+</div>
+</div>
+<a id="ad9aba6b4b9554ef86b076ec4d8a29cea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9aba6b4b9554ef86b076ec4d8a29cea">&#9670;&nbsp;</a></span>validatePassword()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool validatePassword </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>password</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Validates password length (between 6 and 20 characters). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">password</td><td>The password to validate. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the password is valid, else throws an exception. </dd></dl>
+
+</div>
+</div>
+<a id="a2d95210919fd00eca05e1d2e8421964b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d95210919fd00eca05e1d2e8421964b">&#9670;&nbsp;</a></span>validateUniversity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool validateUniversity </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>university</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Validates if the university exists in the list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">university</td><td>The university name to validate. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the university exists, else throws an exception. </dd></dl>
 
 </div>
 </div>

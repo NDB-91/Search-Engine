@@ -1,7 +1,10 @@
 <map id="/workspaces/codespaces&#45;blank/source/search/SearchEngine.h" name="/workspaces/codespaces&#45;blank/source/search/SearchEngine.h">
-<area shape="rect" id="node1" title="Defines the SearchEngine class for managing search operations." alt="" coords="223,5,485,47"/>
-<area shape="rect" id="node2" href="$Application_8h.html" title=" " alt="" coords="124,95,323,136"/>
-<area shape="rect" id="node5" href="$SearchEngine_8cpp.html" title=" " alt="" coords="347,95,623,136"/>
-<area shape="rect" id="node3" href="$Application_8cpp.html" title=" " alt="" coords="5,184,220,225"/>
-<area shape="rect" id="node4" href="$main_8cpp.html" title=" " alt="" coords="244,184,427,225"/>
+<area shape="rect" id="node1" title="Defines the SearchEngine class for managing search operations." alt="" coords="274,5,535,47"/>
+<area shape="rect" id="node2" href="$Application_8h.html" title=" " alt="" coords="112,206,311,247"/>
+<area shape="rect" id="node5" href="$IRankingVisitor_8h.html" title=" " alt="" coords="313,95,496,151"/>
+<area shape="rect" id="node6" href="$TFIDFRanking_8h.html" title=" " alt="" coords="335,199,517,255"/>
+<area shape="rect" id="node8" href="$SearchEngine_8cpp.html" title=" " alt="" coords="541,206,817,247"/>
+<area shape="rect" id="node3" href="$Application_8cpp.html" title=" " alt="" coords="212,310,427,351"/>
+<area shape="rect" id="node4" href="$main_8cpp.html" title=" " alt="" coords="5,310,188,351"/>
+<area shape="rect" id="node7" href="$TFIDFRanking_8cpp.html" title=" " alt="" coords="451,303,633,359"/>
 </map>

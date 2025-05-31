@@ -1,4 +1,38 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classIAccountRepository.html" title="Interface for managing account storage and retrieval." alt="" coords="5,5,153,32"/>
-<area shape="rect" id="node2" href="$classFileAccountRepository.html" title="Implements the IAccountRepository interface to manage accounts stored in a file." alt="" coords="201,5,368,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,192,32"/>
+<area shape="rect" id="node2" href="$classSearchEngine.html" title="Provides functionality to perform and manage search operations." alt="" coords="259,31,369,57"/>
+<area shape="rect" id="node3" href="$classIVisitable.html" title=" " alt="" coords="57,56,140,83"/>
+<area shape="rect" id="node4" href="$classObject.html" title=" " alt="" coords="67,563,131,589"/>
+<area shape="rect" id="node5" href="$classAccountFactory.html" title="Factory class for creating account objects." alt="" coords="253,81,375,108"/>
+<area shape="rect" id="node6" href="$classAccountService.html" title="Provides functionality for managing accounts, including registration and login." alt="" coords="253,132,375,159"/>
+<area shape="rect" id="node7" href="$classDocument.html" title="Represents a document associated with a specific department and author." alt="" coords="269,183,359,209"/>
+<area shape="rect" id="node9" href="$classDocumentManager.html" title="Singleton class for managing documents in the system." alt="" coords="241,233,387,260"/>
+<area shape="rect" id="node10" href="$classIAccountRepository.html" title="Interface for managing account storage and retrieval." alt="" coords="240,284,388,311"/>
+<area shape="rect" id="node12" href="$classIIndex.html" title="Interface for indexing and querying documents." alt="" coords="283,335,345,361"/>
+<area shape="rect" id="node14" href="$classIIndexBuilder.html" title="Interface for building and managing document indices." alt="" coords="260,385,368,412"/>
+<area shape="rect" id="node16" href="$classILoader.html" title="Interface for loading document content by document ID." alt="" coords="279,436,349,463"/>
+<area shape="rect" id="node18" href="$classILogger.html" title="Interface for logging informations." alt="" coords="279,487,349,513"/>
+<area shape="rect" id="node20" href="$classIndexManager.html" title="Singleton class for managing the indexing process." alt="" coords="257,537,371,564"/>
+<area shape="rect" id="node21" href="$classIndexSearcher.html" title="Provides functionality to search for documents in an index." alt="" coords="257,588,371,615"/>
+<area shape="rect" id="node22" href="$classISuggester.html" title="Interface for providing suggestions." alt="" coords="269,639,359,665"/>
+<area shape="rect" id="node24" href="$classIUser.html" title="Interface for a user in the system." alt="" coords="286,689,342,716"/>
+<area shape="rect" id="node28" href="$classLecturerManager.html" title="Singleton class for managing lecturers in the system." alt="" coords="248,740,380,767"/>
+<area shape="rect" id="node29" href="$classNotificationService.html" title="Provides functionality for sending notifications." alt="" coords="241,791,387,817"/>
+<area shape="rect" id="node30" href="$classSearchBase.html" title="Abstract base class for performing search queries." alt="" coords="265,841,363,868"/>
+<area shape="rect" id="node32" href="$classStudentManager.html" title="Singleton class for managing students in the system." alt="" coords="249,892,379,919"/>
+<area shape="rect" id="node33" href="$classTextProcessor.html" title="Provides static methods for processing text." alt="" coords="258,943,370,969"/>
+<area shape="rect" id="node34" href="$classTime.html" title="Provides a static method to retrieve the current time as a string." alt="" coords="287,993,341,1020"/>
+<area shape="rect" id="node35" href="$classTrie.html" title="Implements a prefix tree (trie) for efficient string storage and retrieval." alt="" coords="291,1044,337,1071"/>
+<area shape="rect" id="node36" href="$classUniversity.html" title="Represents a university and its associated details." alt="" coords="269,1095,359,1121"/>
+<area shape="rect" id="node8" href="$classMockDocument.html" title="Mock implementation of the Document class for testing purposes." alt="" coords="457,183,581,209"/>
+<area shape="rect" id="node11" href="$classFileAccountRepository.html" title="Implements the IAccountRepository interface to manage accounts stored in a file." alt="" coords="436,284,603,311"/>
+<area shape="rect" id="node13" href="$classInvertedIndex.html" title="Implements the IIndex interface using an inverted index structure." alt="" coords="463,335,575,361"/>
+<area shape="rect" id="node15" href="$classInvertedIndexBuilder.html" title="Implements the IIndexBuilder interface to build and manage inverted indices." alt="" coords="440,385,599,412"/>
+<area shape="rect" id="node17" href="$classLoaderFile.html" title="Singleton class for loading document content from files." alt="" coords="475,436,564,463"/>
+<area shape="rect" id="node19" href="$classSearchLogger.html" title="Implements the ILogger interface to log search queries." alt="" coords="464,487,575,513"/>
+<area shape="rect" id="node23" href="$classSearchSuggester.html" title="Implements the ISuggester interface to provide search suggestions." alt="" coords="454,639,585,665"/>
+<area shape="rect" id="node25" href="$classIAccount.html" title="Interface for managing user accounts." alt="" coords="480,689,559,716"/>
+<area shape="rect" id="node26" href="$classLecturerAccount.html" title="Represents an account for a lecturer." alt="" coords="651,664,777,691"/>
+<area shape="rect" id="node27" href="$classStudentAccount.html" title="Represents an account for a student." alt="" coords="652,715,776,741"/>
+<area shape="rect" id="node31" href="$classSearchKeyword.html" title="Implements keyword&#45;based search functionality." alt="" coords="458,841,581,868"/>
 </map>

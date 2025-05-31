@@ -63,13 +63,14 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classSearchLogger-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">SearchLogger Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Implements the <a class="el" href="classILogger.html" title="Interface for logging messages.">ILogger</a> interface to log search queries.  
+<p>Implements the <a class="el" href="classILogger.html" title="Interface for logging informations.">ILogger</a> interface to log search queries.  
  <a href="classSearchLogger.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="SearchLogger_8h_source.html">SearchLogger.h</a>&gt;</code></p>
@@ -78,8 +79,9 @@ Inheritance diagram for SearchLogger:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSearchLogger__inherit__graph.png" border="0" usemap="#SearchLogger_inherit__map" alt="Inheritance graph"/></div>
 <map name="SearchLogger_inherit__map" id="SearchLogger_inherit__map">
-<area shape="rect" title="Implements the ILogger interface to log search queries." alt="" coords="5,80,116,107"/>
-<area shape="rect" href="classILogger.html" title="Interface for logging messages." alt="" coords="25,5,96,32"/>
+<area shape="rect" title="Implements the ILogger interface to log search queries." alt="" coords="5,155,116,181"/>
+<area shape="rect" href="classILogger.html" title="Interface for logging informations." alt="" coords="25,80,96,107"/>
+<area shape="rect" href="classObject.html" title=" " alt="" coords="29,5,93,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -87,8 +89,9 @@ Collaboration diagram for SearchLogger:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSearchLogger__coll__graph.png" border="0" usemap="#SearchLogger_coll__map" alt="Collaboration graph"/></div>
 <map name="SearchLogger_coll__map" id="SearchLogger_coll__map">
-<area shape="rect" title="Implements the ILogger interface to log search queries." alt="" coords="5,80,116,107"/>
-<area shape="rect" href="classILogger.html" title="Interface for logging messages." alt="" coords="25,5,96,32"/>
+<area shape="rect" title="Implements the ILogger interface to log search queries." alt="" coords="5,155,116,181"/>
+<area shape="rect" href="classILogger.html" title="Interface for logging informations." alt="" coords="25,80,96,107"/>
+<area shape="rect" href="classObject.html" title=" " alt="" coords="29,5,93,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -97,16 +100,25 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a61dfa88618b999c45b635a311d8c792d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchLogger.html#a61dfa88618b999c45b635a311d8c792d">~SearchLogger</a> () override=default</td></tr>
 <tr class="memdesc:a61dfa88618b999c45b635a311d8c792d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the <a class="el" href="classSearchLogger.html" title="Implements the ILogger interface to log search queries.">SearchLogger</a> object.  <a href="classSearchLogger.html#a61dfa88618b999c45b635a311d8c792d">More...</a><br /></td></tr>
 <tr class="separator:a61dfa88618b999c45b635a311d8c792d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a1b417a8e89932f1334fbb237635169"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchLogger.html#a9a1b417a8e89932f1334fbb237635169">log</a> (const std::string &amp;query) override</td></tr>
-<tr class="memdesc:a9a1b417a8e89932f1334fbb237635169"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a search query.  <a href="classSearchLogger.html#a9a1b417a8e89932f1334fbb237635169">More...</a><br /></td></tr>
-<tr class="separator:a9a1b417a8e89932f1334fbb237635169"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a657f20620681316be5c9438e0df3aa3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchLogger.html#a657f20620681316be5c9438e0df3aa3b">log</a> (const std::string &amp;query)</td></tr>
+<tr class="memdesc:a657f20620681316be5c9438e0df3aa3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a search query.  <a href="classSearchLogger.html#a657f20620681316be5c9438e0df3aa3b">More...</a><br /></td></tr>
+<tr class="separator:a657f20620681316be5c9438e0df3aa3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classILogger"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classILogger')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classILogger.html">ILogger</a></td></tr>
 <tr class="memitem:ad5d37badb7f177d73bb0344109ff847d inherit pub_methods_classILogger"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classILogger.html#ad5d37badb7f177d73bb0344109ff847d">~ILogger</a> ()=default</td></tr>
-<tr class="memdesc:ad5d37badb7f177d73bb0344109ff847d inherit pub_methods_classILogger"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor for the <a class="el" href="classILogger.html" title="Interface for logging messages.">ILogger</a> interface.  <a href="classILogger.html#ad5d37badb7f177d73bb0344109ff847d">More...</a><br /></td></tr>
+<tr class="memdesc:ad5d37badb7f177d73bb0344109ff847d inherit pub_methods_classILogger"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor for the <a class="el" href="classILogger.html" title="Interface for logging informations.">ILogger</a> interface.  <a href="classILogger.html#ad5d37badb7f177d73bb0344109ff847d">More...</a><br /></td></tr>
 <tr class="separator:ad5d37badb7f177d73bb0344109ff847d inherit pub_methods_classILogger"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classObject"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classObject')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classObject.html">Object</a></td></tr>
+<tr class="memitem:a226f2ae2af766b77d83c09a4d766b725 inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObject.html#a226f2ae2af766b77d83c09a4d766b725">~Object</a> ()=default</td></tr>
+<tr class="separator:a226f2ae2af766b77d83c09a4d766b725 inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ae776ba2ec139e7d79433430bd8009acd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classSearchLogger.html">SearchLogger</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchLogger.html#ae776ba2ec139e7d79433430bd8009acd">instance</a> ()</td></tr>
+<tr class="memdesc:ae776ba2ec139e7d79433430bd8009acd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the singleton instance of the <a class="el" href="classSearchLogger.html" title="Implements the ILogger interface to log search queries.">SearchLogger</a>.  <a href="classSearchLogger.html#ae776ba2ec139e7d79433430bd8009acd">More...</a><br /></td></tr>
+<tr class="separator:ae776ba2ec139e7d79433430bd8009acd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Implements the <a class="el" href="classILogger.html" title="Interface for logging messages.">ILogger</a> interface to log search queries. </p>
+<div class="textblock"><p>Implements the <a class="el" href="classILogger.html" title="Interface for logging informations.">ILogger</a> interface to log search queries. </p>
 <p>The <a class="el" href="classSearchLogger.html" title="Implements the ILogger interface to log search queries.">SearchLogger</a> class provides functionality to log search queries to a specified file. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a61dfa88618b999c45b635a311d8c792d"></a>
@@ -137,14 +149,39 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a9a1b417a8e89932f1334fbb237635169"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a1b417a8e89932f1334fbb237635169">&#9670;&nbsp;</a></span>log()</h2>
+<a id="ae776ba2ec139e7d79433430bd8009acd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae776ba2ec139e7d79433430bd8009acd">&#9670;&nbsp;</a></span>instance()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSearchLogger.html">SearchLogger</a> &amp; SearchLogger::instance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the singleton instance of the <a class="el" href="classSearchLogger.html" title="Implements the ILogger interface to log search queries.">SearchLogger</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the <a class="el" href="classSearchLogger.html" title="Implements the ILogger interface to log search queries.">SearchLogger</a> instance. </dd></dl>
+
+</div>
+</div>
+<a id="a657f20620681316be5c9438e0df3aa3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a657f20620681316be5c9438e0df3aa3b">&#9670;&nbsp;</a></span>log()</h2>
+
+<div class="memitem">
+<div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void SearchLogger::log </td>
@@ -154,11 +191,6 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Logs a search query. </p>
@@ -168,8 +200,6 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-<p>Implements <a class="el" href="classILogger.html#acd44b418d120135ffb3255ca3adeb92d">ILogger</a>.</p>
 
 </div>
 </div>

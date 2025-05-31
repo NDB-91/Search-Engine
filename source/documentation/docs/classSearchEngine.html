@@ -73,6 +73,28 @@ $(function() {
  <a href="classSearchEngine.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="SearchEngine_8h_source.html">SearchEngine.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for SearchEngine:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSearchEngine__inherit__graph.png" border="0" usemap="#SearchEngine_inherit__map" alt="Inheritance graph"/></div>
+<map name="SearchEngine_inherit__map" id="SearchEngine_inherit__map">
+<area shape="rect" title="Provides functionality to perform and manage search operations." alt="" coords="143,95,254,121"/>
+<area shape="rect" href="classObject.html" title=" " alt="" coords="5,13,69,39"/>
+<area shape="rect" title=" " alt="" coords="94,5,303,47"/>
+<area shape="rect" href="classIVisitable.html" title=" " alt="" coords="328,13,411,39"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for SearchEngine:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSearchEngine__coll__graph.png" border="0" usemap="#SearchEngine_coll__map" alt="Collaboration graph"/></div>
+<map name="SearchEngine_coll__map" id="SearchEngine_coll__map">
+<area shape="rect" title="Provides functionality to perform and manage search operations." alt="" coords="143,95,254,121"/>
+<area shape="rect" href="classObject.html" title=" " alt="" coords="5,13,69,39"/>
+<area shape="rect" title=" " alt="" coords="94,5,303,47"/>
+<area shape="rect" href="classIVisitable.html" title=" " alt="" coords="328,13,411,39"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -85,12 +107,27 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af40017e2a759d20d1478a9339ba246d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchEngine.html#af40017e2a759d20d1478a9339ba246d2">search</a> (const std::string &amp;query)</td></tr>
 <tr class="memdesc:af40017e2a759d20d1478a9339ba246d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a search query.  <a href="classSearchEngine.html#af40017e2a759d20d1478a9339ba246d2">More...</a><br /></td></tr>
 <tr class="separator:af40017e2a759d20d1478a9339ba246d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1ea6c05c655d645383bef2c91c64b71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchEngine.html#ad1ea6c05c655d645383bef2c91c64b71">displayResults</a> ()</td></tr>
-<tr class="memdesc:ad1ea6c05c655d645383bef2c91c64b71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays the search results.  <a href="classSearchEngine.html#ad1ea6c05c655d645383bef2c91c64b71">More...</a><br /></td></tr>
-<tr class="separator:ad1ea6c05c655d645383bef2c91c64b71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b9bebdfcaa4269d9d84cd16b36914bf"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classDocument.html">Document</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchEngine.html#a0b9bebdfcaa4269d9d84cd16b36914bf">results</a> ()</td></tr>
+<tr class="memdesc:a0b9bebdfcaa4269d9d84cd16b36914bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the result of the current search query.  <a href="classSearchEngine.html#a0b9bebdfcaa4269d9d84cd16b36914bf">More...</a><br /></td></tr>
+<tr class="separator:a0b9bebdfcaa4269d9d84cd16b36914bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab52d2aba2974074184e070dc716aaea6"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchEngine.html#ab52d2aba2974074184e070dc716aaea6">currentQuery</a> () const</td></tr>
+<tr class="memdesc:ab52d2aba2974074184e070dc716aaea6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the current search query string.  <a href="classSearchEngine.html#ab52d2aba2974074184e070dc716aaea6">More...</a><br /></td></tr>
+<tr class="separator:ab52d2aba2974074184e070dc716aaea6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab519c67defddd73517c602c00d033fe2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchEngine.html#ab519c67defddd73517c602c00d033fe2">displayResults</a> (std::shared_ptr&lt; <a class="el" href="classIRankingVisitor.html">IRankingVisitor</a> &gt; visitor)</td></tr>
+<tr class="memdesc:ab519c67defddd73517c602c00d033fe2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays the search results.  <a href="classSearchEngine.html#ab519c67defddd73517c602c00d033fe2">More...</a><br /></td></tr>
+<tr class="separator:ab519c67defddd73517c602c00d033fe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27a7ac467cbe904ae88ac354237fed26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchEngine.html#a27a7ac467cbe904ae88ac354237fed26">clearResults</a> ()</td></tr>
 <tr class="memdesc:a27a7ac467cbe904ae88ac354237fed26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the current search results.  <a href="classSearchEngine.html#a27a7ac467cbe904ae88ac354237fed26">More...</a><br /></td></tr>
 <tr class="separator:a27a7ac467cbe904ae88ac354237fed26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47be1e637ce936ba5c1b4613acb06700"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchEngine.html#a47be1e637ce936ba5c1b4613acb06700">accept</a> (std::shared_ptr&lt; <a class="el" href="classIVisitor.html">IVisitor</a> &gt; visitor) override</td></tr>
+<tr class="memdesc:a47be1e637ce936ba5c1b4613acb06700"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accepts a visitor for processing.  <a href="classSearchEngine.html#a47be1e637ce936ba5c1b4613acb06700">More...</a><br /></td></tr>
+<tr class="separator:a47be1e637ce936ba5c1b4613acb06700"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classObject"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classObject')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classObject.html">Object</a></td></tr>
+<tr class="memitem:a226f2ae2af766b77d83c09a4d766b725 inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObject.html#a226f2ae2af766b77d83c09a4d766b725">~Object</a> ()=default</td></tr>
+<tr class="separator:a226f2ae2af766b77d83c09a4d766b725 inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classIVisitable"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classIVisitable')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classIVisitable.html">IVisitable</a></td></tr>
+<tr class="memitem:ad59960a94fb6f05e6dc73e14d1e37238 inherit pub_methods_classIVisitable"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIVisitable.html#ad59960a94fb6f05e6dc73e14d1e37238">~IVisitable</a> ()=default</td></tr>
+<tr class="separator:ad59960a94fb6f05e6dc73e14d1e37238 inherit pub_methods_classIVisitable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Provides functionality to perform and manage search operations. </p>
@@ -143,6 +180,42 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a47be1e637ce936ba5c1b4613acb06700"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47be1e637ce936ba5c1b4613acb06700">&#9670;&nbsp;</a></span>accept()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SearchEngine::accept </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classIVisitor.html">IVisitor</a> &gt;&#160;</td>
+          <td class="paramname"><em>visitor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Accepts a visitor for processing. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">visitor</td><td>The visitor object to accept. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classIVisitable.html#aff00dd28515a3ff45609787dac081688">IVisitable</a>.</p>
+
+</div>
+</div>
 <a id="a27a7ac467cbe904ae88ac354237fed26"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a27a7ac467cbe904ae88ac354237fed26">&#9670;&nbsp;</a></span>clearResults()</h2>
 
@@ -162,8 +235,28 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ad1ea6c05c655d645383bef2c91c64b71"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad1ea6c05c655d645383bef2c91c64b71">&#9670;&nbsp;</a></span>displayResults()</h2>
+<a id="ab52d2aba2974074184e070dc716aaea6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab52d2aba2974074184e070dc716aaea6">&#9670;&nbsp;</a></span>currentQuery()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SearchEngine::currentQuery </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves the current search query string. </p>
+<dl class="section return"><dt>Returns</dt><dd>The current search query string. </dd></dl>
+
+</div>
+</div>
+<a id="ab519c67defddd73517c602c00d033fe2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab519c67defddd73517c602c00d033fe2">&#9670;&nbsp;</a></span>displayResults()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -171,13 +264,40 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void SearchEngine::displayResults </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classIRankingVisitor.html">IRankingVisitor</a> &gt;&#160;</td>
+          <td class="paramname"><em>visitor</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Displays the search results. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">visitor</td><td>The visitor object to use for displaying results. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0b9bebdfcaa4269d9d84cd16b36914bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b9bebdfcaa4269d9d84cd16b36914bf">&#9670;&nbsp;</a></span>results()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="classDocument.html">Document</a> &gt; &amp; SearchEngine::results </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves the result of the current search query. </p>
+<dl class="section return"><dt>Returns</dt><dd>The list of <a class="el" href="classDocument.html" title="Represents a document associated with a specific department and author.">Document</a> of current search query string. </dd></dl>
 
 </div>
 </div>

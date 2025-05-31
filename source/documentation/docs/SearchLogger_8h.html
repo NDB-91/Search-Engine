@@ -82,9 +82,10 @@ Include dependency graph for SearchLogger.h:</div>
 <div class="center"><img src="SearchLogger_8h__incl.png" border="0" usemap="#_2workspaces_2codespaces-blank_2source_2logger_2SearchLogger_8h" alt=""/></div>
 <map name="_2workspaces_2codespaces-blank_2source_2logger_2SearchLogger_8h" id="_2workspaces_2codespaces-blank_2source_2logger_2SearchLogger_8h">
 <area shape="rect" title="Defines the SearchLogger class for logging search queries." alt="" coords="5,5,264,47"/>
-<area shape="rect" href="ILogger_8h.html" title="Defines the ILogger interface for logging messages." alt="" coords="94,95,175,121"/>
-<area shape="rect" title=" " alt="" coords="53,169,126,196"/>
-<area shape="rect" title=" " alt="" coords="151,169,209,196"/>
+<area shape="rect" href="ILogger_8h.html" title="Defines the ILogger interface for logging informations." alt="" coords="94,95,175,121"/>
+<area shape="rect" title=" " alt="" coords="7,169,81,196"/>
+<area shape="rect" title=" " alt="" coords="105,169,164,196"/>
+<area shape="rect" href="Object_8h.html" title=" " alt="" coords="188,169,276,196"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -92,8 +93,13 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="SearchLogger_8h__dep__incl.png" border="0" usemap="#_2workspaces_2codespaces-blank_2source_2logger_2SearchLogger_8hdep" alt=""/></div>
 <map name="_2workspaces_2codespaces-blank_2source_2logger_2SearchLogger_8hdep" id="_2workspaces_2codespaces-blank_2source_2logger_2SearchLogger_8hdep">
-<area shape="rect" title="Defines the SearchLogger class for logging search queries." alt="" coords="13,5,271,47"/>
-<area shape="rect" href="SearchLogger_8cpp.html" title=" " alt="" coords="5,95,279,136"/>
+<area shape="rect" title="Defines the SearchLogger class for logging search queries." alt="" coords="297,5,555,47"/>
+<area shape="rect" href="Application_8h.html" title=" " alt="" coords="112,102,311,143"/>
+<area shape="rect" href="SearchSuggester_8h.html" title="Defines the SearchSuggester class for providing search suggestions." alt="" coords="335,95,517,151"/>
+<area shape="rect" href="SearchLogger_8cpp.html" title=" " alt="" coords="541,102,815,143"/>
+<area shape="rect" href="Application_8cpp.html" title=" " alt="" coords="212,206,427,247"/>
+<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="5,206,188,247"/>
+<area shape="rect" href="SearchSuggester_8cpp.html" title=" " alt="" coords="451,199,633,255"/>
 </map>
 </div>
 </div>
@@ -102,12 +108,12 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchLogger.html">SearchLogger</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements the <a class="el" href="classILogger.html" title="Interface for logging messages.">ILogger</a> interface to log search queries.  <a href="classSearchLogger.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements the <a class="el" href="classILogger.html" title="Interface for logging informations.">ILogger</a> interface to log search queries.  <a href="classSearchLogger.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:abd5b90692d73af90ab212f7cccc8e797"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SearchLogger_8h.html#abd5b90692d73af90ab212f7cccc8e797">LOG_SEARCH_PATH</a>&#160;&#160;&#160;&quot;../database/log/log.txt&quot;</td></tr>
+<tr class="memitem:abd5b90692d73af90ab212f7cccc8e797"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SearchLogger_8h.html#abd5b90692d73af90ab212f7cccc8e797">LOG_SEARCH_PATH</a>&#160;&#160;&#160;&quot;database/log/log.txt&quot;</td></tr>
 <tr class="separator:abd5b90692d73af90ab212f7cccc8e797"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -120,7 +126,7 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define LOG_SEARCH_PATH&#160;&#160;&#160;&quot;../database/log/log.txt&quot;</td>
+          <td class="memname">#define LOG_SEARCH_PATH&#160;&#160;&#160;&quot;database/log/log.txt&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">

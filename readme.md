@@ -10,13 +10,15 @@
     - Generate sample data  
     - Code synthesis  
     - Create unit test (test plan, test cases and test report)  
+    - Implement auto-complete functionality for seaching (based on Trie tree and search log)
 - Nguyễn Văn Chiến
     - An Account Mangement System that related to universities (Students, Lecturers)
     - Generate documentation to describe the architecture (using Doxygen)  
+    - Handle exception (login, format)
 
 **The proportion of members' contributions to the project**
-- Ngô Đa Báu - 50%  
-- Nguyễn Văn Chiến - 40%  
+- Ngô Đa Báu - 55%  
+- Nguyễn Văn Chiến - 45%  
 
 **Member score ratio:** divide equally
 
@@ -64,14 +66,13 @@ This project is expected to include the following components:
 ### Detail  
 After this project is finished, the program might operate as follows:  
 1. You log in or register an account to access the application.
-2. You enter a word or phrase to search for academic information.
+2. You enter a word to search for academic information.
 3. This search will be saved in the records management system.
 4. The search algorithm processes the query and retrieves relevant results.
 5. The Command Line Interface (CLI) displays a list of results.
 6. You have the following options:
-    - View or download one of the results.
     - Continue searching with a new query.
-    - Exit the program.
+    - Exit search.
 
 
 ### Software Architecture
@@ -117,7 +118,7 @@ The system is divided into the following layers:
     Interfaces are designed to be specific to the needs of the clients.
 
 - **Dependency Inversion Principle (DIP):**  
-    High-level modules do not depend on low-level modules; both depend on abstractions. For example, `IAccount`, `IIndex`, and `ISearch`, etc...  
+    High-level modules do not depend on low-level modules; both depend on abstractions. For example, `Application` class just depends on abstraction class `IRankingVisitor`, `ISuggester`, and `ITerminal`, etc...  
 
 This combination of **Layered Architecture** and **SOLID Principles** ensures that the project is modular, extensible, and easy to maintain.
 
@@ -132,7 +133,7 @@ The following design patterns are used in this project:
     `IndexManager`: Handling the construction of an index type  
     `LectureManager`: Handle adding and retrieving information related to the Lecturer object  
     `StudentManager`: Handle adding and retrieving information related to the Student object  
-
+    `SearchLogger`: Save user searches
 
 - **Builder Pattern:**  
     `IIndexBuilder`: Interface that defines the construction steps required to create an Index.  
@@ -140,6 +141,13 @@ The following design patterns are used in this project:
 
 - **Adapter Pattern:**  
     `InderSearcher`: A bridge between IIndex and BaseBase  
+
+- **Repository Pattern**  
+    `FileAccountRepository`: Save and load student and lecturer accounts  
+
+- **Visitor Pattern**  
+    `IRanking Visitor`: Ranking the result of searhing  
+
 
 ### Reference
 https://github.com/alexandria-org/alexandria

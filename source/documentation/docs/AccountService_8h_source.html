@@ -72,34 +72,36 @@ $(function() {
 <a href="AccountService_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _ACCOUNT_SERVICE_H_</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _ACCOUNT_SERVICE_H_</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../account/IAccountRepository.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../account/AccountFactory.h&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="NotificationService_8h.html">NotificationService.h</a>&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classAccountService.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classAccountService.html">AccountService</a> {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="classAccountService.html#a5a23a55575bd9d6293909f21f27a41eb">AccountService</a>(std::shared_ptr&lt;IAccountRepository&gt; repo);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classAccountService.html#a010fc96a43b00c98923a15ea9bf4c00d">registerStudent</a>(<span class="keyword">const</span> <a class="code" href="classStudent.html">Student</a>&amp; student, <span class="keyword">const</span> std::string&amp; password);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classAccountService.html#ae7b583c3bf723921ffcd80aafdc669b1">registerLecturer</a>(<span class="keyword">const</span> <a class="code" href="classLecturer.html">Lecturer</a>&amp; lecturer, <span class="keyword">const</span> std::string&amp; password);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classAccountService.html#aa1f679e09b47f8f1221b35d5cd3621c7">login</a>(<span class="keyword">const</span> std::string&amp; email, <span class="keyword">const</span> std::string&amp; password) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    std::shared_ptr&lt;IAccountRepository&gt; _repo; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;};</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../Object.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../account/IAccountRepository.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../account/AccountFactory.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="NotificationService_8h.html">NotificationService.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classAccountService.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="classAccountService.html">AccountService</a> : <span class="keyword">public</span> <a class="code" href="classObject.html">Object</a> {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="classAccountService.html#a5a23a55575bd9d6293909f21f27a41eb">AccountService</a>(std::shared_ptr&lt;IAccountRepository&gt; repo);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classAccountService.html#a010fc96a43b00c98923a15ea9bf4c00d">registerStudent</a>(<span class="keyword">const</span> <a class="code" href="classStudent.html">Student</a>&amp; student, <span class="keyword">const</span> std::string&amp; password);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classAccountService.html#ae7b583c3bf723921ffcd80aafdc669b1">registerLecturer</a>(<span class="keyword">const</span> <a class="code" href="classLecturer.html">Lecturer</a>&amp; lecturer, <span class="keyword">const</span> std::string&amp; password);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classAccountService.html#aa1f679e09b47f8f1221b35d5cd3621c7">login</a>(<span class="keyword">const</span> std::string&amp; email, <span class="keyword">const</span> std::string&amp; password) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    std::shared_ptr&lt;IAccountRepository&gt; _repo; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;};</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassAccountService_html_a010fc96a43b00c98923a15ea9bf4c00d"><div class="ttname"><a href="classAccountService.html#a010fc96a43b00c98923a15ea9bf4c00d">AccountService::registerStudent</a></div><div class="ttdeci">void registerStudent(const Student &amp;student, const std::string &amp;password)</div><div class="ttdoc">Registers a new student account.</div><div class="ttdef"><b>Definition:</b> AccountService.cpp:8</div></div>
 <div class="ttc" id="aclassAccountService_html_aa1f679e09b47f8f1221b35d5cd3621c7"><div class="ttname"><a href="classAccountService.html#aa1f679e09b47f8f1221b35d5cd3621c7">AccountService::login</a></div><div class="ttdeci">bool login(const std::string &amp;email, const std::string &amp;password) const</div><div class="ttdoc">Logs in a user with the given email and password.</div><div class="ttdef"><b>Definition:</b> AccountService.cpp:30</div></div>
 <div class="ttc" id="aNotificationService_8h_html"><div class="ttname"><a href="NotificationService_8h.html">NotificationService.h</a></div><div class="ttdoc">Defines the NotificationService class for sending notifications.</div></div>
+<div class="ttc" id="aclassObject_html"><div class="ttname"><a href="classObject.html">Object</a></div><div class="ttdef"><b>Definition:</b> Object.h:4</div></div>
 <div class="ttc" id="aclassAccountService_html_ae7b583c3bf723921ffcd80aafdc669b1"><div class="ttname"><a href="classAccountService.html#ae7b583c3bf723921ffcd80aafdc669b1">AccountService::registerLecturer</a></div><div class="ttdeci">void registerLecturer(const Lecturer &amp;lecturer, const std::string &amp;password)</div><div class="ttdoc">Registers a new lecturer account.</div><div class="ttdef"><b>Definition:</b> AccountService.cpp:19</div></div>
 <div class="ttc" id="aclassAccountService_html_a5a23a55575bd9d6293909f21f27a41eb"><div class="ttname"><a href="classAccountService.html#a5a23a55575bd9d6293909f21f27a41eb">AccountService::AccountService</a></div><div class="ttdeci">AccountService(std::shared_ptr&lt; IAccountRepository &gt; repo)</div><div class="ttdoc">Constructs an AccountService object.</div><div class="ttdef"><b>Definition:</b> AccountService.cpp:5</div></div>
 <div class="ttc" id="aclassLecturer_html"><div class="ttname"><a href="classLecturer.html">Lecturer</a></div><div class="ttdoc">Represents a lecturer in a university.</div><div class="ttdef"><b>Definition:</b> Lecturer.h:21</div></div>
 <div class="ttc" id="aclassStudent_html"><div class="ttname"><a href="classStudent.html">Student</a></div><div class="ttdoc">Represents a student in a university.</div><div class="ttdef"><b>Definition:</b> Student.h:20</div></div>
-<div class="ttc" id="aclassAccountService_html"><div class="ttname"><a href="classAccountService.html">AccountService</a></div><div class="ttdoc">Provides functionality for managing accounts, including registration and login.</div><div class="ttdef"><b>Definition:</b> AccountService.h:20</div></div>
+<div class="ttc" id="aclassAccountService_html"><div class="ttname"><a href="classAccountService.html">AccountService</a></div><div class="ttdoc">Provides functionality for managing accounts, including registration and login.</div><div class="ttdef"><b>Definition:</b> AccountService.h:21</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

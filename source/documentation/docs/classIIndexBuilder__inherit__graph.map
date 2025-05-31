@@ -1,4 +1,5 @@
 <map id="IIndexBuilder" name="IIndexBuilder">
-<area shape="rect" id="node1" title="Interface for building and managing document indices." alt="" coords="31,5,139,32"/>
-<area shape="rect" id="node2" href="$classInvertedIndexBuilder.html" title="Implements the IIndexBuilder interface to build and manage inverted indices." alt="" coords="5,80,164,107"/>
+<area shape="rect" id="node1" title="Interface for building and managing document indices." alt="" coords="31,80,139,107"/>
+<area shape="rect" id="node3" href="$classInvertedIndexBuilder.html" title="Implements the IIndexBuilder interface to build and manage inverted indices." alt="" coords="5,155,164,181"/>
+<area shape="rect" id="node2" href="$classObject.html" title=" " alt="" coords="53,5,117,32"/>
 </map>

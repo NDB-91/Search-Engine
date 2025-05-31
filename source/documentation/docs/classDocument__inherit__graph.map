@@ -1,4 +1,5 @@
 <map id="Document" name="Document">
-<area shape="rect" id="node1" title="Represents a document associated with a specific department and author." alt="" coords="23,5,112,32"/>
-<area shape="rect" id="node2" href="$classMockDocument.html" title="Mock implementation of the Document class for testing purposes." alt="" coords="5,80,129,107"/>
+<area shape="rect" id="node1" title="Represents a document associated with a specific department and author." alt="" coords="23,80,112,107"/>
+<area shape="rect" id="node3" href="$classMockDocument.html" title="Mock implementation of the Document class for testing purposes." alt="" coords="5,155,129,181"/>
+<area shape="rect" id="node2" href="$classObject.html" title=" " alt="" coords="35,5,99,32"/>
 </map>

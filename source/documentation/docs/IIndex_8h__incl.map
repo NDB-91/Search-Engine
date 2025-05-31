@@ -1,9 +1,10 @@
 <map id="/workspaces/codespaces&#45;blank/source/indexer/IIndex.h" name="/workspaces/codespaces&#45;blank/source/indexer/IIndex.h">
-<area shape="rect" id="node1" title="Defines the IIndex interface for indexing and querying documents." alt="" coords="15,5,197,61"/>
+<area shape="rect" id="node1" title="Defines the IIndex interface for indexing and querying documents." alt="" coords="109,5,292,61"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,109,68,136"/>
 <area shape="rect" id="node3" title=" " alt="" coords="267,333,326,360"/>
-<area shape="rect" id="node4" href="$Document_8h.html" title="Defines the Document class for managing documents in the system." alt="" coords="165,109,348,136"/>
-<area shape="rect" id="node5" href="$Department_8h.html" title="Defines the Department enumeration for categorizing academic or organizational departments." alt="" coords="195,259,399,285"/>
-<area shape="rect" id="node6" href="$Lecturer_8h.html" title="Defines the Lecturer class for representing lecturer information." alt="" coords="349,184,501,211"/>
-<area shape="rect" id="node7" href="$University_8h.html" title="Defines the University class for representing university information." alt="" coords="475,259,655,285"/>
+<area shape="rect" id="node4" href="$Object_8h.html" title=" " alt="" coords="649,333,737,360"/>
+<area shape="rect" id="node5" href="$Document_8h.html" title="Defines the Document class for managing documents in the system." alt="" coords="205,109,388,136"/>
+<area shape="rect" id="node6" href="$Department_8h.html" title="Defines the Department enumeration for categorizing academic or organizational departments." alt="" coords="195,259,399,285"/>
+<area shape="rect" id="node7" href="$Lecturer_8h.html" title="Defines the Lecturer class for representing lecturer information." alt="" coords="347,184,499,211"/>
+<area shape="rect" id="node8" href="$University_8h.html" title="Defines the University class for representing university information." alt="" coords="475,259,655,285"/>
 </map>

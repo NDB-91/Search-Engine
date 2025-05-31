@@ -75,17 +75,17 @@ $(function() {
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classILogger.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classILogger.html">ILogger</a> {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classILogger.html#ad5d37badb7f177d73bb0344109ff847d">~ILogger</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classILogger.html#acd44b418d120135ffb3255ca3adeb92d">log</a>(<span class="keyword">const</span> std::string&amp; str) = 0;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;};</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;../Object.h&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classILogger.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="classILogger.html">ILogger</a> : <span class="keyword">public</span> <a class="code" href="classObject.html">Object</a> {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classILogger.html#ad5d37badb7f177d73bb0344109ff847d">~ILogger</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;};</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassILogger_html_acd44b418d120135ffb3255ca3adeb92d"><div class="ttname"><a href="classILogger.html#acd44b418d120135ffb3255ca3adeb92d">ILogger::log</a></div><div class="ttdeci">virtual void log(const std::string &amp;str)=0</div><div class="ttdoc">Logs a message.</div></div>
-<div class="ttc" id="aclassILogger_html"><div class="ttname"><a href="classILogger.html">ILogger</a></div><div class="ttdoc">Interface for logging messages.</div><div class="ttdef"><b>Definition:</b> ILogger.h:19</div></div>
+<div class="ttc" id="aclassObject_html"><div class="ttname"><a href="classObject.html">Object</a></div><div class="ttdef"><b>Definition:</b> Object.h:4</div></div>
+<div class="ttc" id="aclassILogger_html"><div class="ttname"><a href="classILogger.html">ILogger</a></div><div class="ttdoc">Interface for logging informations.</div><div class="ttdef"><b>Definition:</b> ILogger.h:21</div></div>
 <div class="ttc" id="aclassILogger_html_ad5d37badb7f177d73bb0344109ff847d"><div class="ttname"><a href="classILogger.html#ad5d37badb7f177d73bb0344109ff847d">ILogger::~ILogger</a></div><div class="ttdeci">virtual ~ILogger()=default</div><div class="ttdoc">Virtual destructor for the ILogger interface.</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

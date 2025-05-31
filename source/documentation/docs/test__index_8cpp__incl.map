@@ -3,14 +3,15 @@
 <area shape="rect" id="node2" title=" " alt="" coords="5,102,109,129"/>
 <area shape="rect" id="node3" title=" " alt="" coords="133,102,211,129"/>
 <area shape="rect" id="node4" href="$InvertedIndex_8h.html" title="Defines the InvertedIndex class for managing an inverted index of documents." alt="" coords="235,95,421,136"/>
-<area shape="rect" id="node11" href="$Document_8h.html" title="Defines the Document class for managing documents in the system." alt="" coords="287,259,470,285"/>
-<area shape="rect" id="node12" href="$Department_8h.html" title="Defines the Department enumeration for categorizing academic or organizational departments." alt="" coords="493,408,697,435"/>
+<area shape="rect" id="node12" href="$Document_8h.html" title="Defines the Document class for managing documents in the system." alt="" coords="277,259,459,285"/>
+<area shape="rect" id="node13" href="$Department_8h.html" title="Defines the Department enumeration for categorizing academic or organizational departments." alt="" coords="570,408,774,435"/>
 <area shape="rect" id="node5" title=" " alt="" coords="211,184,335,211"/>
 <area shape="rect" id="node6" title=" " alt="" coords="360,184,475,211"/>
 <area shape="rect" id="node7" title=" " alt="" coords="13,184,88,211"/>
 <area shape="rect" id="node8" href="$IIndex_8h.html" title="Defines the IIndex interface for indexing and querying documents." alt="" coords="112,184,187,211"/>
-<area shape="rect" id="node9" title=" " alt="" coords="49,259,111,285"/>
-<area shape="rect" id="node10" title=" " alt="" coords="221,483,280,509"/>
-<area shape="rect" id="node13" href="$Lecturer_8h.html" title="Defines the Lecturer class for representing lecturer information." alt="" coords="303,333,455,360"/>
-<area shape="rect" id="node14" href="$University_8h.html" title="Defines the University class for representing university information." alt="" coords="289,408,469,435"/>
+<area shape="rect" id="node9" title=" " alt="" coords="23,259,86,285"/>
+<area shape="rect" id="node10" title=" " alt="" coords="375,483,433,509"/>
+<area shape="rect" id="node11" href="$Object_8h.html" title=" " alt="" coords="131,483,219,509"/>
+<area shape="rect" id="node14" href="$Lecturer_8h.html" title="Defines the Lecturer class for representing lecturer information." alt="" coords="341,333,493,360"/>
+<area shape="rect" id="node15" href="$University_8h.html" title="Defines the University class for representing university information." alt="" coords="314,408,494,435"/>
 </map>

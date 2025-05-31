@@ -74,16 +74,19 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classILoader.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classILoader.html">ILoader</a> {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classILoader.html#aaa9f69dc4cc786787c9dcbbf140be364">~ILoader</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">virtual</span> std::string <a class="code" href="classILoader.html#a9713501b3d118a50fd95753fa05b529e">loadDocument</a>(<span class="keyword">const</span> std::string&amp; documentId) = 0;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;};</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../Object.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classILoader.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classILoader.html">ILoader</a> : <span class="keyword">public</span> <a class="code" href="classObject.html">Object</a> {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classILoader.html#aaa9f69dc4cc786787c9dcbbf140be364">~ILoader</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">virtual</span> std::string <a class="code" href="classILoader.html#a9713501b3d118a50fd95753fa05b529e">loadDocument</a>(<span class="keyword">const</span> std::string&amp; documentId) = 0;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;};</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassILoader_html"><div class="ttname"><a href="classILoader.html">ILoader</a></div><div class="ttdoc">Interface for loading document content by document ID.</div><div class="ttdef"><b>Definition:</b> ILoader.h:18</div></div>
+<div class="ttc" id="aclassILoader_html"><div class="ttname"><a href="classILoader.html">ILoader</a></div><div class="ttdoc">Interface for loading document content by document ID.</div><div class="ttdef"><b>Definition:</b> ILoader.h:20</div></div>
+<div class="ttc" id="aclassObject_html"><div class="ttname"><a href="classObject.html">Object</a></div><div class="ttdef"><b>Definition:</b> Object.h:4</div></div>
 <div class="ttc" id="aclassILoader_html_aaa9f69dc4cc786787c9dcbbf140be364"><div class="ttname"><a href="classILoader.html#aaa9f69dc4cc786787c9dcbbf140be364">ILoader::~ILoader</a></div><div class="ttdeci">virtual ~ILoader()=default</div><div class="ttdoc">Virtual destructor for the ILoader interface.</div></div>
 <div class="ttc" id="aclassILoader_html_a9713501b3d118a50fd95753fa05b529e"><div class="ttname"><a href="classILoader.html#a9713501b3d118a50fd95753fa05b529e">ILoader::loadDocument</a></div><div class="ttdeci">virtual std::string loadDocument(const std::string &amp;documentId)=0</div><div class="ttdoc">Loads the content of a document.</div></div>
 <!-- start footer part -->

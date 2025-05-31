@@ -77,20 +77,23 @@ $(function() {
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classTextProcessor.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="classTextProcessor.html">TextProcessor</a> {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="classTextProcessor.html#abaff84bb3719b5ad1725e445e9b89b65">TextProcessor</a>() = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">static</span> std::string <a class="code" href="classTextProcessor.html#afca4be4d3cb9ad84ca4e0388489aa70d">toLower</a>(<span class="keyword">const</span> std::string&amp; text);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">static</span> std::vector&lt;std::string&gt; <a class="code" href="classTextProcessor.html#af0be41667cbe3b816a8d9d47af55f6b4">tokenize</a>(<span class="keyword">const</span> std::string&amp; text);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;};</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;../Object.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classTextProcessor.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="classTextProcessor.html">TextProcessor</a> : <span class="keyword">public</span> <a class="code" href="classObject.html">Object</a> {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="classTextProcessor.html#abaff84bb3719b5ad1725e445e9b89b65">TextProcessor</a>() = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">static</span> std::string <a class="code" href="classTextProcessor.html#afca4be4d3cb9ad84ca4e0388489aa70d">toLower</a>(<span class="keyword">const</span> std::string&amp; text);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">static</span> std::vector&lt;std::string&gt; <a class="code" href="classTextProcessor.html#af0be41667cbe3b816a8d9d47af55f6b4">tokenize</a>(<span class="keyword">const</span> std::string&amp; text);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;};</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassTextProcessor_html_abaff84bb3719b5ad1725e445e9b89b65"><div class="ttname"><a href="classTextProcessor.html#abaff84bb3719b5ad1725e445e9b89b65">TextProcessor::TextProcessor</a></div><div class="ttdeci">TextProcessor()=delete</div><div class="ttdoc">Deleted default constructor to prevent instantiation.</div></div>
 <div class="ttc" id="aclassTextProcessor_html_afca4be4d3cb9ad84ca4e0388489aa70d"><div class="ttname"><a href="classTextProcessor.html#afca4be4d3cb9ad84ca4e0388489aa70d">TextProcessor::toLower</a></div><div class="ttdeci">static std::string toLower(const std::string &amp;text)</div><div class="ttdoc">Converts a string to lowercase.</div><div class="ttdef"><b>Definition:</b> TextProcessor.cpp:3</div></div>
-<div class="ttc" id="aclassTextProcessor_html"><div class="ttname"><a href="classTextProcessor.html">TextProcessor</a></div><div class="ttdoc">Provides static methods for processing text.</div><div class="ttdef"><b>Definition:</b> TextProcessor.h:21</div></div>
+<div class="ttc" id="aclassTextProcessor_html"><div class="ttname"><a href="classTextProcessor.html">TextProcessor</a></div><div class="ttdoc">Provides static methods for processing text.</div><div class="ttdef"><b>Definition:</b> TextProcessor.h:23</div></div>
+<div class="ttc" id="aclassObject_html"><div class="ttname"><a href="classObject.html">Object</a></div><div class="ttdef"><b>Definition:</b> Object.h:4</div></div>
 <div class="ttc" id="aclassTextProcessor_html_af0be41667cbe3b816a8d9d47af55f6b4"><div class="ttname"><a href="classTextProcessor.html#af0be41667cbe3b816a8d9d47af55f6b4">TextProcessor::tokenize</a></div><div class="ttdeci">static std::vector&lt; std::string &gt; tokenize(const std::string &amp;text)</div><div class="ttdoc">Tokenizes a string into individual words.</div><div class="ttdef"><b>Definition:</b> TextProcessor.cpp:9</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

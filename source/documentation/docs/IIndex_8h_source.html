@@ -75,26 +75,28 @@ $(function() {
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;../document/Document.h&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classIIndex.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="classIIndex.html">IIndex</a> {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classIIndex.html#a4124bf6a244bc4ca1f0332c82dcd141f">~IIndex</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classIIndex.html#a028fb743072bfc3b0ee90bb11696dfdf">indexDocument</a>(<span class="keyword">const</span> <a class="code" href="classDocument.html">Document</a>&amp; document) = 0;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classIIndex.html#a2fdf1a8ac320d3aa875b30be2fa729cd">removeIndex</a>(<span class="keyword">const</span> <a class="code" href="classDocument.html">Document</a>&amp; document) = 0;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">virtual</span> std::vector&lt;std::string&gt; <a class="code" href="classIIndex.html#a734e7418a7958b55fa8a11c1a5f635f1">search</a>(<span class="keyword">const</span> std::string&amp; query) = 0;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;../Object.h&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../document/Document.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classIIndex.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="classIIndex.html">IIndex</a> : <span class="keyword">public</span> <a class="code" href="classObject.html">Object</a> {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classIIndex.html#a4124bf6a244bc4ca1f0332c82dcd141f">~IIndex</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classIIndex.html#a028fb743072bfc3b0ee90bb11696dfdf">indexDocument</a>(<span class="keyword">const</span> <a class="code" href="classDocument.html">Document</a>&amp; document) = 0;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classIIndex.html#a2fdf1a8ac320d3aa875b30be2fa729cd">removeIndex</a>(<span class="keyword">const</span> <a class="code" href="classDocument.html">Document</a>&amp; document) = 0;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">virtual</span> std::vector&lt;std::string&gt; <a class="code" href="classIIndex.html#a734e7418a7958b55fa8a11c1a5f635f1">search</a>(<span class="keyword">const</span> std::string&amp; query) = 0;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;};</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassIIndex_html_a2fdf1a8ac320d3aa875b30be2fa729cd"><div class="ttname"><a href="classIIndex.html#a2fdf1a8ac320d3aa875b30be2fa729cd">IIndex::removeIndex</a></div><div class="ttdeci">virtual void removeIndex(const Document &amp;document)=0</div><div class="ttdoc">Removes the index of a document.</div></div>
-<div class="ttc" id="aclassDocument_html"><div class="ttname"><a href="classDocument.html">Document</a></div><div class="ttdoc">Represents a document associated with a specific department and author.</div><div class="ttdef"><b>Definition:</b> Document.h:20</div></div>
+<div class="ttc" id="aclassDocument_html"><div class="ttname"><a href="classDocument.html">Document</a></div><div class="ttdoc">Represents a document associated with a specific department and author.</div><div class="ttdef"><b>Definition:</b> Document.h:21</div></div>
 <div class="ttc" id="aclassIIndex_html_a4124bf6a244bc4ca1f0332c82dcd141f"><div class="ttname"><a href="classIIndex.html#a4124bf6a244bc4ca1f0332c82dcd141f">IIndex::~IIndex</a></div><div class="ttdeci">virtual ~IIndex()=default</div><div class="ttdoc">Virtual destructor for the IIndex interface.</div></div>
+<div class="ttc" id="aclassObject_html"><div class="ttname"><a href="classObject.html">Object</a></div><div class="ttdef"><b>Definition:</b> Object.h:4</div></div>
 <div class="ttc" id="aclassIIndex_html_a734e7418a7958b55fa8a11c1a5f635f1"><div class="ttname"><a href="classIIndex.html#a734e7418a7958b55fa8a11c1a5f635f1">IIndex::search</a></div><div class="ttdeci">virtual std::vector&lt; std::string &gt; search(const std::string &amp;query)=0</div><div class="ttdoc">Queries the index for relevant documents.</div></div>
-<div class="ttc" id="aclassIIndex_html"><div class="ttname"><a href="classIIndex.html">IIndex</a></div><div class="ttdoc">Interface for indexing and querying documents.</div><div class="ttdef"><b>Definition:</b> IIndex.h:21</div></div>
+<div class="ttc" id="aclassIIndex_html"><div class="ttname"><a href="classIIndex.html">IIndex</a></div><div class="ttdoc">Interface for indexing and querying documents.</div><div class="ttdef"><b>Definition:</b> IIndex.h:22</div></div>
 <div class="ttc" id="aclassIIndex_html_a028fb743072bfc3b0ee90bb11696dfdf"><div class="ttname"><a href="classIIndex.html#a028fb743072bfc3b0ee90bb11696dfdf">IIndex::indexDocument</a></div><div class="ttdeci">virtual void indexDocument(const Document &amp;document)=0</div><div class="ttdoc">Indexes a document.</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -76,42 +76,44 @@ $(function() {
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Student_8h.html">Student.h</a>&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;../university/University.h&quot;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="StudentManager_8h.html#ae5a58fd2d24f603d7d9c2dbefac331e9">   11</a></span>&#160;<span class="preprocessor">#define STUDENTS &quot;database/entity/students.txt&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classStudentManager.html">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="classStudentManager.html">StudentManager</a> {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">static</span> <a class="code" href="classStudentManager.html">StudentManager</a>&amp; <a class="code" href="classStudentManager.html#a6a43422e04d10ad2e86b2830443cfd5f">instance</a>();</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStudentManager.html#aba2ed73ef34a405ad7fb713d53e092f2">addStudent</a>(<span class="keyword">const</span> <a class="code" href="classStudent.html">Student</a>&amp; student);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    std::string <a class="code" href="classStudentManager.html#a0a41792f18b4faae57d808b58ecee021">getStudentName</a>(<span class="keyword">const</span> std::string&amp; email) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="classStudent.html">Student</a>&amp; <a class="code" href="classStudentManager.html#a79654f085011e885cdd9e53a0dd19b00">getStudent</a>(<span class="keyword">const</span> std::string&amp; email);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="classStudentManager.html">StudentManager</a>(<span class="keyword">const</span> <a class="code" href="classStudentManager.html">StudentManager</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="classStudentManager.html">StudentManager</a>&amp; <a class="code" href="classStudentManager.html#a4f9aabafe5d11c102a965c1d465ce502">operator=</a>(<span class="keyword">const</span> <a class="code" href="classStudentManager.html">StudentManager</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="classStudentManager.html">StudentManager</a>();</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">void</span> loadStudents();</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">void</span> saveStudent(<span class="keyword">const</span> <a class="code" href="classStudent.html">Student</a>&amp; student);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    std::unordered_map&lt;std::string, Student&gt; _students; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;};</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../Object.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Student_8h.html">Student.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../university/University.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="StudentManager_8h.html#ae5a58fd2d24f603d7d9c2dbefac331e9">   12</a></span>&#160;<span class="preprocessor">#define STUDENTS &quot;database/entity/students.txt&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classStudentManager.html">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="classStudentManager.html">StudentManager</a> : <span class="keyword">public</span> <a class="code" href="classObject.html">Object</a> {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">static</span> <a class="code" href="classStudentManager.html">StudentManager</a>&amp; <a class="code" href="classStudentManager.html#a6a43422e04d10ad2e86b2830443cfd5f">instance</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStudentManager.html#aba2ed73ef34a405ad7fb713d53e092f2">addStudent</a>(<span class="keyword">const</span> <a class="code" href="classStudent.html">Student</a>&amp; student);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    std::string <a class="code" href="classStudentManager.html#a0a41792f18b4faae57d808b58ecee021">getStudentName</a>(<span class="keyword">const</span> std::string&amp; email) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="classStudent.html">Student</a>&amp; <a class="code" href="classStudentManager.html#a79654f085011e885cdd9e53a0dd19b00">getStudent</a>(<span class="keyword">const</span> std::string&amp; email);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="classStudentManager.html">StudentManager</a>(<span class="keyword">const</span> <a class="code" href="classStudentManager.html">StudentManager</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="classStudentManager.html">StudentManager</a>&amp; <a class="code" href="classStudentManager.html#a4f9aabafe5d11c102a965c1d465ce502">operator=</a>(<span class="keyword">const</span> <a class="code" href="classStudentManager.html">StudentManager</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="classStudentManager.html">StudentManager</a>();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">void</span> loadStudents();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">void</span> saveStudent(<span class="keyword">const</span> <a class="code" href="classStudent.html">Student</a>&amp; student);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    std::unordered_map&lt;std::string, Student&gt; _students; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;};</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassStudentManager_html_a4f9aabafe5d11c102a965c1d465ce502"><div class="ttname"><a href="classStudentManager.html#a4f9aabafe5d11c102a965c1d465ce502">StudentManager::operator=</a></div><div class="ttdeci">StudentManager &amp; operator=(const StudentManager &amp;)=delete</div><div class="ttdoc">Deleted copy assignment operator to enforce the singleton pattern.</div></div>
 <div class="ttc" id="aStudent_8h_html"><div class="ttname"><a href="Student_8h.html">Student.h</a></div><div class="ttdoc">Defines the Student class for representing student information.</div></div>
+<div class="ttc" id="aclassObject_html"><div class="ttname"><a href="classObject.html">Object</a></div><div class="ttdef"><b>Definition:</b> Object.h:4</div></div>
 <div class="ttc" id="aclassStudentManager_html_a79654f085011e885cdd9e53a0dd19b00"><div class="ttname"><a href="classStudentManager.html#a79654f085011e885cdd9e53a0dd19b00">StudentManager::getStudent</a></div><div class="ttdeci">Student &amp; getStudent(const std::string &amp;email)</div><div class="ttdoc">Retrieves a Student object by their email.</div><div class="ttdef"><b>Definition:</b> StudentManager.cpp:23</div></div>
 <div class="ttc" id="aclassStudentManager_html_aba2ed73ef34a405ad7fb713d53e092f2"><div class="ttname"><a href="classStudentManager.html#aba2ed73ef34a405ad7fb713d53e092f2">StudentManager::addStudent</a></div><div class="ttdeci">void addStudent(const Student &amp;student)</div><div class="ttdoc">Adds a new student to the system.</div><div class="ttdef"><b>Definition:</b> StudentManager.cpp:9</div></div>
-<div class="ttc" id="aclassStudentManager_html"><div class="ttname"><a href="classStudentManager.html">StudentManager</a></div><div class="ttdoc">Singleton class for managing students in the system.</div><div class="ttdef"><b>Definition:</b> StudentManager.h:25</div></div>
+<div class="ttc" id="aclassStudentManager_html"><div class="ttname"><a href="classStudentManager.html">StudentManager</a></div><div class="ttdoc">Singleton class for managing students in the system.</div><div class="ttdef"><b>Definition:</b> StudentManager.h:26</div></div>
 <div class="ttc" id="aclassStudent_html"><div class="ttname"><a href="classStudent.html">Student</a></div><div class="ttdoc">Represents a student in a university.</div><div class="ttdef"><b>Definition:</b> Student.h:20</div></div>
 <div class="ttc" id="aclassStudentManager_html_a0a41792f18b4faae57d808b58ecee021"><div class="ttname"><a href="classStudentManager.html#a0a41792f18b4faae57d808b58ecee021">StudentManager::getStudentName</a></div><div class="ttdeci">std::string getStudentName(const std::string &amp;email) const</div><div class="ttdoc">Retrieves the name of a student by their email.</div><div class="ttdef"><b>Definition:</b> StudentManager.cpp:13</div></div>
 <div class="ttc" id="aclassStudentManager_html_a6a43422e04d10ad2e86b2830443cfd5f"><div class="ttname"><a href="classStudentManager.html#a6a43422e04d10ad2e86b2830443cfd5f">StudentManager::instance</a></div><div class="ttdeci">static StudentManager &amp; instance()</div><div class="ttdoc">Gets the singleton instance of the StudentManager.</div><div class="ttdef"><b>Definition:</b> StudentManager.cpp:4</div></div>

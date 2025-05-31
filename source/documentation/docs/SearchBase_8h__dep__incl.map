@@ -1,10 +1,13 @@
 <map id="/workspaces/codespaces&#45;blank/source/search/SearchBase.h" name="/workspaces/codespaces&#45;blank/source/search/SearchBase.h">
-<area shape="rect" id="node1" title="Defines the SearchBase abstract class for performing search queries." alt="" coords="375,5,624,47"/>
-<area shape="rect" id="node2" href="$SearchEngine_8h.html" title="Defines the SearchEngine class for managing search operations." alt="" coords="223,95,485,136"/>
-<area shape="rect" id="node7" href="$SearchKeyword_8h.html" title="Defines the SearchKeyword class for performing keyword&#45;based search queries." alt="" coords="508,95,781,136"/>
-<area shape="rect" id="node3" href="$Application_8h.html" title=" " alt="" coords="124,184,323,225"/>
-<area shape="rect" id="node6" href="$SearchEngine_8cpp.html" title=" " alt="" coords="347,184,623,225"/>
-<area shape="rect" id="node4" href="$Application_8cpp.html" title=" " alt="" coords="5,273,220,315"/>
-<area shape="rect" id="node5" href="$main_8cpp.html" title=" " alt="" coords="244,273,427,315"/>
-<area shape="rect" id="node8" href="$SearchKeyword_8cpp.html" title=" " alt="" coords="647,184,935,225"/>
+<area shape="rect" id="node1" title="Defines the SearchBase abstract class for performing search queries." alt="" coords="465,5,715,47"/>
+<area shape="rect" id="node2" href="$SearchEngine_8h.html" title="Defines the SearchEngine class for managing search operations." alt="" coords="314,95,575,136"/>
+<area shape="rect" id="node10" href="$SearchKeyword_8h.html" title="Defines the SearchKeyword class for performing keyword&#45;based search queries." alt="" coords="599,95,872,136"/>
+<area shape="rect" id="node3" href="$Application_8h.html" title=" " alt="" coords="112,295,311,337"/>
+<area shape="rect" id="node6" href="$IRankingVisitor_8h.html" title=" " alt="" coords="353,184,536,240"/>
+<area shape="rect" id="node7" href="$TFIDFRanking_8h.html" title=" " alt="" coords="335,288,517,344"/>
+<area shape="rect" id="node9" href="$SearchEngine_8cpp.html" title=" " alt="" coords="541,295,817,337"/>
+<area shape="rect" id="node4" href="$Application_8cpp.html" title=" " alt="" coords="212,399,427,441"/>
+<area shape="rect" id="node5" href="$main_8cpp.html" title=" " alt="" coords="5,399,188,441"/>
+<area shape="rect" id="node8" href="$TFIDFRanking_8cpp.html" title=" " alt="" coords="451,392,633,448"/>
+<area shape="rect" id="node11" href="$SearchKeyword_8cpp.html" title=" " alt="" coords="717,191,1005,233"/>
 </map>

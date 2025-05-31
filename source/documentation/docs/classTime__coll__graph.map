@@ -1,0 +1,4 @@
+<map id="Time" name="Time">
+<area shape="rect" id="node1" title="Provides a static method to retrieve the current time as a string." alt="" coords="10,80,65,107"/>
+<area shape="rect" id="node2" href="$classObject.html" title=" " alt="" coords="5,5,69,32"/>
+</map>

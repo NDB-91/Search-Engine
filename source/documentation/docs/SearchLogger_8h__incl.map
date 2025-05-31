@@ -1,6 +1,7 @@
 <map id="/workspaces/codespaces&#45;blank/source/logger/SearchLogger.h" name="/workspaces/codespaces&#45;blank/source/logger/SearchLogger.h">
 <area shape="rect" id="node1" title="Defines the SearchLogger class for logging search queries." alt="" coords="5,5,264,47"/>
-<area shape="rect" id="node2" href="$ILogger_8h.html" title="Defines the ILogger interface for logging messages." alt="" coords="94,95,175,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="53,169,126,196"/>
-<area shape="rect" id="node4" title=" " alt="" coords="151,169,209,196"/>
+<area shape="rect" id="node2" href="$ILogger_8h.html" title="Defines the ILogger interface for logging informations." alt="" coords="94,95,175,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="7,169,81,196"/>
+<area shape="rect" id="node4" title=" " alt="" coords="105,169,164,196"/>
+<area shape="rect" id="node5" href="$Object_8h.html" title=" " alt="" coords="188,169,276,196"/>
 </map>

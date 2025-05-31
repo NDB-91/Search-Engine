@@ -1,4 +1,12 @@
 <map id="/workspaces/codespaces&#45;blank/source/suggester/SearchSuggester.h" name="/workspaces/codespaces&#45;blank/source/suggester/SearchSuggester.h">
-<area shape="rect" id="node1" title="Defines the SearchSuggester class for providing search suggestions." alt="" coords="5,5,188,61"/>
-<area shape="rect" id="node2" href="$ISuggester_8h.html" title="Defines the ISuggester interface for providing suggestions." alt="" coords="45,109,148,136"/>
+<area shape="rect" id="node1" title="Defines the SearchSuggester class for providing search suggestions." alt="" coords="180,5,363,61"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,259,79,285"/>
+<area shape="rect" id="node3" title=" " alt="" coords="359,109,445,136"/>
+<area shape="rect" id="node4" href="$ISuggester_8h.html" title="Defines the ISuggester interface for providing suggestions." alt="" coords="304,184,407,211"/>
+<area shape="rect" id="node8" href="$SearchLogger_8h.html" title="Defines the SearchLogger class for logging search queries." alt="" coords="55,109,234,136"/>
+<area shape="rect" id="node10" href="$Trie_8h.html" title="Defines the Trie and TrieNode classes for managing a prefix tree (trie) data structure." alt="" coords="185,184,280,211"/>
+<area shape="rect" id="node5" title=" " alt="" coords="117,259,175,285"/>
+<area shape="rect" id="node6" title=" " alt="" coords="324,259,387,285"/>
+<area shape="rect" id="node7" href="$Object_8h.html" title=" " alt="" coords="199,259,287,285"/>
+<area shape="rect" id="node9" href="$ILogger_8h.html" title="Defines the ILogger interface for logging informations." alt="" coords="80,184,161,211"/>
 </map>

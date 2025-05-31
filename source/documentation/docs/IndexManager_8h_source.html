@@ -76,28 +76,30 @@ $(function() {
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;unordered_set&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="IIndexBuilder_8h.html">IIndexBuilder.h</a>&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classIndexManager.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="classIndexManager.html">IndexManager</a> {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">static</span> <a class="code" href="classIndexManager.html">IndexManager</a>&amp; <a class="code" href="classIndexManager.html#ad339e631d895b9f7e29917c9a6c52dc4">instance</a>();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    std::shared_ptr&lt;IIndex&gt; <a class="code" href="classIndexManager.html#ac74e152e55d3a2c4b826772ddfd3b0a3">buildIndex</a>(<span class="keyword">const</span> std::vector&lt;std::shared_ptr&lt;Document&gt;&gt;&amp; documents, std::shared_ptr&lt;IIndexBuilder&gt; indexBuilder);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="classIndexManager.html">IndexManager</a>(<span class="keyword">const</span> <a class="code" href="classIndexManager.html">IndexManager</a>&amp; indexManager) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="classIndexManager.html">IndexManager</a>&amp; <a class="code" href="classIndexManager.html#a89915c467130fdd24c00e95a67d3ce1f">operator=</a>(<span class="keyword">const</span> <a class="code" href="classIndexManager.html">IndexManager</a>&amp; indexManager) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="classIndexManager.html">IndexManager</a>();</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;};</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../Object.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="IIndexBuilder_8h.html">IIndexBuilder.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classIndexManager.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="classIndexManager.html">IndexManager</a> : <span class="keyword">public</span> <a class="code" href="classObject.html">Object</a> {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">static</span> <a class="code" href="classIndexManager.html">IndexManager</a>&amp; <a class="code" href="classIndexManager.html#ad339e631d895b9f7e29917c9a6c52dc4">instance</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    std::shared_ptr&lt;IIndex&gt; <a class="code" href="classIndexManager.html#a1c8f48468b6c4a4af1501b76de7f16b4">buildIndex</a>(<span class="keyword">const</span> std::vector&lt;Document&gt;&amp; documents, std::shared_ptr&lt;IIndexBuilder&gt; indexBuilder);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="classIndexManager.html">IndexManager</a>(<span class="keyword">const</span> <a class="code" href="classIndexManager.html">IndexManager</a>&amp; indexManager) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="classIndexManager.html">IndexManager</a>&amp; <a class="code" href="classIndexManager.html#a89915c467130fdd24c00e95a67d3ce1f">operator=</a>(<span class="keyword">const</span> <a class="code" href="classIndexManager.html">IndexManager</a>&amp; indexManager) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="classIndexManager.html">IndexManager</a>();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;};</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassIndexManager_html"><div class="ttname"><a href="classIndexManager.html">IndexManager</a></div><div class="ttdoc">Singleton class for managing the indexing process.</div><div class="ttdef"><b>Definition:</b> IndexManager.h:23</div></div>
-<div class="ttc" id="aclassIndexManager_html_ac74e152e55d3a2c4b826772ddfd3b0a3"><div class="ttname"><a href="classIndexManager.html#ac74e152e55d3a2c4b826772ddfd3b0a3">IndexManager::buildIndex</a></div><div class="ttdeci">std::shared_ptr&lt; IIndex &gt; buildIndex(const std::vector&lt; std::shared_ptr&lt; Document &gt;&gt; &amp;documents, std::shared_ptr&lt; IIndexBuilder &gt; indexBuilder)</div><div class="ttdoc">Builds an index for a collection of documents.</div><div class="ttdef"><b>Definition:</b> IndexManager.cpp:12</div></div>
+<div class="ttc" id="aclassObject_html"><div class="ttname"><a href="classObject.html">Object</a></div><div class="ttdef"><b>Definition:</b> Object.h:4</div></div>
+<div class="ttc" id="aclassIndexManager_html"><div class="ttname"><a href="classIndexManager.html">IndexManager</a></div><div class="ttdoc">Singleton class for managing the indexing process.</div><div class="ttdef"><b>Definition:</b> IndexManager.h:24</div></div>
 <div class="ttc" id="aclassIndexManager_html_a89915c467130fdd24c00e95a67d3ce1f"><div class="ttname"><a href="classIndexManager.html#a89915c467130fdd24c00e95a67d3ce1f">IndexManager::operator=</a></div><div class="ttdeci">IndexManager &amp; operator=(const IndexManager &amp;indexManager)=delete</div><div class="ttdoc">Deleted copy assignment operator to enforce the singleton pattern.</div></div>
 <div class="ttc" id="aclassIndexManager_html_ad339e631d895b9f7e29917c9a6c52dc4"><div class="ttname"><a href="classIndexManager.html#ad339e631d895b9f7e29917c9a6c52dc4">IndexManager::instance</a></div><div class="ttdeci">static IndexManager &amp; instance()</div><div class="ttdoc">Gets the singleton instance of the IndexManager.</div><div class="ttdef"><b>Definition:</b> IndexManager.cpp:7</div></div>
+<div class="ttc" id="aclassIndexManager_html_a1c8f48468b6c4a4af1501b76de7f16b4"><div class="ttname"><a href="classIndexManager.html#a1c8f48468b6c4a4af1501b76de7f16b4">IndexManager::buildIndex</a></div><div class="ttdeci">std::shared_ptr&lt; IIndex &gt; buildIndex(const std::vector&lt; Document &gt; &amp;documents, std::shared_ptr&lt; IIndexBuilder &gt; indexBuilder)</div><div class="ttdoc">Builds an index for a collection of documents.</div><div class="ttdef"><b>Definition:</b> IndexManager.cpp:12</div></div>
 <div class="ttc" id="aIIndexBuilder_8h_html"><div class="ttname"><a href="IIndexBuilder_8h.html">IIndexBuilder.h</a></div><div class="ttdoc">Defines the IIndexBuilder interface for building and managing document indices.</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

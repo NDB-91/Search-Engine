@@ -1,4 +1,9 @@
 <map id="/workspaces/codespaces&#45;blank/source/logger/SearchLogger.h" name="/workspaces/codespaces&#45;blank/source/logger/SearchLogger.h">
-<area shape="rect" id="node1" title="Defines the SearchLogger class for logging search queries." alt="" coords="13,5,271,47"/>
-<area shape="rect" id="node2" href="$SearchLogger_8cpp.html" title=" " alt="" coords="5,95,279,136"/>
+<area shape="rect" id="node1" title="Defines the SearchLogger class for logging search queries." alt="" coords="297,5,555,47"/>
+<area shape="rect" id="node2" href="$Application_8h.html" title=" " alt="" coords="112,102,311,143"/>
+<area shape="rect" id="node5" href="$SearchSuggester_8h.html" title="Defines the SearchSuggester class for providing search suggestions." alt="" coords="335,95,517,151"/>
+<area shape="rect" id="node7" href="$SearchLogger_8cpp.html" title=" " alt="" coords="541,102,815,143"/>
+<area shape="rect" id="node3" href="$Application_8cpp.html" title=" " alt="" coords="212,206,427,247"/>
+<area shape="rect" id="node4" href="$main_8cpp.html" title=" " alt="" coords="5,206,188,247"/>
+<area shape="rect" id="node6" href="$SearchSuggester_8cpp.html" title=" " alt="" coords="451,199,633,255"/>
 </map>

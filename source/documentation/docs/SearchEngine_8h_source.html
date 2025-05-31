@@ -75,34 +75,48 @@ $(function() {
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="SearchBase_8h.html">SearchBase.h</a>&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classSearchEngine.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSearchEngine.html">SearchEngine</a> {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="classSearchEngine.html#ab129d2c96c29c6dcf4a28abbe4168f6c">SearchEngine</a>();</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="classSearchEngine.html#a71bceddd2d9448e4032d4740bde7f8ad">~SearchEngine</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSearchEngine.html#af40017e2a759d20d1478a9339ba246d2">search</a>(<span class="keyword">const</span> std::string&amp; query);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSearchEngine.html#ad1ea6c05c655d645383bef2c91c64b71">displayResults</a>();</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSearchEngine.html#a27a7ac467cbe904ae88ac354237fed26">clearResults</a>();</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;../Object.h&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="SearchBase_8h.html">SearchBase.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;../visitor/IVisitable.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../visitor/IRankingVisitor.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classSearchEngine.html">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSearchEngine.html">SearchEngine</a> : <span class="keyword">public</span> <a class="code" href="classObject.html">Object</a>, <span class="keyword">public</span> std::enable_shared_from_this&lt;SearchEngine&gt;, <span class="keyword">public</span> <a class="code" href="classIVisitable.html">IVisitable</a> {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="classSearchEngine.html#ab129d2c96c29c6dcf4a28abbe4168f6c">SearchEngine</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="classSearchEngine.html#a71bceddd2d9448e4032d4740bde7f8ad">~SearchEngine</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSearchEngine.html#af40017e2a759d20d1478a9339ba246d2">search</a>(<span class="keyword">const</span> std::string&amp; query);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    std::vector&lt;Document&gt;&amp; <a class="code" href="classSearchEngine.html#a0b9bebdfcaa4269d9d84cd16b36914bf">results</a>();</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    std::shared_ptr&lt;SearchBase&gt; _search; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    std::string _currentQuery;           </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    std::vector&lt;std::string&gt; _results;   </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;};</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    std::string <a class="code" href="classSearchEngine.html#ab52d2aba2974074184e070dc716aaea6">currentQuery</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSearchEngine.html#ab519c67defddd73517c602c00d033fe2">displayResults</a>(std::shared_ptr&lt;IRankingVisitor&gt; visitor);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSearchEngine.html#a27a7ac467cbe904ae88ac354237fed26">clearResults</a>();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSearchEngine.html#a47be1e637ce936ba5c1b4613acb06700">accept</a>(std::shared_ptr&lt;IVisitor&gt; visitor) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    std::shared_ptr&lt;SearchBase&gt; _search; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    std::string _currentQuery;           </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    std::vector&lt;Document&gt; _results;   </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;};</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassSearchEngine_html_a27a7ac467cbe904ae88ac354237fed26"><div class="ttname"><a href="classSearchEngine.html#a27a7ac467cbe904ae88ac354237fed26">SearchEngine::clearResults</a></div><div class="ttdeci">void clearResults()</div><div class="ttdoc">Clears the current search results.</div><div class="ttdef"><b>Definition:</b> SearchEngine.cpp:23</div></div>
-<div class="ttc" id="aclassSearchEngine_html_ad1ea6c05c655d645383bef2c91c64b71"><div class="ttname"><a href="classSearchEngine.html#ad1ea6c05c655d645383bef2c91c64b71">SearchEngine::displayResults</a></div><div class="ttdeci">void displayResults()</div><div class="ttdoc">Displays the search results.</div><div class="ttdef"><b>Definition:</b> SearchEngine.cpp:16</div></div>
-<div class="ttc" id="aclassSearchEngine_html_af40017e2a759d20d1478a9339ba246d2"><div class="ttname"><a href="classSearchEngine.html#af40017e2a759d20d1478a9339ba246d2">SearchEngine::search</a></div><div class="ttdeci">void search(const std::string &amp;query)</div><div class="ttdoc">Performs a search query.</div><div class="ttdef"><b>Definition:</b> SearchEngine.cpp:11</div></div>
-<div class="ttc" id="aclassSearchEngine_html_ab129d2c96c29c6dcf4a28abbe4168f6c"><div class="ttname"><a href="classSearchEngine.html#ab129d2c96c29c6dcf4a28abbe4168f6c">SearchEngine::SearchEngine</a></div><div class="ttdeci">SearchEngine()</div><div class="ttdoc">Constructs a SearchEngine object.</div><div class="ttdef"><b>Definition:</b> SearchEngine.cpp:7</div></div>
+<div class="ttc" id="aclassIVisitable_html"><div class="ttname"><a href="classIVisitable.html">IVisitable</a></div><div class="ttdef"><b>Definition:</b> IVisitable.h:7</div></div>
+<div class="ttc" id="aclassSearchEngine_html_a27a7ac467cbe904ae88ac354237fed26"><div class="ttname"><a href="classSearchEngine.html#a27a7ac467cbe904ae88ac354237fed26">SearchEngine::clearResults</a></div><div class="ttdeci">void clearResults()</div><div class="ttdoc">Clears the current search results.</div><div class="ttdef"><b>Definition:</b> SearchEngine.cpp:43</div></div>
+<div class="ttc" id="aclassObject_html"><div class="ttname"><a href="classObject.html">Object</a></div><div class="ttdef"><b>Definition:</b> Object.h:4</div></div>
+<div class="ttc" id="aclassSearchEngine_html_af40017e2a759d20d1478a9339ba246d2"><div class="ttname"><a href="classSearchEngine.html#af40017e2a759d20d1478a9339ba246d2">SearchEngine::search</a></div><div class="ttdeci">void search(const std::string &amp;query)</div><div class="ttdoc">Performs a search query.</div><div class="ttdef"><b>Definition:</b> SearchEngine.cpp:13</div></div>
+<div class="ttc" id="aclassSearchEngine_html_ab129d2c96c29c6dcf4a28abbe4168f6c"><div class="ttname"><a href="classSearchEngine.html#ab129d2c96c29c6dcf4a28abbe4168f6c">SearchEngine::SearchEngine</a></div><div class="ttdeci">SearchEngine()</div><div class="ttdoc">Constructs a SearchEngine object.</div><div class="ttdef"><b>Definition:</b> SearchEngine.cpp:9</div></div>
+<div class="ttc" id="aclassSearchEngine_html_a47be1e637ce936ba5c1b4613acb06700"><div class="ttname"><a href="classSearchEngine.html#a47be1e637ce936ba5c1b4613acb06700">SearchEngine::accept</a></div><div class="ttdeci">void accept(std::shared_ptr&lt; IVisitor &gt; visitor) override</div><div class="ttdoc">Accepts a visitor for processing.</div><div class="ttdef"><b>Definition:</b> SearchEngine.cpp:47</div></div>
+<div class="ttc" id="aclassSearchEngine_html_ab52d2aba2974074184e070dc716aaea6"><div class="ttname"><a href="classSearchEngine.html#ab52d2aba2974074184e070dc716aaea6">SearchEngine::currentQuery</a></div><div class="ttdeci">std::string currentQuery() const</div><div class="ttdoc">Retrieves the current search query string.</div><div class="ttdef"><b>Definition:</b> SearchEngine.cpp:29</div></div>
+<div class="ttc" id="aclassSearchEngine_html_ab519c67defddd73517c602c00d033fe2"><div class="ttname"><a href="classSearchEngine.html#ab519c67defddd73517c602c00d033fe2">SearchEngine::displayResults</a></div><div class="ttdeci">void displayResults(std::shared_ptr&lt; IRankingVisitor &gt; visitor)</div><div class="ttdoc">Displays the search results.</div><div class="ttdef"><b>Definition:</b> SearchEngine.cpp:33</div></div>
 <div class="ttc" id="aSearchBase_8h_html"><div class="ttname"><a href="SearchBase_8h.html">SearchBase.h</a></div><div class="ttdoc">Defines the SearchBase abstract class for performing search queries.</div></div>
-<div class="ttc" id="aclassSearchEngine_html"><div class="ttname"><a href="classSearchEngine.html">SearchEngine</a></div><div class="ttdoc">Provides functionality to perform and manage search operations.</div><div class="ttdef"><b>Definition:</b> SearchEngine.h:22</div></div>
+<div class="ttc" id="aclassSearchEngine_html"><div class="ttname"><a href="classSearchEngine.html">SearchEngine</a></div><div class="ttdoc">Provides functionality to perform and manage search operations.</div><div class="ttdef"><b>Definition:</b> SearchEngine.h:25</div></div>
+<div class="ttc" id="aclassSearchEngine_html_a0b9bebdfcaa4269d9d84cd16b36914bf"><div class="ttname"><a href="classSearchEngine.html#a0b9bebdfcaa4269d9d84cd16b36914bf">SearchEngine::results</a></div><div class="ttdeci">std::vector&lt; Document &gt; &amp; results()</div><div class="ttdoc">Retrieves the result of the current search query.</div><div class="ttdef"><b>Definition:</b> SearchEngine.cpp:25</div></div>
 <div class="ttc" id="aclassSearchEngine_html_a71bceddd2d9448e4032d4740bde7f8ad"><div class="ttname"><a href="classSearchEngine.html#a71bceddd2d9448e4032d4740bde7f8ad">SearchEngine::~SearchEngine</a></div><div class="ttdeci">~SearchEngine()=default</div><div class="ttdoc">Destroys the SearchEngine object.</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

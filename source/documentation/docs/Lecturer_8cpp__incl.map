@@ -1,7 +1,8 @@
 <map id="/workspaces/codespaces&#45;blank/source/lecturer/Lecturer.cpp" name="/workspaces/codespaces&#45;blank/source/lecturer/Lecturer.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="21,5,204,61"/>
-<area shape="rect" id="node2" href="$Lecturer_8h.html" title="Defines the Lecturer class for representing lecturer information." alt="" coords="69,109,156,136"/>
-<area shape="rect" id="node3" title=" " alt="" coords="83,259,142,285"/>
-<area shape="rect" id="node4" href="$University_8h.html" title="Defines the University class for representing university information." alt="" coords="23,184,203,211"/>
-<area shape="rect" id="node5" href="$Department_8h.html" title="Defines the Department enumeration for categorizing academic or organizational departments." alt="" coords="227,184,431,211"/>
+<area shape="rect" id="node1" title=" " alt="" coords="34,5,216,61"/>
+<area shape="rect" id="node2" href="$Lecturer_8h.html" title="Defines the Lecturer class for representing lecturer information." alt="" coords="82,109,168,136"/>
+<area shape="rect" id="node3" title=" " alt="" coords="96,259,154,285"/>
+<area shape="rect" id="node4" href="$University_8h.html" title="Defines the University class for representing university information." alt="" coords="251,184,431,211"/>
+<area shape="rect" id="node6" href="$Department_8h.html" title="Defines the Department enumeration for categorizing academic or organizational departments." alt="" coords="23,184,227,211"/>
+<area shape="rect" id="node5" href="$Object_8h.html" title=" " alt="" coords="297,259,385,285"/>
 </map>

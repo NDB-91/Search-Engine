@@ -1,7 +1,10 @@
 <map id="/workspaces/codespaces&#45;blank/source/text/TextProcessor.h" name="/workspaces/codespaces&#45;blank/source/text/TextProcessor.h">
-<area shape="rect" id="node1" title="Defines the TextProcessor class for text processing operations." alt="" coords="307,5,553,47"/>
-<area shape="rect" id="node2" href="$InvertedIndex_8cpp.html" title=" " alt="" coords="5,95,188,151"/>
-<area shape="rect" id="node3" href="$TFIDF_8cpp.html" title=" " alt="" coords="212,95,395,151"/>
-<area shape="rect" id="node4" href="$SearchEngine_8cpp.html" title=" " alt="" coords="419,102,695,143"/>
-<area shape="rect" id="node5" href="$TextProcessor_8cpp.html" title=" " alt="" coords="719,102,979,143"/>
+<area shape="rect" id="node1" title="Defines the TextProcessor class for text processing operations." alt="" coords="522,5,767,47"/>
+<area shape="rect" id="node2" href="$Application_8h.html" title=" " alt="" coords="124,102,323,143"/>
+<area shape="rect" id="node5" href="$InvertedIndex_8cpp.html" title=" " alt="" coords="347,95,529,151"/>
+<area shape="rect" id="node6" href="$TFIDF_8cpp.html" title=" " alt="" coords="553,95,736,151"/>
+<area shape="rect" id="node7" href="$SearchEngine_8cpp.html" title=" " alt="" coords="760,102,1036,143"/>
+<area shape="rect" id="node8" href="$TextProcessor_8cpp.html" title=" " alt="" coords="1060,102,1320,143"/>
+<area shape="rect" id="node3" href="$Application_8cpp.html" title=" " alt="" coords="5,199,220,240"/>
+<area shape="rect" id="node4" href="$main_8cpp.html" title=" " alt="" coords="244,199,427,240"/>
 </map>
