@@ -26,6 +26,11 @@ public:
     Application();
 
     /**
+     * @brief Configures the application settings and services.
+     */
+    void config();
+
+    /**
      * @brief Starts the main application loop.
      */
     void run();
@@ -35,7 +40,6 @@ public:
      */
     void search();
 private:
-    std::shared_ptr<IAccountRepository> _repo; ///< Repository for account data.
     std::shared_ptr<AccountService> _accountService; ///< Service for managing accounts.
     std::shared_ptr<SearchEngine> _searchEngine; ///< Search engine for handling search queries.
     std::shared_ptr<IRankingVisitor> _rankingVisitor; ///< Visitor for ranking search results.

@@ -7,11 +7,15 @@
 
 
 Application::Application() {
-    _repo = std::make_shared<FileAccountRepository>(ACCOUNTS);
-    _accountService = std::make_shared<AccountService>(_repo);
+    
+}
+
+void Application::config() {
+    _accountService = std::make_shared<AccountService>(std::make_shared<FileAccountRepository>(ACCOUNTS));
     _searchEngine = std::make_shared<SearchEngine>();
     _rankingVisitor = std::make_shared<TFIDFRanking>();
     _suggester = std::make_shared<SearchSuggester>();
+
 }
 
 void Application::run() {

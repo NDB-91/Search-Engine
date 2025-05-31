@@ -8,3 +8,5 @@
 1|dbtien@lecturer|dbtienhcmus
 0|abc@student|passofabc
 1|gv@lecturer|gvadmin123
+0|test@student|testpass
+1|test@lecturer|checkpass
