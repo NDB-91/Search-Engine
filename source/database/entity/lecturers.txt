@@ -5,3 +5,4 @@ tdquang@lecturer|Tran Duy Quang|Information Technology|HCMUS
 dbtien@lecturer|Dinh Ba Tien|Information Technology|HCMUS
 gv@lecturer|Giang Vien|Marketing|FTU
 test@lecturer|Your Check|Economics|FTU
+giangvien@lecturer|Giang Vien|Information Technology|UIT

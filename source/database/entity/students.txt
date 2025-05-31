@@ -3,3 +3,4 @@ nvchien@student|Nguyen Van Chien|HCMUS
 nva@student|Nguyen Van A|UIT
 abc@student|ABC|NEU
 test@student|My Check|UIT
+sinhvien@student|Sinh Vien|HCMUS

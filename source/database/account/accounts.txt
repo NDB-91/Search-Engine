@@ -10,3 +10,5 @@
 1|gv@lecturer|gvadmin123
 0|test@student|testpass
 1|test@lecturer|checkpass
+0|sinhvien@student|password
+1|giangvien@lecturer|passgiangvien
